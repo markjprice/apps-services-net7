@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "MonitoringLib"
+		},
+		{
+			"path": "MonitoringApp"
+		},
+		{
+			"path": "Benchmarking"
+		},
+		{
+			"path": "WorkingWithTasks"
+		},
+		{
+			"path": "SynchronizingResourceAccess"
+		},
+		{
+			"path": "AsyncConsole"
+		},
+		{
+			"path": "AsyncEnumerable"
+		},
+		{
+			"path": "WpfResponsive"
+		}
+	]
+}

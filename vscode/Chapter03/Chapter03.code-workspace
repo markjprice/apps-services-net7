@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "CryptographyLib"
+		},
+		{
+			"path": "EncryptionApp"
+		},
+		{
+			"path": "HashingApp"
+		},
+		{
+			"path": "SigningApp"
+		},
+		{
+			"path": "RandomizingApp"
+		},
+		{
+			"path": "SecureApp"
+		},
+		{
+			"path": "Ch03Ex02_EncryptData"
+		},
+		{
+			"path": "Ch03Ex03_DecryptData"
+		}
+	]
+}
