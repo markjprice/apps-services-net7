@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customers>
+  <customer>
+    <name>Bob Smith</name>
+    <creditcard>8xbz4KAQkfVs98j/Wh7/goFmNZBwfYqESfqP598LOafdxX3Sol/tSbHsiACGXFTD</creditcard>
+    <password>5TdVD+Hmq8x1O27y3tdJgkuzuieosIHPic7Po4U/IpE=</password>
+    <salt>Id6qRm9ayP+v4JLZtAOxaQ==</salt>
+  </customer>
+  <customer>
+    <name>Leslie Knope</name>
+    <creditcard>ku2VdKk8390yTi7WJGq/TNaxghEUTKbcSr6X6lIvTucx6zH5G8BWNezfi5uXUDjV</creditcard>
+    <password>/z/7nkYqfQVth5jW/jTAI/3T9XVInmFPufaRgHEluVM=</password>
+    <salt>xB8GS3GyE0UjDSAhG0e7BQ==</salt>
+  </customer>
+</customers>
