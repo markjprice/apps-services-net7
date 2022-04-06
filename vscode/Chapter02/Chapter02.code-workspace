@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "WorkingWithGlobalization"
+			"path": "WorkingWithTime"
 		},
 		{
-			"path": "WorkingWithTime"
+			"path": "WorkingWithCultures"
 		}
 	]
 }

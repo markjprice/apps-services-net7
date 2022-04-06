@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="EnterYourDob" xml:space="preserve">
+    <value>Entrez votre date de naissance: </value>
+  </data>
+  <data name="EnterYourName" xml:space="preserve">
+    <value>Entrez votre nom: </value>
+  </data>
+  <data name="EnterYourSalary" xml:space="preserve">
+    <value>Entrez votre salaire: </value>
+  </data>
+  <data name="PersonDetails" xml:space="preserve">
+    <value>{0} est né un {1:dddd}, a {2:N0} minutes, et gagne {3:C}</value>
+  </data>
+</root>
