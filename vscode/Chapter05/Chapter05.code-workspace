@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": "WorkingWithImages"
+		},
+		{
+			"path": "Serilogging"
+		},
+		{
+			"path": "MappingObjects.Models"
+		},
+		{
+			"path": "MappingObjects.Tests"
+		},
+		{
+			"path": "MappingObjects"
+		},
+		{
+			"path": "FluentTests"
+		},
+		{
+			"path": "FluentValidation.Models"
+		},
+		{
+			"path": "FluentValidation.Validators"
+		},
+		{
+			"path": "FluentValidation.App"
+		},
+		{
+			"path": "GeneratingPdf.Models"
+		},
+		{
+			"path": "GeneratingPdf.Document"
+		},
+		{
+			"path": "GeneratingPdf.App"
+		}
+	]
+}
