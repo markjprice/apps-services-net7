@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "WorkingWithEFCore"
+		},
+		{
+			"path": "Northwind.Common.EntityModels.SqlServer"
+		},
+		{
+			"path": "Northwind.Common.DataContext.SqlServer"
+		},
+		{
+			"path": "Northwind.Common.EntityModels.Tests"
 		}
 	]
 }
