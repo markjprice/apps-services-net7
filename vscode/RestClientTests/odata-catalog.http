@@ -1,0 +1,17 @@
+GET https://localhost:5004/catalog/categories/ HTTP/1.1
+###
+https://localhost:5004/catalog/categories(3)
+###
+https://localhost:5004/catalog/categories/3
+###
+https://localhost:5004/catalog/categories/$count
+###
+https://localhost:5004/catalog/products
+###
+https://localhost:5004/catalog/products/$count
+###
+https://localhost:5004/catalog/products(2)
+###
+https://localhost:5004/catalog/suppliers
+###
+https://localhost:5004/catalog/suppliers/$count
