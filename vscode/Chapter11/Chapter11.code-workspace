@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "Northwind.GraphQL"
+		},
+		{
+			"path": "Northwind.Mvc.GraphQLClient"
+		}
+	]
+}

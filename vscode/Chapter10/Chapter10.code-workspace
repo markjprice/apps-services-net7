@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "Northwind.OData"
+		},
+		{
+			"path": "Northwind.OData.Client.Mvc"
+		}
+	]
+}
