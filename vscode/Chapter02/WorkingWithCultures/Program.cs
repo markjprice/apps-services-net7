@@ -22,6 +22,7 @@ OutputCultures("Default cultures");
 WriteLine("en-US: English (United States) - default");
 WriteLine("da-DK: Danish (Denmark)");
 WriteLine("fr-CA: French (Canada)");
+WriteLine("fa-IR: Persian (Iran)");
 WriteLine();
 
 Write("Enter an ISO culture code: ");
@@ -65,7 +66,15 @@ string? dobText = ReadLine();
 
 if (string.IsNullOrWhiteSpace(dobText))
 {
-  dobText = "1/2/1990";
+  // if they do not enter a DOB then use
+  // sensible defaults for their culture
+  dobText = ci.Name switch
+    {
+      "en-US" => "1/27/1990",
+      "da-DK" or "fr-CA" => "27/1/1990",
+      "fa-IR" => "1990/1/27",
+      _ => "1/27/1990"
+    };
 }
 
 Write(resources.GetEnterYourSalaryPrompt());
