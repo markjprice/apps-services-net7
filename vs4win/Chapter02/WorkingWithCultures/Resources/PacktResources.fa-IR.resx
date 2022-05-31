@@ -10,6 +10,6 @@
     <value>حقوق خود را وارد کنید / Enter your salary: </value>
   </data>
   <data name="PersonDetails" xml:space="preserve">
-    <value>{0} در {1} متولد شد، {2} دقیقه سن دارد و {3} درآمد دارد.</value>
+    <value>{0} در {1:dddd}به دنیا آمد. {0} {2:N0} دقیقه است. {0} {3:C}.</value>
   </data>
 </root>

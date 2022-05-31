@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "WorkingWithCultures"
+		},
+		{
+			"path": "WorkingWithTimeZones"
 		}
 	]
 }

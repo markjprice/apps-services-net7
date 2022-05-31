@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting; // IHost, Host
+
 // AddLocalization, AddTransient<T>
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,12 +18,17 @@ using IHost host = Host.CreateDefaultBuilder(args)
   })
   .Build();
 
-OutputCultures("Default cultures");
+OutputCultures("Current culture");
 
-WriteLine("en-US: English (United States) - default");
-WriteLine("da-DK: Danish (Denmark)");
-WriteLine("fr-CA: French (Canada)");
-WriteLine("fa-IR: Persian (Iran)");
+WriteLine("Example ISO culture codes:");
+WriteLine("  da-DK: Danish (Denmark)");
+WriteLine("  en-GB: English (United Kingdom)");
+WriteLine("  en-US: English (United States)");
+WriteLine("  fa-IR: Persian (Iran)");
+WriteLine("  fr-CA: French (Canada)");
+WriteLine("  fr-FR: French (France)");
+WriteLine("  he-IL: Hebrew (Israel)");
+WriteLine("  pl-PL: Polish (Poland)");
 WriteLine();
 
 Write("Enter an ISO culture code: ");
@@ -42,6 +48,7 @@ try
 catch (CultureNotFoundException)
 {
   WriteLine($"Culture code not found: {cultureCode}");
+  WriteLine("Exiting the app.");
   return;
 }
 
@@ -49,7 +56,7 @@ catch (CultureNotFoundException)
 CultureInfo.CurrentCulture = ci;
 CultureInfo.CurrentUICulture = ci;
 
-OutputCultures("After changing cultures");
+OutputCultures("After changing the current culture");
 
 PacktResources resources =
     host.Services.GetRequiredService<PacktResources>();
@@ -70,8 +77,8 @@ if (string.IsNullOrWhiteSpace(dobText))
   // sensible defaults for their culture
   dobText = ci.Name switch
     {
-      "en-US" => "1/27/1990",
-      "da-DK" or "fr-CA" => "27/1/1990",
+      "en-US" or "fr-CA" => "1/27/1990",
+      "da-DK" or "fr-FR" or "pl-PL" => "27/1/1990",
       "fa-IR" => "1990/1/27",
       _ => "1/27/1990"
     };

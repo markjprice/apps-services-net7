@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32314.265
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithTime", "WorkingWithTime\WorkingWithTime.csproj", "{76B9C71A-48AE-488B-97F0-2CC797082EB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithTime", "WorkingWithTime\WorkingWithTime.csproj", "{76B9C71A-48AE-488B-97F0-2CC797082EB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithCultures", "WorkingWithCultures\WorkingWithCultures.csproj", "{C4B6CE47-BF34-4FA8-8AAF-5546524C8B41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithCultures", "WorkingWithCultures\WorkingWithCultures.csproj", "{C4B6CE47-BF34-4FA8-8AAF-5546524C8B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithTimeZones", "WorkingWithTimeZones\WorkingWithTimeZones.csproj", "{DA0F6625-EF4C-4B39-825F-3574BF61BFDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C4B6CE47-BF34-4FA8-8AAF-5546524C8B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B6CE47-BF34-4FA8-8AAF-5546524C8B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4B6CE47-BF34-4FA8-8AAF-5546524C8B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA0F6625-EF4C-4B39-825F-3574BF61BFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0F6625-EF4C-4B39-825F-3574BF61BFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA0F6625-EF4C-4B39-825F-3574BF61BFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA0F6625-EF4C-4B39-825F-3574BF61BFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

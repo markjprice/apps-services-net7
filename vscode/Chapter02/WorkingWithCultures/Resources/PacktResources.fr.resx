@@ -10,6 +10,6 @@
     <value>Entrez votre salaire: </value>
   </data>
   <data name="PersonDetails" xml:space="preserve">
-    <value>{0} est né un {1:dddd}, a {2:N0} minutes, et gagne {3:C}</value>
+    <value>{0} est né un {1:dddd}. {0} a {2:N0} minutes. {0} gagne {3:C}</value>
   </data>
 </root>

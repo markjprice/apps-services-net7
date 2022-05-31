@@ -11,16 +11,27 @@ public class PacktResources
 
   public string? GetEnterYourNamePrompt()
   {
-    LocalizedString localizedString = localizer["EnterYourName"];
-    // localizedString.SearchedLocation
-    // e.g. WorkingWithCultures/Resources/PacktResources
-    // localizedString.ResourceNotFound e.g. false
+    string resourceStringName = "EnterYourName";
+
+    // 1. get the LocalizedString object
+    LocalizedString localizedString = localizer[resourceStringName];
+
+    // 2. check if the resource string was found
+    if (localizedString.ResourceNotFound)
+    {
+      return $"Error: resource string \"{resourceStringName}\" not found."
+        + $"\nSearch path: {localizedString.SearchedLocation}"
+        + $"\n{localizedString}";
+    }
+
+    // 3. return the found resource string
     return localizedString;
   }
 
   public string? GetEnterYourDobPrompt()
   {
     // LocalizedString has an implicit cast to string
+    // that falls back to the key if the resource string is not found
     return localizer["EnterYourDob"];
   }
 
