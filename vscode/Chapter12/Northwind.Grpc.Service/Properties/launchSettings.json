@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "Northwind.Grpc.Service": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:5031",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿@{
+  ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+  <div class="alert alert-secondary">
+    <form>
+      <input name="name" placeholder="Enter your name" />
+      <input type="submit" />
+    </form>
+    <form>
+      <input name="id" placeholder="Enter a shipper id" />
+      <input type="submit" />
+    </form>
+  </div>
+  @if (ViewData["greeting"] is not null)
+  {
+    <p class="alert alert-primary">@ViewData["greeting"]</p>
+  }
+  @if (ViewData["exception"] is not null)
+  {
+    <p class="alert alert-danger">@ViewData["exception"]</p>
+  }
+  @if (ViewData["shipper"] is not null)
+  {
+    <p class="alert alert-primary">@ViewData["shipper"]</p>
+  }
+</div>
