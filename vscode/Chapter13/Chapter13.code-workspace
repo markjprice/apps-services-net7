@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Northwind.Common"
+		},
+		{
+			"path": "Northwind.SignalR.Service.Client.Mvc"
+		},
+		{
+			"path": "Northwind.SignalR.Client.Console"
+		}
+	]
+}
