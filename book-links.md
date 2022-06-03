@@ -41,7 +41,7 @@
 - [Chapter 11 - Combining Data Sources Using GraphQL](#chapter-11---combining-data-sources-using-graphql)
 - [Chapter 12 - Building Efficient Services Using gRPC](#chapter-12---building-efficient-services-using-grpc)
 - [Chapter 13 - Broadcasting Realtime Communication Using SignalR](#chapter-13---broadcasting-realtime-communication-using-signalr)
-- [Chapter 14 - Building Nanoservices Using Azure Functions](#chapter-14---building-nanoservices-using-azure-functions)
+- [Chapter 14 - Building Serverless Services Using Azure Functions](#chapter-14---building-serverless-services-using-azure-functions)
 - [Chapter 15 - Building Websites Using ASP.NET Core](#chapter-15---building-websites-using-aspnet-core)
   - [ASP.NET versions and features](#aspnet-versions-and-features)
   - [ASP.NET Core](#aspnet-core)
@@ -350,11 +350,13 @@
 - SignalR GitHub repository: https://github.com/dotnet/aspnetcore/tree/main/src/SignalR
 - Azure SignalR Service: https://azure.microsoft.com/en-gb/services/signalr-service/
 
-# Chapter 14 - Building Nanoservices Using Azure Functions
+# Chapter 14 - Building Serverless Services Using Azure Functions
 
 - Azure Functions: https://azure.microsoft.com/en-us/services/functions/
 - Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
 - Azure serverless community library: https://www.serverlesslibrary.net/
+- Quartz.NET: https://www.quartz-scheduler.net/
+- Quartz.NET GitHub repository: https://github.com/quartznet/quartznet
 
 # Chapter 15 - Building Websites Using ASP.NET Core
 
