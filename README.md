@@ -15,8 +15,8 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 - Chapter 11 Combining Data Sources Using GraphQL
 - Chapter 12 Building Efficient Services Using gRPC
 - Chapter 13 Broadcasting Realtime Communication Using SignalR
-- Chapter 14 Building Nanoservices Using Azure Functions
-- Chapter 15 Building Websites Using ASP.NET Core
+- Chapter 14 Building Serverless Services Using Azure Functions
+- Chapter 15 Building Web User Interfaces Using ASP.NET Core
 - Chapter 16 Building Web Components Using Blazor WebAssembly
 - Chapter 17 Using Open Source Blazor Component Libraries
 - Chapter 18 Building Mobile and Desktop Apps Using .NET MAUI
