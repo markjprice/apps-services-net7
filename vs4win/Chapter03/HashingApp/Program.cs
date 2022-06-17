@@ -11,14 +11,16 @@ WriteLine();
 
 Write("Enter a new user to register: ");
 string? username = ReadLine();
+if (string.IsNullOrEmpty(username))
+{
+  username = "Bob";
+}
 
 Write($"Enter a password for {username}: ");
 string? password = ReadLine();
-
-if ((username is null) || (password is null))
+if (string.IsNullOrEmpty(password))
 {
-  WriteLine("Username or password cannot be null.");
-  return;
+  password = "Pa$$w0rd";
 }
 
 WriteLine("Registering a new user:");
@@ -35,14 +37,22 @@ while (!correctPassword)
 {
   Write("Enter a username to log in: ");
   string? loginUsername = ReadLine();
+  if (string.IsNullOrEmpty(loginUsername))
+  {
+    WriteLine("Login username cannot be empty.");
+    Write("Press Ctrl+C to end or press ENTER to continue.");
+    ReadLine();
+    continue;
+  }
 
   Write("Enter a password to log in: ");
   string? loginPassword = ReadLine();
-
-  if ((loginUsername is null) || (loginPassword is null))
+  if (string.IsNullOrEmpty(loginPassword))
   {
-    WriteLine("Login username or password cannot be null.");
-    return;
+    WriteLine("Login password cannot be empty.");
+    Write("Press Ctrl+C to end or press ENTER to continue.");
+    ReadLine();
+    continue;
   }
 
   correctPassword = Protector.CheckPassword(

@@ -17,26 +17,27 @@ WriteLine(Protector.PublicKey);
 
 if (Protector.ValidateSignature(data, signature))
 {
-  WriteLine("Correct! Signature is valid.");
+  WriteLine("Correct! Signature is valid. Data has not been manipulated.");
 }
 else
 {
-  WriteLine("Invalid signature.");
+  WriteLine("Invalid signature or the data has been manipulated.");
 }
 
-// simulate a fake signature by replacing the
+// simulate manipulated data by replacing the
 // first character with an X or Y
-string fakeSignature = signature.Replace(signature[0], 'X');
-if (fakeSignature == signature)
+string manipulatedData = data.Replace(data[0], 'X');
+if (manipulatedData == data)
 {
-  fakeSignature = signature.Replace(signature[0], 'Y');
+  manipulatedData = data.Replace(data[0], 'Y');
 }
 
-if (Protector.ValidateSignature(data, fakeSignature))
+if (Protector.ValidateSignature(manipulatedData, signature))
 {
-  WriteLine("Correct! Signature is valid.");
+  WriteLine("Correct! Signature is valid. Data has not been manipulated.");
 }
 else
 {
-  WriteLine($"Invalid signature: {fakeSignature}");
+  WriteLine("Invalid signature or manipulated data: {0}", 
+    manipulatedData);
 }

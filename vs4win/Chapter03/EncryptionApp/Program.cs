@@ -31,11 +31,9 @@ try
   string clearText = Protector.Decrypt(cipherText, password2Decrypt); 
   WriteLine($"Decrypted text: {clearText}");
 }
-catch (CryptographicException ex)
+catch (CryptographicException)
 {
-  WriteLine("{0}\nMore details: {1}",
-    arg0: "You entered the wrong password!",
-    arg1: ex.Message);
+  WriteLine("You entered the wrong password!");
 }
 catch (Exception ex)
 {

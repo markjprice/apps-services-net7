@@ -13,7 +13,8 @@ public static class Protector
   private static readonly byte[] salt =
     Encoding.Unicode.GetBytes("7BANANAS");
 
-  // iterations should be high enough to take at least 100ms to 
+  // Default iterations for Rfc2898DeriveBytes is 1000.
+  // Iterations should be high enough to take at least 100ms to 
   // generate a Key and IV on the target machine. 150,000 iterations
   // takes 139ms on my 11th Gen Intel Core i7-1165G7 @ 2.80GHz.
   private static readonly int iterations = 150_000;
@@ -30,17 +31,22 @@ public static class Protector
       Stopwatch timer = Stopwatch.StartNew();
 
       using (Rfc2898DeriveBytes pbkdf2 = new(
-        password, salt, iterations))
+        password, salt, iterations, HashAlgorithmName.SHA256))
       {
+        WriteLine("PBKDF2 algorithm: {0}, Iteration count: {1:N0}",
+          pbkdf2.HashAlgorithm, pbkdf2.IterationCount);
+
         aes.Key = pbkdf2.GetBytes(32); // set a 256-bit key
         aes.IV = pbkdf2.GetBytes(16); // set a 128-bit IV
       }
 
       timer.Stop();
 
-      WriteLine("{0:N0} milliseconds to generate Key and IV using {1:N0} iterations.",
-        arg0: timer.ElapsedMilliseconds,
-        arg1: iterations);
+      WriteLine("{0:N0} milliseconds to generate Key and IV.",
+        arg0: timer.ElapsedMilliseconds);
+
+      WriteLine("Encryption algorithm: {0}-{1}, {2} mode with {3} padding.",
+        "AES", aes.KeySize, aes.Mode, aes.Padding);
 
       using (MemoryStream ms = new())
       {
@@ -50,6 +56,11 @@ public static class Protector
             ms, transformer, CryptoStreamMode.Write))
           {
             cs.Write(plainBytes, 0, plainBytes.Length);
+
+            if (!cs.HasFlushedFinalBlock)
+            {
+              cs.FlushFinalBlock();
+            }
           }
         }
         encryptedBytes = ms.ToArray();
@@ -68,7 +79,7 @@ public static class Protector
     using (Aes aes = Aes.Create())
     {
       using (Rfc2898DeriveBytes pbkdf2 = new(
-        password, salt, iterations))
+        password, salt, iterations, HashAlgorithmName.SHA256))
       {
         aes.Key = pbkdf2.GetBytes(32);
         aes.IV = pbkdf2.GetBytes(16);
@@ -82,6 +93,11 @@ public static class Protector
             ms, aes.CreateDecryptor(), CryptoStreamMode.Write))
           {
             cs.Write(cryptoBytes, 0, cryptoBytes.Length);
+
+            if (!cs.HasFlushedFinalBlock)
+            {
+              cs.FlushFinalBlock();
+            }
           }
         }
         plainBytes = ms.ToArray();
@@ -93,7 +109,7 @@ public static class Protector
 
   private static Dictionary<string, User> Users = new();
 
-  public static User Register(string username, 
+  public static User Register(string username,
     string password, string[]? roles = null)
   {
     // generate a random salt
@@ -105,7 +121,7 @@ public static class Protector
     // generate the salted and hashed password
     string saltedhashedPassword = SaltAndHashPassword(password, saltText);
 
-    User user = new(username, saltText, 
+    User user = new(username, saltText,
       saltedhashedPassword, roles);
 
     Users.Add(user.Name, user);
@@ -190,10 +206,10 @@ public static class Protector
 
     byte[] hashedData = sha.ComputeHash(dataBytes);
     byte[] signatureBytes = FromBase64String(signature);
-    
+
     RSA rsa = RSA.Create();
     rsa.FromXmlString(PublicKey);
-    
+
     return rsa.VerifyHash(hashedData, signatureBytes,
       HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
   }
