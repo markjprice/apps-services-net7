@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Northwind.WebApi.Service"
+		},
+		{
+			"path": "Northwind.WebApi.Client.Mvc"
+		},
+		{
+			"path": "Northwind.WebApi.Client.Console"
+		}
+	]
+}
