@@ -32,7 +32,7 @@ namespace FluentTests
       names.Should().HaveCountLessThan(4, 
         "because the maximum items should be 3 or fewer");
 
-      names.Should().OnlyContain(name => name.Length <= 7);
+      names.Should().OnlyContain(name => name.Length <= 6);
     }
 
     [Fact]

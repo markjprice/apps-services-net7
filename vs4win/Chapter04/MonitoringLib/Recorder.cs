@@ -13,7 +13,7 @@ public static class Recorder
 
   public static void Start()
   {
-    // force two garbage collections to release memory that is
+    // force some garbage collections to release memory that is
     // no longer referenced but has not been released yet
     GC.Collect();
     GC.WaitForPendingFinalizers();

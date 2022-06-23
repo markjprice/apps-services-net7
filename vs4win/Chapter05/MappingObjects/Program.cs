@@ -23,7 +23,7 @@ foreach (LineItem item in cart.Items)
   WriteLine($"  {item}");
 }
 
-// confugure mappings using projections
+// configure mappings using projections
 
 MapperConfiguration config = new(cfg =>
   {

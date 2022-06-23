@@ -41,7 +41,7 @@
       }
       else
       {
-        WriteLine("Method A timed out when entering a monitor on conch.");
+        WriteLine("Method B timed out when entering a monitor on conch.");
       }
     }
     finally

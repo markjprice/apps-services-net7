@@ -7,7 +7,7 @@ using Logger log = new LoggerConfiguration()
     .CreateLogger();
 
 Log.Logger = log;
-Log.Information("The global logger has been configured");
+Log.Information("The global logger has been configured.");
 
 Log.Warning("Danger, Serilog, danger!");
 Log.Error("This is an error!");
