@@ -3,29 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32408.312
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithImages", "WorkingWithImages\WorkingWithImages.csproj", "{37DF413A-24A9-4AFD-A1E7-7FEFFDC10858}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithImages", "WorkingWithImages\WorkingWithImages.csproj", "{37DF413A-24A9-4AFD-A1E7-7FEFFDC10858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilogging", "Serilogging\Serilogging.csproj", "{164D2BD8-A76E-4298-B1CA-D7C6D2AD6574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilogging", "Serilogging\Serilogging.csproj", "{164D2BD8-A76E-4298-B1CA-D7C6D2AD6574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObjects", "MappingObjects\MappingObjects.csproj", "{FAAD7F43-531E-4A40-83F3-BA47BC77E56C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObjects", "MappingObjects\MappingObjects.csproj", "{FAAD7F43-531E-4A40-83F3-BA47BC77E56C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObjects.Models", "MappingObjects.Models\MappingObjects.Models.csproj", "{EAEF4895-945A-49FD-BB19-23FE024F47BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObjects.Models", "MappingObjects.Models\MappingObjects.Models.csproj", "{EAEF4895-945A-49FD-BB19-23FE024F47BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObjects.Tests", "MappingObjects.Tests\MappingObjects.Tests.csproj", "{7E988FA1-CD35-488D-AD83-167D965EB2FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObjects.Tests", "MappingObjects.Tests\MappingObjects.Tests.csproj", "{7E988FA1-CD35-488D-AD83-167D965EB2FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentTests", "FluentTests\FluentTests.csproj", "{D00A9A6B-E546-4CE0-B224-4D0F62D1C9C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentTests", "FluentTests\FluentTests.csproj", "{D00A9A6B-E546-4CE0-B224-4D0F62D1C9C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.Models", "FluentValidation.Models\FluentValidation.Models.csproj", "{81267FAE-0FCC-452F-8EB5-EB9D9B72846C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation.Models", "FluentValidation.Models\FluentValidation.Models.csproj", "{81267FAE-0FCC-452F-8EB5-EB9D9B72846C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.App", "FluentValidation.App\FluentValidation.App.csproj", "{A403BAA6-6160-4455-A29C-D109BF0C8921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation.App", "FluentValidation.App\FluentValidation.App.csproj", "{A403BAA6-6160-4455-A29C-D109BF0C8921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.Validators", "FluentValidation.Validators\FluentValidation.Validators.csproj", "{5A07B2D1-AB57-4729-938B-6711C02E5CBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation.Validators", "FluentValidation.Validators\FluentValidation.Validators.csproj", "{5A07B2D1-AB57-4729-938B-6711C02E5CBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingPdf.Models", "GeneratingPdf.Models\GeneratingPdf.Models.csproj", "{C75C54AB-2C69-4120-AE2E-118C244B04E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingPdf.Models", "GeneratingPdf.Models\GeneratingPdf.Models.csproj", "{C75C54AB-2C69-4120-AE2E-118C244B04E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingPdf.Document", "GeneratingPdf.Document\GeneratingPdf.Document.csproj", "{4E3E0B81-545D-41A0-BFF6-85B22556E744}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingPdf.Document", "GeneratingPdf.Document\GeneratingPdf.Document.csproj", "{4E3E0B81-545D-41A0-BFF6-85B22556E744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingPdf.App", "GeneratingPdf.App\GeneratingPdf.App.csproj", "{60F6B1E4-B52D-4239-938C-8158D0E770E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingPdf.App", "GeneratingPdf.App\GeneratingPdf.App.csproj", "{60F6B1E4-B52D-4239-938C-8158D0E770E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingObjects.Mappers", "MappingObjects.Mappers\MappingObjects.Mappers.csproj", "{8053B413-5A01-4F12-AA10-8A90D228AD8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{60F6B1E4-B52D-4239-938C-8158D0E770E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60F6B1E4-B52D-4239-938C-8158D0E770E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60F6B1E4-B52D-4239-938C-8158D0E770E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8053B413-5A01-4F12-AA10-8A90D228AD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8053B413-5A01-4F12-AA10-8A90D228AD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8053B413-5A01-4F12-AA10-8A90D228AD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8053B413-5A01-4F12-AA10-8A90D228AD8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿using AutoMapper; // MapperConfiguration, IMapper
+using MappingObjects.Mappers; // CartToSummaryMapper
 using Packt.Entities; // Customer, Cart, LineItem
 using Packt.ViewModels; // Summary
 
@@ -23,22 +24,18 @@ foreach (LineItem item in cart.Items)
   WriteLine($"  {item}");
 }
 
-// configure mappings using projections
+// get a mapper configuration for converting a Cart to a Summary
 
-MapperConfiguration config = new(cfg =>
-  {
-    cfg.CreateMap<Cart, Summary>()
-     .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => 
-        string.Format("{0} {1}", src.Customer.FirstName, src.Customer.LastName)
-      ))
-     .ForMember(dest => dest.Total, opt => opt.MapFrom(src => src.Items.Sum(item => item.UnitPrice * item.Quantity)));
-  }
-);
+MapperConfiguration config = CartToSummaryMapper.GetMapperConfiguration();
 
-// create a mapper, perform the mapping, and output the result
+// create a mapper using the configuration 
 
 IMapper mapper = config.CreateMapper();
 
+// perform the mapping
+
 Summary summary = mapper.Map<Cart, Summary>(cart);
+
+// output the result
 
 WriteLine($"Summary: {summary.FullName} spent {summary.Total}.");

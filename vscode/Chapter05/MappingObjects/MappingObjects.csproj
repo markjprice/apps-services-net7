@@ -5,7 +5,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<Using Include="System.Console" Static="true" />
@@ -17,6 +18,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\MappingObjects.Models\MappingObjects.Models.csproj" />
+		<ProjectReference Include="..\MappingObjects.Mappers\MappingObjects.Mappers.csproj" />
 	</ItemGroup>
 
 </Project>
