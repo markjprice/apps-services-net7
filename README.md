@@ -6,7 +6,7 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 - Chapter 2 Working with Data Using SQL Server
 - Chapter 3 Working with Data Using Azure Cosmos DB
 - Chapter 4 Improving Performance and Scalability Using Multitasking
-- Chapter 5 Using Popular Third Party Libraries (ImageSharp, Serilog, AutoMapper, FluentAssertions, FlientValidation, QuestPDF)
+- Chapter 5 Using Popular Third Party Libraries (ImageSharp, Serilog, AutoMapper, FluentAssertions, FluentValidation, QuestPDF)
 - Chapter 6 Controlling the Roslyn Compiler, Reflection and Expression Trees
 - Chapter 7 Handling Dates, Times, and Internationalization
 - Chapter 8 Protecting Your Data and Applications
