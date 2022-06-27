@@ -15,7 +15,7 @@
           Click="GetEmployeesAsyncButton_Click">
         Get Employees Asynchronously</Button>
       <TextBox HorizontalAlignment="Stretch" Text="Type in here" />
-      <ListBox Name="EmployeesListBox" Height="400" />
+      <ListBox Name="EmployeesListBox" Height="350" />
     </StackPanel>
   </Grid>
 </Window>

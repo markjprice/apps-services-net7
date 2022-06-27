@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomizingApp", "Randomizi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureApp", "SecureApp\SecureApp.csproj", "{D3347EA8-72FC-47DF-82D4-A601FA83F478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex02_EncryptData", "Ch03Ex02_EncryptData\Ch03Ex02_EncryptData.csproj", "{1785DDEF-73F4-4B4F-B1BC-508247381EBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch08Ex02_EncryptData", "Ch08Ex02_EncryptData\Ch08Ex02_EncryptData.csproj", "{1785DDEF-73F4-4B4F-B1BC-508247381EBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex03_DecryptData", "Ch03Ex03_DecryptData\Ch03Ex03_DecryptData.csproj", "{5ECB54D5-79BC-446B-A2B9-2BC857B3AC3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch08Ex03_DecryptData", "Ch08Ex03_DecryptData\Ch08Ex03_DecryptData.csproj", "{5ECB54D5-79BC-446B-A2B9-2BC857B3AC3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

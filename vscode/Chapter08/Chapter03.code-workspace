@@ -19,10 +19,10 @@
 			"path": "SecureApp"
 		},
 		{
-			"path": "Ch03Ex02_EncryptData"
+			"path": "Ch08Ex02_EncryptData"
 		},
 		{
-			"path": "Ch03Ex03_DecryptData"
+			"path": "Ch08Ex03_DecryptData"
 		}
 	]
 }

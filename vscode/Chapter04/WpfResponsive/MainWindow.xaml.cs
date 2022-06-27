@@ -26,6 +26,7 @@ namespace WpfResponsive
       "Data Source=.;" +
       "Initial Catalog=Northwind;" +
       "Integrated Security=true;" +
+      "Encrypt=false;" +
       "MultipleActiveResultSets=true;";
 
     private const string sql =
@@ -38,21 +39,28 @@ namespace WpfResponsive
 
       using (SqlConnection connection = new(connectionString))
       {
-        connection.Open();
-
-        SqlCommand command = new(sql, connection);
-        SqlDataReader reader = command.ExecuteReader();
-
-        while (reader.Read())
+        try
         {
-          string employee = string.Format("{0}: {1} {2}",
-            reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+          connection.Open();
 
-          EmployeesListBox.Items.Add(employee);
+          SqlCommand command = new(sql, connection);
+          SqlDataReader reader = command.ExecuteReader();
+
+          while (reader.Read())
+          {
+            string employee = string.Format("{0}: {1} {2}",
+              reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+
+            EmployeesListBox.Items.Add(employee);
+          }
+
+          reader.Close();
+          connection.Close();
         }
-
-        reader.Close();
-        connection.Close();
+        catch (Exception ex)
+        {
+          MessageBox.Show(ex.Message);
+        }
       }
       EmployeesListBox.Items.Add($"Sync: {timer.ElapsedMilliseconds:N0}ms");
     }
@@ -64,22 +72,29 @@ namespace WpfResponsive
 
       using (SqlConnection connection = new(connectionString))
       {
-        await connection.OpenAsync();
-
-        SqlCommand command = new(sql, connection);
-        SqlDataReader reader = await command.ExecuteReaderAsync();
-
-        while (await reader.ReadAsync())
+        try
         {
-          string employee = string.Format("{0}: {1} {2}",
-            await reader.GetFieldValueAsync<int>(0),
-            await reader.GetFieldValueAsync<string>(1),
-            await reader.GetFieldValueAsync<string>(2));
+          await connection.OpenAsync();
 
-          EmployeesListBox.Items.Add(employee);
+          SqlCommand command = new(sql, connection);
+          SqlDataReader reader = await command.ExecuteReaderAsync();
+
+          while (await reader.ReadAsync())
+          {
+            string employee = string.Format("{0}: {1} {2}",
+              await reader.GetFieldValueAsync<int>(0),
+              await reader.GetFieldValueAsync<string>(1),
+              await reader.GetFieldValueAsync<string>(2));
+
+            EmployeesListBox.Items.Add(employee);
+          }
+          await reader.CloseAsync();
+          await connection.CloseAsync();
         }
-        await reader.CloseAsync();
-        await connection.CloseAsync();
+        catch (Exception ex)
+        {
+          MessageBox.Show(ex.Message);
+        }
       }
       EmployeesListBox.Items.Add($"Async: {timer.ElapsedMilliseconds:N0}ms");
     }
