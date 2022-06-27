@@ -3,13 +3,13 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 
 ## Chapters
 - Chapter 1 Introducing Apps and Services with .NET
-- Chapter 2 Handling Dates, Times, and Internationalization
-- Chapter 3 Protecting Your Data and Applications
+- Chapter 2 Working with Data Using SQL Server
+- Chapter 3 Working with Data Using Azure Cosmos DB
 - Chapter 4 Improving Performance and Scalability Using Multitasking
 - Chapter 5 Using Popular Third Party Libraries (ImageSharp, Serilog, AutoMapper, FluentAssertions, FlientValidation, QuestPDF)
 - Chapter 6 Controlling the Roslyn Compiler, Reflection and Expression Trees
-- Chapter 7 Working with Data Using SQL Server
-- Chapter 8 Working with Data Using Azure Cosmos DB
+- Chapter 7 Handling Dates, Times, and Internationalization
+- Chapter 8 Protecting Your Data and Applications
 - Chapter 9 Building and Securing Web Services with Minimal APIs
 - Chapter 10 Exposing Data via the Web Using OData
 - Chapter 11 Combining Data Sources Using GraphQL (using ChilliCream's Hot Chocolate)
