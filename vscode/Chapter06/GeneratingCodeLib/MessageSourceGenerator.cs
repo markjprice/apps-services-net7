@@ -1,5 +1,5 @@
-﻿// [Generator], ISourceGenerator, GeneratorExecutionContext
-using Microsoft.CodeAnalysis; // GeneratorInitializationContext
+﻿using Microsoft.CodeAnalysis; // [Generator], GeneratorInitializationContext
+                              // ISourceGenerator, GeneratorExecutionContext
 
 namespace Packt.Shared;
 
@@ -16,7 +16,7 @@ static partial class {mainMethod.ContainingType.Name}
 {{
   static partial void Message(string message)
   {{
-    System.Console.WriteLine($""Generator2 says: '{{message}}'"");
+    System.Console.WriteLine($""Generator says: '{{message}}'"");
   }}
 }}
 ";
