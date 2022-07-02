@@ -9,25 +9,25 @@
   - [C# proposals being worked on](#c-proposals-being-worked-on)
   - [C# language](#c-language)
   - [Help and learning](#help-and-learning)
-- [Chapter 2 - Handling Dates, Times, and Internationalization](#chapter-2---handling-dates-times-and-internationalization)
-  - [Dates and times](#dates-and-times)
-  - [Internationalization](#internationalization)
-- [Chapter 3 - Protecting Your Data and Applications](#chapter-3---protecting-your-data-and-applications)
+- [Chapter 2 - Working with Data Using SQL Server](#chapter-2---working-with-data-using-sql-server)
+  - [Microsoft SQL Server](#microsoft-sql-server)
+  - [EF Core](#ef-core)
+  - [EF Core database providers](#ef-core-database-providers)
+  - [EF Core models](#ef-core-models)
+  - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
+- [Chapter 3 - Working with Data Using Azure Cosmos DB](#chapter-3---working-with-data-using-azure-cosmos-db)
+  - [NoSQL data stores](#nosql-data-stores)
+  - [Azure Cosmos DB](#azure-cosmos-db)
 - [Chapter 4 - Improving Performance and Scalability Using Multitasking](#chapter-4---improving-performance-and-scalability-using-multitasking)
 - [Chapter 5 - Using Popular Third Party Libraries](#chapter-5---using-popular-third-party-libraries)
   - [Working with images](#working-with-images)
   - [Others](#others)
 - [Chapter 6 - Controlling the Roslyn Compiler, Reflection and Expression Trees](#chapter-6---controlling-the-roslyn-compiler-reflection-and-expression-trees)
   - [Assemblies and reflection](#assemblies-and-reflection)
-- [Chapter 7 - Working with Data Using SQL Server](#chapter-7---working-with-data-using-sql-server)
-  - [Microsoft SQL Server](#microsoft-sql-server)
-  - [Legacy EF 6](#legacy-ef-6)
-  - [EF Core](#ef-core)
-  - [EF Core database providers](#ef-core-database-providers)
-  - [EF Core models](#ef-core-models)
-  - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
-- [Chapter 8 - Working with Data Using Azure Cosmos DB](#chapter-8---working-with-data-using-azure-cosmos-db)
-  - [NoSQL data stores](#nosql-data-stores)
+- [Chapter 7 - Handling Dates, Times, and Internationalization](#chapter-7---handling-dates-times-and-internationalization)
+  - [Dates and times](#dates-and-times)
+  - [Internationalization](#internationalization)
+- [Chapter 8 - Protecting Your Data and Applications](#chapter-8---protecting-your-data-and-applications)
 - [Chapter 9 - Securing Web Services](#chapter-9---securing-web-services)
   - [Web service technologies](#web-service-technologies)
   - [Web Service design](#web-service-design)
@@ -160,58 +160,7 @@
 - .NET Videos: https://dotnet.microsoft.com/learn/videos
 - Microsoft Channel 9 – .NET Videos: https://channel9.msdn.com/Search?term=.net&lang-en=true
 
-# Chapter 2 - Handling Dates, Times, and Internationalization
-
-## Dates and times
-- Date, Time, and Time Zone Enhancements in .NET 6: https://devblogs.microsoft.com/dotnet/date-time-and-time-zone-enhancements-in-net-6/
-- .NET 6: Date and Time Structures: https://www.infoq.com/news/2021/04/Net6-Date-Time/
-- Noda Time: A better date and time API for .NET: https://nodatime.org/
-
-## Internationalization
-- Globalizing and localizing .NET applications: https://docs.microsoft.com/en-us/dotnet/standard/globalization-localization/
-- Time zones: https://devblogs.microsoft.com/dotnet/cross-platform-time-zones-with-net-core/
-
-# Chapter 3 - Protecting Your Data and Applications
-
-- Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
-- Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
-- The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
-- The RSA algorithm is based on the factorization of large integers: http://mathworld.wolfram.com/RSAEncryption.html
-- Key Security Concepts: https://docs.microsoft.com/en-us/dotnet/standard/security/key-security-concepts
-- Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
-- Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
-
-# Chapter 4 - Improving Performance and Scalability Using Multitasking
-
-- Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
-- Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
-- Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
-- Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
-- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
-- Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
-- await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
-- Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
-- Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
-
-# Chapter 5 - Using Popular Third Party Libraries
-
-## Working with images
-- ImageSharp: https://github.com/SixLabors/ImageSharp
-
-## Others
-- AutoMapper, a convention-based object-object mapper: https://automapper.org
-
-# Chapter 6 - Controlling the Roslyn Compiler, Reflection and Expression Trees
-
-## Assemblies and reflection
-- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
-- Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
-- Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
-- Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
-- Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
-- Extending Metadata Using Attributes: https://docs.microsoft.com/en-us/dotnet/standard/attributes/
-
-# Chapter 7 - Working with Data Using SQL Server
+# Chapter 2 - Working with Data Using SQL Server
 
 ## Microsoft SQL Server
 - Try SQL Server on-premises or in the cloud: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
@@ -220,9 +169,6 @@
 - Quickstart: Connect and query an Azure SQL Database or an Azure Managed Instance using SQL Server Management Studio (SSMS): https://docs.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-azure-sql
 - Use Visual Studio Code to create and run Transact-SQL scripts: https://docs.microsoft.com/en-us/sql/tools/visual-studio-code/sql-server-develop-use-vscode
 - .NET Interactive with SQL!| .NET Notebooks in Visual Studio Code: https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/
-
-## Legacy EF 6
-- Entity Framework 6.3 and its .NET Core 3.0 and later support: https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/
 
 ## EF Core
 - EF Core documentation: https://docs.microsoft.com/en-us/ef/core/
@@ -255,11 +201,77 @@
 - Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
 - Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
 
-# Chapter 8 - Working with Data Using Azure Cosmos DB
+# Chapter 3 - Working with Data Using Azure Cosmos DB
 
 ## NoSQL data stores
-- Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
 - Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
+
+## Azure Cosmos DB
+- Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+- Azure Cosmos DB .NET SDK v3 for SQL API: Download and release notes: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/sql-api-sdk-dotnet-standard
+- Data modeling in Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/modeling-data
+- How to model and partition data on Azure Cosmos DB using a real-world example: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-model-partition-example
+- Getting started with SQL queries: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/sql-query-getting-started
+- Azure Cosmos DB query cheat sheets: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/query-cheat-sheet
+- Stored procedures, triggers, and user-defined functions: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/stored-procedures-triggers-udfs
+- Manage consistency levels in Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-manage-consistency
+- Create a container in Azure Cosmos DB SQL API: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-create-container
+- Query an Azure Cosmos container: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-query-container
+- Best practices for Azure Cosmos DB .NET SDK: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/best-practice-dotnet
+- Diagnose and troubleshoot issues when using Azure Cosmos DB .NET SDK: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/troubleshoot-dot-net-sdk
+- Migrate one-to-few relational data into Azure Cosmos DB SQL API account: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/migrate-relational-to-cosmos-db-sql-api
+- Frequently asked questions about different APIs in Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/faq
+
+# Chapter 4 - Improving Performance and Scalability Using Multitasking
+
+- Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
+- Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
+- Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
+- Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
+- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
+- Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
+- await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
+- Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
+- Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
+
+# Chapter 5 - Using Popular Third Party Libraries
+
+## Working with images
+- ImageSharp: https://github.com/SixLabors/ImageSharp
+
+## Others
+- AutoMapper, a convention-based object-object mapper: https://automapper.org
+
+# Chapter 6 - Controlling the Roslyn Compiler, Reflection and Expression Trees
+
+## Assemblies and reflection
+- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
+- Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
+- Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
+- Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
+- Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
+- Extending Metadata Using Attributes: https://docs.microsoft.com/en-us/dotnet/standard/attributes/
+
+# Chapter 7 - Handling Dates, Times, and Internationalization
+
+## Dates and times
+- Date, Time, and Time Zone Enhancements in .NET 6: https://devblogs.microsoft.com/dotnet/date-time-and-time-zone-enhancements-in-net-6/
+- .NET 6: Date and Time Structures: https://www.infoq.com/news/2021/04/Net6-Date-Time/
+- Noda Time: A better date and time API for .NET: https://nodatime.org/
+
+## Internationalization
+- Globalizing and localizing .NET applications: https://docs.microsoft.com/en-us/dotnet/standard/globalization-localization/
+- Time zones: https://devblogs.microsoft.com/dotnet/cross-platform-time-zones-with-net-core/
+
+# Chapter 8 - Protecting Your Data and Applications
+
+- Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
+- Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
+- The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
+- The RSA algorithm is based on the factorization of large integers: http://mathworld.wolfram.com/RSAEncryption.html
+- Key Security Concepts: https://docs.microsoft.com/en-us/dotnet/standard/security/key-security-concepts
+- Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
+- Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
 # Chapter 9 - Securing Web Services
 
