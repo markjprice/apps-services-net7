@@ -4,9 +4,12 @@ using WorkingWithEFCore.Models; // Northwind
 string server =
   // "."; // SQL Server for Windows
   // @".\net7book"; // SQL Server for Windows
-  "tcp:apps-services-net7.database.windows.net,1433"; // Azure SQL Database
+  // "tcp:apps-services-net7.database.windows.net,1433"; // Azure SQL Database
+  "tcp:127.0.0.1,1433"; // Azure SQL Edge
 
-string username = "markjprice"; // change to your username
+// to use SQL authentication
+string username = "sa"; // Azure SQL Edge
+// string username = "markjprice"; // change to your username
 
 Write("Enter your SQL Server password: ");
 string? password = ReadLine();
@@ -19,12 +22,19 @@ if (password == null)
 string connectionString =
   $"Server={server};" +
   "Initial Catalog=Northwind;" +
+
+  // to use SQL authentication
   "Persist Security Info=False;" +
   $"User ID={username};" +
   $"Password={password};" +
-  "MultipleActiveResultSets=False;" +
+
+  // to use Windows Authentication
+  // "Integrated Security=True;"
+
+  // other options
+  "MultipleActiveResultSets=True;" +
   "Encrypt=True;" +
-  "TrustServerCertificate=False;" +
+  "TrustServerCertificate=True;" +
   "Connection Timeout=30;";
 
 DbContextOptionsBuilder<Northwind> builder = new();
