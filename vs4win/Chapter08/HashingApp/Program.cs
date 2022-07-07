@@ -40,7 +40,7 @@ while (!correctPassword)
   if (string.IsNullOrEmpty(loginUsername))
   {
     WriteLine("Login username cannot be empty.");
-    Write("Press Ctrl+C to end or press ENTER to continue.");
+    Write("Press Ctrl+C to end or press ENTER to retry.");
     ReadLine();
     continue;
   }
@@ -50,7 +50,7 @@ while (!correctPassword)
   if (string.IsNullOrEmpty(loginPassword))
   {
     WriteLine("Login password cannot be empty.");
-    Write("Press Ctrl+C to end or press ENTER to continue.");
+    Write("Press Ctrl+C to end or press ENTER to retry.");
     ReadLine();
     continue;
   }
