@@ -9,17 +9,17 @@
   - [C# proposals being worked on](#c-proposals-being-worked-on)
   - [C# language](#c-language)
   - [Help and learning](#help-and-learning)
-- [Chapter 2 - Working with Data Using SQL Server](#chapter-2---working-with-data-using-sql-server)
+- [Chapter 2 - Managing Relational Data Using SQL Server](#chapter-2---managing-relational-data-using-sql-server)
   - [Microsoft SQL Server](#microsoft-sql-server)
   - [EF Core](#ef-core)
   - [EF Core database providers](#ef-core-database-providers)
   - [EF Core models](#ef-core-models)
   - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
-- [Chapter 3 - Working with Data Using Azure Cosmos DB](#chapter-3---working-with-data-using-azure-cosmos-db)
+- [Chapter 3 - Managing NoSQL Data Using Azure Cosmos DB](#chapter-3---managing-nosql-data-using-azure-cosmos-db)
   - [NoSQL data stores](#nosql-data-stores)
   - [Azure Cosmos DB](#azure-cosmos-db)
 - [Chapter 4 - Improving Performance and Scalability Using Multitasking](#chapter-4---improving-performance-and-scalability-using-multitasking)
-- [Chapter 5 - Using Popular Third Party Libraries](#chapter-5---using-popular-third-party-libraries)
+- [Chapter 5 - Using Popular Third-Party Libraries](#chapter-5---using-popular-third-party-libraries)
   - [Working with images](#working-with-images)
   - [Others](#others)
 - [Chapter 6 - Controlling the Roslyn Compiler, Reflection and Expression Trees](#chapter-6---controlling-the-roslyn-compiler-reflection-and-expression-trees)
@@ -28,7 +28,7 @@
   - [Dates and times](#dates-and-times)
   - [Internationalization](#internationalization)
 - [Chapter 8 - Protecting Your Data and Applications](#chapter-8---protecting-your-data-and-applications)
-- [Chapter 9 - Securing Web Services](#chapter-9---securing-web-services)
+- [Chapter 9 - Building and Securing Web Services Using Minimal APIs](#chapter-9---building-and-securing-web-services-using-minimal-apis)
   - [Web service technologies](#web-service-technologies)
   - [Web Service design](#web-service-design)
   - [Web service routing](#web-service-routing)
@@ -39,19 +39,12 @@
   - [Health checks and reliable web services](#health-checks-and-reliable-web-services)
 - [Chapter 10 - Exposing Data via the Web Using OData](#chapter-10---exposing-data-via-the-web-using-odata)
 - [Chapter 11 - Combining Data Sources Using GraphQL](#chapter-11---combining-data-sources-using-graphql)
-- [Chapter 12 - Building Efficient Services Using gRPC](#chapter-12---building-efficient-services-using-grpc)
+- [Chapter 12 - Building Efficient Microservices Using gRPC](#chapter-12---building-efficient-microservices-using-grpc)
 - [Chapter 13 - Broadcasting Realtime Communication Using SignalR](#chapter-13---broadcasting-realtime-communication-using-signalr)
-- [Chapter 14 - Building Serverless Services Using Azure Functions](#chapter-14---building-serverless-services-using-azure-functions)
-- [Chapter 15 - Building Websites Using ASP.NET Core](#chapter-15---building-websites-using-aspnet-core)
-  - [ASP.NET versions and features](#aspnet-versions-and-features)
+- [Chapter 14 - Building Serverless Nanoservices Using Azure Functions](#chapter-14---building-serverless-nanoservices-using-azure-functions)
+- [Chapter 15 - Building Web User Interfaces Using ASP.NET Core](#chapter-15---building-web-user-interfaces-using-aspnet-core)
   - [ASP.NET Core](#aspnet-core)
-  - [Razor Pages and layouts](#razor-pages-and-layouts)
-  - [Endpoint routing](#endpoint-routing)
-  - [Setting up and configuring](#setting-up-and-configuring)
-  - [Controllers](#controllers)
-  - [Models](#models)
-  - [Views](#views)
-  - [Miscellaneous](#miscellaneous)
+  - [Razor views and layouts](#razor-views-and-layouts)
 - [Chapter 16 - Building Web Components Using Blazor WebAssembly](#chapter-16---building-web-components-using-blazor-webassembly)
   - [Blazor hosting models](#blazor-hosting-models)
   - [Blazor components](#blazor-components)
@@ -60,10 +53,7 @@
   - [Blazor resources](#blazor-resources)
 - [Chapter 18 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-18---building-mobile-and-desktop-apps-using-net-maui)
 - [Chapter 19 - Implementing .NET MAUI Mobile Features](#chapter-19---implementing-net-maui-mobile-features)
-- [Chapter 20 - Introducing the Survey Project](#chapter-20---introducing-the-survey-project)
-- [Chapter 21 - Building the Survey Services](#chapter-21---building-the-survey-services)
-- [Chapter 22 - Building the Survey Taking Website](#chapter-22---building-the-survey-taking-website)
-- [Chapter 23 - Building the Survey Analytics App](#chapter-23---building-the-survey-analytics-app)
+- [Chapter 20 - Introducing the Survey Project Challenge](#chapter-20---introducing-the-survey-project-challenge)
 - [Epilogue](#epilogue)
   - [Next steps on your C# and .NET learning journey](#next-steps-on-your-c-and-net-learning-journey)
   - [Learn from other Packt books](#learn-from-other-packt-books)
@@ -160,7 +150,7 @@
 - .NET Videos: https://dotnet.microsoft.com/learn/videos
 - Microsoft Channel 9 – .NET Videos: https://channel9.msdn.com/Search?term=.net&lang-en=true
 
-# Chapter 2 - Working with Data Using SQL Server
+# Chapter 2 - Managing Relational Data Using SQL Server
 
 ## Microsoft SQL Server
 - Try SQL Server on-premises or in the cloud: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
@@ -201,7 +191,7 @@
 - Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
 - Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
 
-# Chapter 3 - Working with Data Using Azure Cosmos DB
+# Chapter 3 - Managing NoSQL Data Using Azure Cosmos DB
 
 ## NoSQL data stores
 - Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
@@ -234,7 +224,7 @@
 - Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
 - Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
 
-# Chapter 5 - Using Popular Third Party Libraries
+# Chapter 5 - Using Popular Third-Party Libraries
 
 ## Working with images
 - ImageSharp: https://github.com/SixLabors/ImageSharp
@@ -273,7 +263,7 @@
 - Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
 - Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
-# Chapter 9 - Securing Web Services
+# Chapter 9 - Building and Securing Web Services Using Minimal APIs
 
 ## Web service technologies
 - Media types: http://en.wikipedia.org/wiki/Media_type
@@ -348,7 +338,7 @@
 - Getting started with GraphQL and HotChocolate: https://docs.microsoft.com/en-us/shows/on-net/getting-started-with-hotchocolate
 - Say hello to Hot Chocolate 12!: https://chillicream.com/blog/2021/09/27/hot-chocolate-12
 
-# Chapter 12 - Building Efficient Services Using gRPC
+# Chapter 12 - Building Efficient Microservices Using gRPC
 
 - gRPC: https://grpc.io/
 - gRPC - Architecting Cloud Native .NET Applications for Azure: https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/grpc
@@ -362,7 +352,7 @@
 - SignalR GitHub repository: https://github.com/dotnet/aspnetcore/tree/main/src/SignalR
 - Azure SignalR Service: https://azure.microsoft.com/en-gb/services/signalr-service/
 
-# Chapter 14 - Building Serverless Services Using Azure Functions
+# Chapter 14 - Building Serverless Nanoservices Using Azure Functions
 
 - Azure Functions: https://azure.microsoft.com/en-us/services/functions/
 - Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
@@ -370,71 +360,23 @@
 - Quartz.NET: https://www.quartz-scheduler.net/
 - Quartz.NET GitHub repository: https://github.com/quartznet/quartznet
 
-# Chapter 15 - Building Websites Using ASP.NET Core
-
-## ASP.NET versions and features
-- ASP.NET Core 1.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-0/
-- ASP.NET Core 1.1 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-1/
-- ASP.NET Core 2.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-2-0/
-- ASP.NET Core 2.1 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-2-1-0-now-available/
-- ASP.NET Core 2.2 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-2-2-available-today/
-- ASP.NET Core 3.0 announcement: https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/
-- ASP.NET Core 3.1 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/
-- Blazor WebAssembly announcement: https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/
-- ASP.NET Core 5.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/
-- Announcing ASP.NET Core in .NET 6: https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/
+# Chapter 15 - Building Web User Interfaces Using ASP.NET Core
 
 ## ASP.NET Core
 - ASP.NET Core fundamentals: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/
-- Static files in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files
-- HttpContext class: https://docs.microsoft.com/en-us/dotnet/api/system.web.httpcontext
-- Kestrel web server: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
+- Overview of ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/overview
 - Free TLS/SSL certificates: https://letsencrypt.org
-- ASP.NET Core hosting environments: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments
 
-## Razor Pages and layouts
+## Razor views and layouts
 - Razor syntax reference for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor
+- HtmlHelper class: https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.htmlhelper
+- Views in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview
 - Layout in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout
 - Tag Helpers in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro
 - ASP.NET Core Razor Pages with EF Core: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro
 - Registering a database context for use as a dependency service: https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext#using-dbcontext-with-dependency-injection
 - The `<partial>` tag helper: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/partial-tag-helper
-
-## Endpoint routing
-- Simple examples of Run, Map, and Use: https://www.vaughanreid.com/2020/05/using-in-line-middleware-in-asp-net-core/
-- Automatically visualize your endpoints: https://andrewlock.net/visualizing-asp-net-core-endpoints-using-graphvizonline-and-the-dot-language/
-- Configuring the HTTP pipeline with middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware
-- DEEP DIVE: HOW IS THE ASP.NET CORE MIDDLEWARE PIPELINE BUILT? https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipeline-built
-
-## Setting up and configuring
-- dotnet new templates: https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new
-- Overview of ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/overview
-- Default configuration of web hosts: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host
-- Dependency injection for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
-- Configuring middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
-- Announcing YARP 1.0 Release: https://devblogs.microsoft.com/dotnet/announcing-yarp-1-0-release/
-
-## Controllers
-- Handle requests with controllers in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/actions
-- Response caching: https://docs.microsoft.com/en-us/aspnet/core/performance/caching/response
-- How cache busting using query strings works: https://stackoverflow.com/questions/9692665/cache-busting-via-params
-
-## Models
-- Model Binding in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding
-- Create your own model binders by implementing the IModelBinder interface: https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/custom-model-binding
-- Model validation: https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation
-- Tutorial: Get started with EF Core in an ASP.NET MVC web app: https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro
-
-## Views
-- HtmlHelper class: https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.htmlhelper
-- Views in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview
 - Why it is good to put <script> elements at the bottom of the <body>: https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
-
-## Miscellaneous
-- How to unit test controllers: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing
-- Filters for cross-concern functionality: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters
-- Free stock photos for commercial use with no attribution: https://www.pexels.com/
-- Images of eight categories: https://github.com/markjprice/cs9dotnet5/tree/master/Assets/Categories
 
 # Chapter 16 - Building Web Components Using Blazor WebAssembly
 
@@ -442,7 +384,6 @@
 - Blazor: https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
 - Official list of supported Blazor platforms: https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms
 - Blazor hosting models: https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models
-- Blazor Mobile Bindings: https://devblogs.microsoft.com/aspnet/mobile-blazor-bindings-experiment/
 - Blazor Hybrid apps: https://devblogs.microsoft.com/aspnet/hybrid-blazor-apps-in-mobile-blazor-bindings-july-update/
 
 ## Blazor components
@@ -483,13 +424,7 @@
 
 - Xamarin.Essentials 1.7 and introducing .NET MAUI Essentials: https://devblogs.microsoft.com/xamarin/xamarin-essentials-1-7-and-introducing-net-maui-essentials/
 
-# Chapter 20 - Introducing the Survey Project
-
-# Chapter 21 - Building the Survey Services
-
-# Chapter 22 - Building the Survey Taking Website
-
-# Chapter 23 - Building the Survey Analytics App
+# Chapter 20 - Introducing the Survey Project Challenge
 
 # Epilogue
 
