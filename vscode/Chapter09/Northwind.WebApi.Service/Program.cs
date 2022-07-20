@@ -63,6 +63,14 @@ builder.Services.AddHttpLogging(options =>
 
 var app = builder.Build();
 
+using (IServiceScope scope = app.Services.CreateScope())
+{
+  IClientPolicyStore clientPolicyStore = scope.ServiceProvider
+    .GetRequiredService<IClientPolicyStore>();
+
+  await clientPolicyStore.SeedAsync();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -101,8 +109,7 @@ app.MapGet("api/products", (
     operation.Summary = "Get in-stock products that are not discontinued.";
     return operation;
   })
-  .Produces<Product[]>(StatusCodes.Status200OK)
-  .Produces(StatusCodes.Status404NotFound);
+  .Produces<Product[]>(StatusCodes.Status200OK);
 
 app.MapGet("api/products/outofstock", ([FromServices] NorthwindContext db) =>
   db.Products.Where(product =>
@@ -133,7 +140,7 @@ app.MapGet("api/products/{name}", (
   [FromServices] NorthwindContext db,
   [FromRoute] string name) =>
     db.Products.Where(p => p.ProductName.Contains(name)))
-  .WithName("GetProductByName")
+  .WithName("GetProductsByName")
   .WithOpenApi()
   .Produces<Product[]>(StatusCodes.Status200OK)
   .RequireCors(policyName: northwindMvc);
@@ -145,7 +152,8 @@ app.MapPost("api/products", async (
   db.Products.Add(product);
   await db.SaveChangesAsync();
   return Results.Created($"api/products/{product.ProductId}", product);
-}).WithOpenApi();
+}).WithOpenApi()
+  .Produces<Product>(StatusCodes.Status201Created);
 
 app.MapPut("api/products/{id:int}", async (
   [FromRoute] int id,

@@ -22,13 +22,14 @@ namespace Northwind.WebApi.Client.Mvc.Controllers
       return View();
     }
 
-    public async Task<IActionResult> Products(string? id)
+    [Route("home/products/{name?}")]
+    public async Task<IActionResult> Products(string? name)
     {
       HttpClient client = clientFactory.CreateClient(
         name: "Northwind.WebApi.Service");
 
       HttpRequestMessage request = new(
-        method: HttpMethod.Get, requestUri: $"api/products/{id}");
+        method: HttpMethod.Get, requestUri: $"api/products/{name}");
 
       HttpResponseMessage response = await client.SendAsync(request);
 
