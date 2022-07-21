@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
 
-namespace Northwind.OData.Controllers;
+namespace Northwind.OData.Services.Controllers;
 
-public class SuppliersController : ODataController
+public class CustomersController : ODataController
 {
   protected readonly NorthwindContext db;
 
-  public SuppliersController(NorthwindContext db)
+  public CustomersController(NorthwindContext db)
   {
     this.db = db;
   }
@@ -17,12 +17,13 @@ public class SuppliersController : ODataController
   [EnableQuery]
   public IActionResult Get()
   {
-    return Ok(db.Suppliers);
+    return Ok(db.Customers);
   }
 
   [EnableQuery]
-  public IActionResult Get(int key)
+  public IActionResult Get(string key)
   {
-    return Ok(db.Suppliers.Find(key));
+    return Ok(db.Customers.Where(
+      customer => customer.CustomerId == key));
   }
 }

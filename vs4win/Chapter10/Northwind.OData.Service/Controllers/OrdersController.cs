@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
 
-namespace Northwind.OData.Controllers;
+namespace Northwind.OData.Services.Controllers;
 
 public class OrdersController : ODataController
 {
@@ -23,6 +23,7 @@ public class OrdersController : ODataController
   [EnableQuery]
   public IActionResult Get(int key)
   {
-    return Ok(db.Orders.Find(key));
+    return Ok(db.Orders.Where(
+      order => order.OrderId == key));
   }
 }

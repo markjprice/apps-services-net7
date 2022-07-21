@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
 
-namespace Northwind.OData.Controllers;
+namespace Northwind.OData.Services.Controllers;
 
 public class ProductsController : ODataController
 {
@@ -25,15 +25,22 @@ public class ProductsController : ODataController
   public IActionResult Get(int key, string version = "1")
   {
     Console.WriteLine($"*** ProductsController version {version}.");
-    Product? p = db.Products.Find(key);
-    if (p is null)
+
+    IQueryable<Product> products = db.Products.Where(
+      product => product.ProductId == key);
+
+    Product? p = products.FirstOrDefault();
+
+    if ((products is null) || (p is null))
     {
       return NotFound($"Product with id {key} not found.");
     }
+
     if (version == "2")
     {
       p.ProductName += " version 2.0";
     }
+
     return Ok(p);
   }
 

@@ -9,12 +9,12 @@
     }
   },
   "profiles": {
-    "Northwind.OData": {
+    "Northwind.OData.Services": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:5004",
+      "applicationUrl": "https://localhost:5101",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
