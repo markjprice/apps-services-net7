@@ -1,13 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "WorkingWithTime"
+			"path": "WorkingWithSqlClient"
 		},
 		{
-			"path": "WorkingWithCultures"
+			"path": "WorkingWithEFCore"
 		},
 		{
-			"path": "WorkingWithTimeZones"
+			"path": "Northwind.Common.EntityModels.SqlServer"
+		},
+		{
+			"path": "Northwind.Common.DataContext.SqlServer"
+		},
+		{
+			"path": "Northwind.Common.EntityModels.Tests"
 		}
 	]
 }
