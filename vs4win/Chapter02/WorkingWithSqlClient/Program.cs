@@ -29,7 +29,7 @@ string connectionString =
   $"Password={password};" +
 
   // to use Windows Authentication
-  // "Integrated Security=True;"
+  // "Integrated Security=True;" +
 
   // other options
   "MultipleActiveResultSets=True;" +
