@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Northwind.BlazorLibraries\\Client"
+		},
+		{
+			"path": "Northwind.BlazorLibraries\\Server"
+		},
+		{
+			"path": "Northwind.BlazorLibraries\\Shared"
+		}
+	]
+}
