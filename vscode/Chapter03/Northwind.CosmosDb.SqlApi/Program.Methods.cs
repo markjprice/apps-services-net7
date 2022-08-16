@@ -11,7 +11,7 @@ partial class Program
   // to use Azure Cosmos DB in the local emulator
   private static string endpointUri = "https://localhost:8081/";
   private static string primaryKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
-
+  
   /* 
   // to use Azure Cosmos DB in the cloud
   private static string account = "apps-services-net7"; // use your account
@@ -76,8 +76,11 @@ partial class Program
         ContainerProperties properties = await container.ReadContainerAsync();
         WriteLine($"  PartitionKeyPath: {properties.PartitionKeyPath}");
         WriteLine($"  LastModified: {properties.LastModified}");
-        WriteLine($"  IndexingPolicy.IndexingMode: {properties.IndexingPolicy.IndexingMode}");
-        WriteLine($"  IndexingPolicy.IncludedPaths: {properties.IndexingPolicy.IncludedPaths}");
+        WriteLine("  IndexingPolicy.IndexingMode: {0}",
+          arg0: properties.IndexingPolicy.IndexingMode);
+        WriteLine("  IndexingPolicy.IncludedPaths: {0}",
+          arg0: string.Join(",", properties.IndexingPolicy
+            .IncludedPaths.Select(path => path.Path)));
       }
     }
     catch (HttpRequestException ex)
