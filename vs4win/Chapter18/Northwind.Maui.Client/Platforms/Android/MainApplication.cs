@@ -3,7 +3,7 @@ using Android.Runtime;
 
 namespace Northwind.Maui.Client;
 
-[Application(UsesCleartextTraffic = true)]
+[Application]
 public class MainApplication : MauiApplication
 {
 	public MainApplication(IntPtr handle, JniHandleOwnership ownership)

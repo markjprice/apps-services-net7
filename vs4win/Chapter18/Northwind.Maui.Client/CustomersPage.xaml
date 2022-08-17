@@ -5,13 +5,15 @@
              Title="Customers">
 
   <VerticalStackLayout Spacing="15" Padding="20">
-    <HorizontalStackLayout>
+    <HorizontalStackLayout Spacing="10">
       <Label Text="Customers" FontSize="Title" />
       <Button Text="Add" Clicked="Add_Clicked" HorizontalOptions="End" />
     </HorizontalStackLayout>
+    <Label x:Name="InfoLabel" />
+    <Label x:Name="ErrorLabel" IsVisible="false" />
     <ListView ItemsSource="{Binding .}" 
-            VerticalOptions="StartAndExpand" 
-            HorizontalOptions="StartAndExpand" 
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" 
             IsPullToRefreshEnabled="True" 
             ItemTapped="Customer_Tapped" 
             Refreshing="Customers_Refreshing">

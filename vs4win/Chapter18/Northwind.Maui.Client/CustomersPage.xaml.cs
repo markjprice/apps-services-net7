@@ -5,7 +5,7 @@ namespace Northwind.Maui.Client;
 
 public partial class CustomersPage : ContentPage
 {
-	public CustomersPage()
+  public CustomersPage()
 	{
 		InitializeComponent();
 
@@ -15,8 +15,11 @@ public partial class CustomersPage : ContentPage
     {
       HttpClient client = new()
       {
-        BaseAddress = new Uri("http://localhost:5182/")
+        BaseAddress = new Uri(DeviceInfo.Platform == DevicePlatform.Android ?
+          "http://10.0.2.2:5182" : "http://localhost:5182")
       };
+
+      InfoLabel.Text = $"BaseAddress: {client.BaseAddress}";
 
       client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/json"));
@@ -24,7 +27,7 @@ public partial class CustomersPage : ContentPage
       HttpResponseMessage response = client
         .GetAsync("api/customers").Result;
 
-      //response.EnsureSuccessStatusCode();
+      response.EnsureSuccessStatusCode();
 
       IEnumerable<CustomerDetailViewModel> customersFromService =
         response.Content.ReadFromJsonAsync
@@ -36,8 +39,10 @@ public partial class CustomersPage : ContentPage
         viewModel.Add(c);
       }
     }
-    catch (Exception)
+    catch (Exception ex)
     {
+      ErrorLabel.Text = ex.Message + "\nUsing sample data instead.";
+      ErrorLabel.IsVisible = true;
 
       viewModel.AddSampleData();
     }

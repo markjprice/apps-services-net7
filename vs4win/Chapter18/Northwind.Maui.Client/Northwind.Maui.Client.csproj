@@ -38,6 +38,7 @@
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 		<MauiImage Include="Resources\Images\card_index_3d.png" />
 		<MauiImage Include="Resources\Images\cityscape_3d.png" />
@@ -46,8 +47,7 @@
 		<MauiImage Include="Resources\Images\euro_banknote_3d.png" />
 		<MauiImage Include="Resources\Images\file_cabinet_3d.png" />
 		<MauiImage Include="Resources\Images\identification_card_3d.png" />
-		<MauiImage Include=
-		  "Resources\Images\magnifying_glass_tilted_left_3d.png" />
+		<MauiImage Include="Resources\Images\magnifying_glass_tilted_left_3d.png" />
 		<MauiImage Include="Resources\Images\wind_face_3d.png" />
 
 		<!-- Custom Fonts -->
@@ -55,6 +55,10 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
