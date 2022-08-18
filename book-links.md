@@ -40,7 +40,7 @@
 - [Chapter 10 - Exposing Data via the Web Using OData](#chapter-10---exposing-data-via-the-web-using-odata)
 - [Chapter 11 - Combining Data Sources Using GraphQL](#chapter-11---combining-data-sources-using-graphql)
 - [Chapter 12 - Building Efficient Microservices Using gRPC](#chapter-12---building-efficient-microservices-using-grpc)
-- [Chapter 13 - Broadcasting Realtime Communication Using SignalR](#chapter-13---broadcasting-realtime-communication-using-signalr)
+- [Chapter 13 - Broadcasting Real-Time Communication Using SignalR](#chapter-13---broadcasting-real-time-communication-using-signalr)
 - [Chapter 14 - Building Serverless Nanoservices Using Azure Functions](#chapter-14---building-serverless-nanoservices-using-azure-functions)
 - [Chapter 15 - Building Web User Interfaces Using ASP.NET Core](#chapter-15---building-web-user-interfaces-using-aspnet-core)
   - [ASP.NET Core](#aspnet-core)
@@ -347,7 +347,7 @@
 - ASP.NET Core gRPC for WCF Developers: https://docs.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/
 - Introduction to HTTP/2: https://web.dev/performance-http2/
 
-# Chapter 13 - Broadcasting Realtime Communication Using SignalR
+# Chapter 13 - Broadcasting Real-Time Communication Using SignalR
 
 - Overview of ASP.NET Core SignalR: https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction
 - SignalR GitHub repository: https://github.com/dotnet/aspnetcore/tree/main/src/SignalR
