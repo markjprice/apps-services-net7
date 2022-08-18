@@ -34,5 +34,6 @@ UserModel registration = new()
 
 await hubConnection.InvokeAsync("Register", registration);
 
+WriteLine("Successfully registered.");
 WriteLine("Listening... (press ENTER to stop.)");
 ReadLine();

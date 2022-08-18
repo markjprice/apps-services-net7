@@ -6,7 +6,7 @@ namespace Northwind.SignalR.Service.Hubs;
 public class ChatHub : Hub
 {
   // a new instance of ChatHub is created to process each method so
-  // we must store user names, connection ids, and groups in a static field
+  // we must store user names, connection IDs, and groups in a static field
   private static Dictionary<string, UserModel> Users = new();
 
   public async Task Register(UserModel newUser)
@@ -29,7 +29,7 @@ public class ChatHub : Hub
       }
       user.Groups = newUser.Groups;
 
-      // connection id might have changed if the browser 
+      // connection ID might have changed if the browser 
       // refreshed so update it
       user.ConnectionId = Context.ConnectionId;
 
@@ -64,7 +64,7 @@ public class ChatHub : Hub
     { 
       From = "SignalR Hub", To = user.Name, 
       Body = string.Format(
-        "You have successfully {0} with connection id {1}.",
+        "You have successfully {0} with connection ID {1}.",
         arg0: action, arg1: user.ConnectionId)
     };
 
@@ -87,12 +87,13 @@ public class ChatHub : Hub
     // if To has a value, then split it into a list of user and group names
     string[] userAndGroupList = message.To.Split(',');
 
+    // each item could be a user or group 
     foreach (string userOrGroup in userAndGroupList)
     {
       if (Users.ContainsKey(userOrGroup))
       {
         // if the item is in Users then send the message to that user
-        // by looking up their connection id in the dictionary
+        // by looking up their connection ID in the dictionary
         message.To = $"User: {Users[userOrGroup].Name}";
         proxy = Clients.Client(Users[userOrGroup].ConnectionId);
       }
