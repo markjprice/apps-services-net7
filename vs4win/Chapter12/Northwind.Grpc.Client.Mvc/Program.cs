@@ -8,13 +8,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddGrpcClient<Greeter.GreeterClient>("Greeter",
   options =>
   {
-    options.Address = new Uri("https://localhost:5031");
+    options.Address = new Uri("https://localhost:5121");
   });
 
 builder.Services.AddGrpcClient<Shipper.ShipperClient>("Shipper",
   options =>
   {
-    options.Address = new Uri("https://localhost:5031");
+    options.Address = new Uri("https://localhost:5121");
   });
 
 var app = builder.Build();

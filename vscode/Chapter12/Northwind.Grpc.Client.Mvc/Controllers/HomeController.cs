@@ -32,6 +32,7 @@ namespace Northwind.Grpc.Client.Mvc.Controllers
         // ShipperReply shipperReply = await shipperClient.GetShipperAsync(
         //   new ShipperRequest { ShipperId = id });
 
+        // the same call as above but not awaited and with a deadline
         AsyncUnaryCall<ShipperReply> shipperCall = shipperClient.GetShipperAsync(
           new ShipperRequest { ShipperId = id },
           deadline: DateTime.UtcNow.AddSeconds(3) // must be a UTC DateTime

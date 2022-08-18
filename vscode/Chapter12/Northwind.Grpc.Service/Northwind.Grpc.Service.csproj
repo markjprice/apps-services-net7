@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	</PropertyGroup>
 
   <ItemGroup>
 		<Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
@@ -12,12 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.43.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.48.0-pre1" />
     <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="7.0.0-*" />
   </ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Chapter07\Northwind.Common.DataContext.SqlServer\Northwind.Common.DataContext.SqlServer.csproj" />
+		<ProjectReference Include="..\..\Chapter02\Northwind.Common.DataContext.SqlServer\Northwind.Common.DataContext.SqlServer.csproj" />
 	</ItemGroup>
 
 </Project>

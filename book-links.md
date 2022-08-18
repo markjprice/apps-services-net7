@@ -345,6 +345,7 @@
 - Introduction to gRPC on .NET: https://docs.microsoft.com/en-us/aspnet/core/grpc/
 - Protocol Buffers: https://developers.google.com/protocol-buffers/docs/overview
 - ASP.NET Core gRPC for WCF Developers: https://docs.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/
+- Introduction to HTTP/2: https://web.dev/performance-http2/
 
 # Chapter 13 - Broadcasting Realtime Communication Using SignalR
 

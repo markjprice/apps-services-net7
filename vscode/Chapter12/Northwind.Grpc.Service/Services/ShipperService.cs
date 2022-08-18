@@ -16,7 +16,7 @@ public class ShipperService : Shipper.ShipperBase
     this.db = db;
   }
 
-  public override async Task<ShipperReply> GetShipper(
+  public override async Task<ShipperReply?> GetShipper(
     ShipperRequest request, ServerCallContext context)
   {
     _logger.LogCritical(
@@ -25,17 +25,25 @@ public class ShipperService : Shipper.ShipperBase
 
     await Task.Delay(TimeSpan.FromSeconds(5));
 
-    return ToShipperReply(
-      await db.Shippers.FindAsync(request.ShipperId));
+    ShipperEntity? shipper = await db.Shippers.FindAsync(request.ShipperId);
+
+    if (shipper == null)
+    {
+      return null;
+    }
+    else
+    {
+      return ToShipperReply(shipper);
+    }
   }
 
-  private ShipperReply ToShipperReply(ShipperEntity? shipper)
+  private ShipperReply ToShipperReply(ShipperEntity shipper)
   {
     return new ShipperReply
     {
-      ShipperId = shipper?.ShipperId ?? 0,
-      CompanyName = shipper?.CompanyName ?? string.Empty,
-      Phone = shipper?.Phone ?? string.Empty
+      ShipperId = shipper.ShipperId,
+      CompanyName = shipper.CompanyName,
+      Phone = shipper.Phone
     };
   }
 }
