@@ -416,6 +416,7 @@
 - Visual Studio 2022 for Mac is now available: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/
 - Introducing .NET MAUI – One Codebase, Many Platforms: https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/
 - Introducing .NET Multi-platform App UI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
+- Connect to local web services from Android emulators and iOS simulators: https://docs.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services
 - .NET MAUI - Workshop: https://github.com/dotnet-presentations/dotnet-maui-workshop
 - Build mobile and desktop apps with .NET MAUI learning path: https://docs.microsoft.com/en-gb/learn/paths/build-apps-with-dotnet-maui/
 - Forums: https://docs.microsoft.com/en-us/answers/topics/dotnet-maui.html

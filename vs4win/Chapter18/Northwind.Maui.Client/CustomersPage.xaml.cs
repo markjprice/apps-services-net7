@@ -38,6 +38,8 @@ public partial class CustomersPage : ContentPage
       {
         viewModel.Add(c);
       }
+
+      InfoLabel.Text += $"\n{viewModel.Count} customers loaded.";
     }
     catch (Exception ex)
     {
