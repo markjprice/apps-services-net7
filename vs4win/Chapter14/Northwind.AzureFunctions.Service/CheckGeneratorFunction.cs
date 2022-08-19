@@ -120,6 +120,8 @@ public static class CheckGeneratorFunction
 
         stream.Seek(0, SeekOrigin.Begin);
 
+        blobContainerClient.CreateIfNotExists();
+
         BlobContentInfo info = await blobContainerClient.UploadBlobAsync(
           blobName, stream);
 

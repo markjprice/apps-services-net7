@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "Northwind.AzureFunctions.Service"
+		},
+		{
+			"path": "NCrontab.Console"
 		}
 	]
 }
