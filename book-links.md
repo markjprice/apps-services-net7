@@ -52,7 +52,7 @@
 - [Chapter 17 - Using Open Source Blazor Component Libraries](#chapter-17---using-open-source-blazor-component-libraries)
   - [Blazor resources](#blazor-resources)
 - [Chapter 18 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-18---building-mobile-and-desktop-apps-using-net-maui)
-- [Chapter 19 - Implementing .NET MAUI Mobile Features](#chapter-19---implementing-net-maui-mobile-features)
+- [Chapter 19 - Integrating .NET MAUI Apps with Blazor and Native Platforms](#chapter-19---integrating-net-maui-apps-with-blazor-and-native-platforms)
 - [Chapter 20 - Introducing the Survey Project Challenge](#chapter-20---introducing-the-survey-project-challenge)
 - [Epilogue](#epilogue)
   - [Next steps on your C# and .NET learning journey](#next-steps-on-your-c-and-net-learning-journey)
@@ -417,14 +417,33 @@
 - Visual Studio 2022 for Mac is now available: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/
 - Introducing .NET MAUI – One Codebase, Many Platforms: https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/
 - Introducing .NET Multi-platform App UI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
+- Layouts: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/layouts/
+- Pages - ContentPage: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/pages/contentpage
+- Add a splash screen to a .NET MAUI app project: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/images/splashscreen
+- Inspect the visual tree of a .NET MAUI app: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/live-visual-tree
+- Phone dialer: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/communication/phone-dialer
 - Connect to local web services from Android emulators and iOS simulators: https://docs.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services
 - .NET MAUI - Workshop: https://github.com/dotnet-presentations/dotnet-maui-workshop
 - Build mobile and desktop apps with .NET MAUI learning path: https://docs.microsoft.com/en-gb/learn/paths/build-apps-with-dotnet-maui/
 - Forums: https://docs.microsoft.com/en-us/answers/topics/dotnet-maui.html
 
-# Chapter 19 - Implementing .NET MAUI Mobile Features
+# Chapter 19 - Integrating .NET MAUI Apps with Blazor and Native Platforms
 
+- Host a Blazor web app in a .NET MAUI app using BlazorWebView: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview
+- Enterprise Application Patterns Using .NET MAUI: https://docs.microsoft.com/en-us/dotnet/architecture/maui/
+- CarouselView: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/carouselview/
+- Display a menu bar in a .NET MAUI desktop app: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/menubar
 - Xamarin.Essentials 1.7 and introducing .NET MAUI Essentials: https://devblogs.microsoft.com/xamarin/xamarin-essentials-1-7-and-introducing-net-maui-essentials/
+- Platform integration: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/
+- Permissions: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions
+- Connectivity: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/communication/networking
+- Device information: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/device/information
+- Geolocation: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/device/geolocation
+- App actions: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/app-actions
+- File picker: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker
+- Media picker: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker
+- Clipboard: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/data/clipboard
+- Secure storage: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/storage/secure-storages
 
 # Chapter 20 - Introducing the Survey Project Challenge
 

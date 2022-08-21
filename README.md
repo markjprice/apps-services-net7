@@ -20,7 +20,7 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 - Chapter 16 Building Web Components Using Blazor WebAssembly
 - Chapter 17 Leveraging Open Source Blazor Component Libraries
 - Chapter 18 Building Mobile and Desktop Apps Using .NET MAUI
-- Chapter 19 Implementing Mobile Features Using .NET MAUI
+- Chapter 19 Integrating .NET MAUI Apps with Blazor and Native Platforms
 - Chapter 20 Introducing the Survey Project Challenge
 
 ## Sibling books
