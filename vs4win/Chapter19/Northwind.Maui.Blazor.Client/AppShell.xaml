@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="Northwind.Maui.Blazor.Client.AppShell"
+       xmlns:local="clr-namespace:Northwind.Maui.Blazor.Client"
+       Title="Northwind .NET MAUI + Blazor App">
+
+  <TabBar>
+    <Tab Title="Home" Icon="wind_face_high_contrast.svg" >
+      <ShellContent Route="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}" />
+    </Tab>
+    <Tab Title="Categories" Icon="file_cabinet_high_contrast.svg">
+      <ShellContent Route="Categories" 
+        ContentTemplate="{DataTemplate local:CategoriesPage}" />
+    </Tab>
+    <Tab Title="Employees" Icon="identification_card_high_contrast.svg">
+      <ShellContent Route="Employees" 
+        ContentTemplate="{DataTemplate local:EmployeesPage}" />
+    </Tab>
+    <Tab Title="Orders" Icon="euro_banknote_high_contrast.svg">
+      <ShellContent Route="Orders" 
+        ContentTemplate="{DataTemplate local:OrdersPage}" />
+    </Tab>
+  </TabBar>
+
+</Shell>
