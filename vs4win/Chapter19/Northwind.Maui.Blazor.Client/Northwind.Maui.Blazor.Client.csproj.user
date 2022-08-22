@@ -14,14 +14,22 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="CategoriesPage.xaml">
+    <MauiXaml Update="Views\Categories\CategoriesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="EmployeesPage.xaml">
+    <MauiXaml Update="Views\Categories\CategoryPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="OrdersPage.xaml">
+    <MauiXaml Update="Views\Employees\EmployeesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Orders\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Platforms\Windows\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

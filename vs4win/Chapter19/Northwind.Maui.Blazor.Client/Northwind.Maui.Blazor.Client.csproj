@@ -48,8 +48,10 @@
 		<MauiImage Include="Resources\Images\euro_banknote_high_contrast.svg" />
 		<MauiImage Include="Resources\Images\file_cabinet_high_contrast.svg" />
 		<MauiImage Include="Resources\Images\gear_high_contrast.svg" />
+		<MauiImage Include="Resources\Images\heart_suit_high_contrast.svg" />
 		<MauiImage Include="Resources\Images\identification_card_high_contrast.svg" />
 		<MauiImage Include="Resources\Images\magnifying_glass_tilted_left_high_contrast.svg" />
+		<MauiImage Include="Resources\Images\wastebasket_high_contrast.svg" />
 		<MauiImage Include="Resources\Images\wind_face_high_contrast.svg" />
 
 		<!-- Custom Fonts -->
@@ -62,32 +64,49 @@
 	<ItemGroup>
 		<None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
 		<None Remove="Resources\Images\card_index_high_contrast.svg" />
+		<None Remove="Resources\Images\categories_small.jpeg" />
+		<None Remove="Resources\Images\category1-small.jpeg" />
+		<None Remove="Resources\Images\category1_small.jpeg" />
+		<None Remove="Resources\Images\category2-small.jpeg" />
+		<None Remove="Resources\Images\category2_small.jpeg" />
+		<None Remove="Resources\Images\category3-small.jpeg" />
+		<None Remove="Resources\Images\category3_small.jpeg" />
+		<None Remove="Resources\Images\category4_small.jpeg" />
+		<None Remove="Resources\Images\category5_small.jpeg" />
+		<None Remove="Resources\Images\category6_small.jpeg" />
+		<None Remove="Resources\Images\category7_small.jpeg" />
+		<None Remove="Resources\Images\category8_small.jpeg" />
 		<None Remove="Resources\Images\cityscape_high_contrast.svg" />
 		<None Remove="Resources\Images\delivery_truck_high_contrast.svg" />
 		<None Remove="Resources\Images\euro_banknote_high_contrast.svg" />
 		<None Remove="Resources\Images\file_cabinet_high_contrast.svg" />
 		<None Remove="Resources\Images\gear_high_contrast.svg" />
+		<None Remove="Resources\Images\heart_suit_high_contrast.svg" />
 		<None Remove="Resources\Images\identification_card_high_contrast.svg" />
 		<None Remove="Resources\Images\magnifying_glass_tilted_left_high_contrast.svg" />
+		<None Remove="Resources\Images\wastebasket_high_contrast.svg" />
 		<None Remove="Resources\Images\wind_face_high_contrast.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<MauiXaml Update="AppShell.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="CategoriesPage.xaml">
+		<MauiXaml Update="Views\Categories\CategoriesPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="EmployeesPage.xaml">
+		<MauiXaml Update="Views\Categories\CategoryPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\Employees\EmployeesPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="OrdersPage.xaml">
+		<MauiXaml Update="Views\Orders\OrdersPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
