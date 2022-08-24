@@ -24,6 +24,10 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 - Chapter 20 Introducing the Survey Project Challenge
 
 ## Sibling books
-![Sibling books](B18857_01_01.png)
+![Sibling books](images/B18857_01_01.png)
 
 [GitHub repository for C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals](https://github.com/markjprice/cs11dotnet7)
+
+## Technologies covered in the book
+
+![Technologies covered in the book](images/B18857_20_01.png)
