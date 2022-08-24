@@ -26,4 +26,4 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 ## Sibling books
 ![Sibling books](B18857_01_01.png)
 
-[GitHub repository for C# 11 and .NET 7 - Modern Cross-Platform Development](https://github.com/markjprice/cs11dotnet7)
+[GitHub repository for C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals](https://github.com/markjprice/cs11dotnet7)
