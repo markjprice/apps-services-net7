@@ -1,6 +1,17 @@
 # Apps and Services with .NET 7
 Repository for the Packt Publishing book titled "Apps and Services with .NET 7" by Mark J. Price
 
+All of my books on Packt's website: https://subscription.packtpub.com/search?query=mark+j.+price
+
+## Sibling books
+![Sibling books](images/B18857_01_01.png)
+
+[GitHub repository for C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals](https://github.com/markjprice/cs11dotnet7)
+
+## Technologies covered in the book
+
+![Technologies covered in the book](images/B18857_20_01.png)
+
 ## Chapters
 - Chapter 1 Introducing Apps and Services with .NET
 - Chapter 2 Managing Relational Data Using SQL Server
@@ -22,12 +33,3 @@ Repository for the Packt Publishing book titled "Apps and Services with .NET 7" 
 - Chapter 18 Building Mobile and Desktop Apps Using .NET MAUI
 - Chapter 19 Integrating .NET MAUI Apps with Blazor and Native Platforms
 - Chapter 20 Introducing the Survey Project Challenge
-
-## Sibling books
-![Sibling books](images/B18857_01_01.png)
-
-[GitHub repository for C# 11 and .NET 7 - Modern Cross-Platform Development Fundamentals](https://github.com/markjprice/cs11dotnet7)
-
-## Technologies covered in the book
-
-![Technologies covered in the book](images/B18857_20_01.png)
