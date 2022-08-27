@@ -37,7 +37,8 @@
     // we must control how references are handled.
     JsonSerializerOptions jsonOptions = new()
       {
-        ReferenceHandler = ReferenceHandler.Preserve
+        ReferenceHandler = ReferenceHandler.Preserve,
+        PropertyNameCaseInsensitive = true
       };
 
     string lastGetText = await localStorage.GetValueAsync(keyTS);

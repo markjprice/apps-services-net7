@@ -1,15 +1,14 @@
 using Microsoft.AspNetCore.Mvc; // [FromServices] 
 using Packt.Shared; // AddNorthwindContext extension method
 using System.Text.Json.Serialization; // ReferenceHandler
-using System.Text.Json; // JsonSerializerOptions
+
+using HttpJsonOptions = Microsoft.AspNetCore.Http.Json.JsonOptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// This should work to set default options for JSON
-// serialization but it seems to be ignored.
-builder.Services.Configure<JsonOptions>(options =>
+builder.Services.Configure<HttpJsonOptions>(options =>
 {
-  options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+  options.SerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 
 builder.Services.AddControllersWithViews();
@@ -36,25 +35,35 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Create an options object to pass with Results.Json
-JsonSerializerOptions jsonOptions = new()
-{
-  // Employee entity has circular reference to itself so
-  // we must control how references are handled.
-  ReferenceHandler = ReferenceHandler.Preserve
-};
-
 app.MapGet("api/employees", (
   [FromServices] NorthwindContext db) => 
-    Results.Json(db.Employees, jsonOptions))
+    Results.Json(db.Employees))
   .WithName("GetEmployees")
   .Produces<Employee[]>(StatusCodes.Status200OK);
+
+app.MapGet("api/employees/{id:int}", (
+  [FromServices] NorthwindContext db,
+  [FromRoute] int id) =>
+  {
+    Employee? employee = db.Employees.Find(id);
+    if (employee == null)
+    {
+      return Results.NotFound();
+    }
+    else
+    {
+      return Results.Json(employee);
+    }
+  })
+  .WithName("GetEmployeesById")
+  .Produces<Employee>(StatusCodes.Status200OK)
+  .Produces(StatusCodes.Status404NotFound);
 
 app.MapGet("api/employees/{country}", (
   [FromServices] NorthwindContext db,
   [FromRoute] string country) =>
     Results.Json(db.Employees.Where(employee => 
-    employee.Country == country), jsonOptions))
+    employee.Country == country)))
   .WithName("GetEmployeesByCountry")
   .Produces<Employee[]>(StatusCodes.Status200OK);
 
