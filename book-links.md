@@ -390,7 +390,7 @@
 ## Blazor components
 - The reason for needing CSS isolation for Blazor components: https://github.com/dotnet/aspnetcore/issues/10170
 - OI icons: https://iconify.design/icon-sets/oi/
-- Setting `<head>` elements: https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/additional-scenarios-influence-html-head-tag-elements
+- Control <head> content in ASP.NET Core Blazor apps: https://docs.microsoft.com/en-us/aspnet/core/blazor/components/control-head-content
 - Forms and validation: https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation
 - NavigationManager with Blazor routes: https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing#uri-and-navigation-state-helpers
 
