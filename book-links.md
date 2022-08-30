@@ -15,6 +15,7 @@
   - [EF Core database providers](#ef-core-database-providers)
   - [EF Core models](#ef-core-models)
   - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
+  - [Dapper and EF Core performance](#dapper-and-ef-core-performance)
 - [Chapter 3 - Managing NoSQL Data Using Azure Cosmos DB](#chapter-3---managing-nosql-data-using-azure-cosmos-db)
   - [NoSQL data stores](#nosql-data-stores)
   - [Azure Cosmos DB](#azure-cosmos-db)
@@ -190,6 +191,11 @@
 - Query tags: https://docs.microsoft.com/en-us/ef/core/querying/tags
 - Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
 - Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
+
+## Dapper and EF Core performance
+- Dapper: https://github.com/DapperLib/Dapper
+- Announcing Entity Framework Core 6.0 Preview 4: Performance Edition: https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-6-0-preview-4-performance-edition/
+- Announcing Entity Framework Core 7 Preview 6: Performance Edition: https://devblogs.microsoft.com/dotnet/announcing-ef-core-7-preview6-performance-optimizations/
 
 # Chapter 3 - Managing NoSQL Data Using Azure Cosmos DB
 
