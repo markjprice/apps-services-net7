@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "WorkingWithSqlClient"
+			"path": "Northwind.Console.SqlClient"
 		},
 		{
-			"path": "WorkingWithEFCore"
+			"path": "Northwind.Console.EFCore"
+		},
+		{
+			"path": "Northwind.Console.HierarchyMapping"
 		},
 		{
 			"path": "Northwind.Common.EntityModels.SqlServer"

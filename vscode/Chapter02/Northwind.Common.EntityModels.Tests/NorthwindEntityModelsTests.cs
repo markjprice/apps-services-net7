@@ -36,5 +36,20 @@ namespace Northwind.Common.EntityModels.Tests
         Assert.Equal("Chai", product1.ProductName);
       }
     }
+
+    [Fact]
+    public void EmployeeHasLastRefreshedIn10sWindow()
+    {
+      using (NorthwindContext db = new())
+      {
+        Employee employee1 = db.Employees.Single(p => p.EmployeeId == 1);
+
+        DateTimeOffset now = DateTimeOffset.UtcNow;
+
+        Assert.InRange(actual: employee1.LastRefreshed,
+          low: now.Subtract(TimeSpan.FromSeconds(5)),
+          high: now.AddSeconds(5));
+      }
+    }
   }
 }
