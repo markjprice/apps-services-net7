@@ -50,7 +50,7 @@
   - [Blazor hosting models](#blazor-hosting-models)
   - [Blazor components](#blazor-components)
   - [Advanced techniques](#advanced-techniques)
-- [Chapter 17 - Using Open Source Blazor Component Libraries](#chapter-17---using-open-source-blazor-component-libraries)
+- [Chapter 17 - Using Open-Source Blazor Component Libraries](#chapter-17---using-open-source-blazor-component-libraries)
   - [Blazor resources](#blazor-resources)
 - [Chapter 18 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-18---building-mobile-and-desktop-apps-using-net-maui)
 - [Chapter 19 - Integrating .NET MAUI Apps with Blazor and Native Platforms](#chapter-19---integrating-net-maui-apps-with-blazor-and-native-platforms)
@@ -405,7 +405,7 @@
 - Lazy loading assemblies: https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0
 - Routing in Blazor Apps: Comparing the routing of popular web frameworks like React and Angular with Blazor: https://devblogs.microsoft.com/premier-developer/routing-in-blazor-apps/
 
-# Chapter 17 - Using Open Source Blazor Component Libraries
+# Chapter 17 - Using Open-Source Blazor Component Libraries
 
 ## Blazor resources
 - Awesome Blazor: A collection of awesome Blazor resources: https://github.com/AdrienTorris/awesome-blazor
