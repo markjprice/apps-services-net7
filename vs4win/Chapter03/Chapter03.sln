@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32422.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.CosmosDb.Gremlin", "Northwind.CosmosDb.Gremlin\Northwind.CosmosDb.Gremlin.csproj", "{4375DA0A-6199-4FAF-949D-FB8DF52ED5AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.CosmosDb.SqlApi", "Northwind.CosmosDb.SqlApi\Northwind.CosmosDb.SqlApi.csproj", "{4FE7BA4F-3C97-4828-ACB4-F85AB0A3C508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.CosmosDb.SqlApi", "Northwind.CosmosDb.SqlApi\Northwind.CosmosDb.SqlApi.csproj", "{4FE7BA4F-3C97-4828-ACB4-F85AB0A3C508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
