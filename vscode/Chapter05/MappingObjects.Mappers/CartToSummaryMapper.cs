@@ -20,13 +20,15 @@ public static class CartToSummaryMapper
       cfg.CreateMap<Cart, Summary>()
 
         // FullName
-       .ForMember(dest => dest.FullName, opt => opt.MapFrom(src =>
-          string.Format("{0} {1}", src.Customer.FirstName, src.Customer.LastName)
+        .ForMember(dest => dest.FullName, opt => opt.MapFrom(src =>
+          string.Format("{0} {1}",
+            src.Customer.FirstName,
+            src.Customer.LastName)
         ))
 
-       // Total
-       .ForMember(dest => dest.Total, opt => opt.MapFrom(
-         src => src.Items.Sum(item => item.UnitPrice * item.Quantity)));
+        // Total
+        .ForMember(dest => dest.Total, opt => opt.MapFrom(
+          src => src.Items.Sum(item => item.UnitPrice * item.Quantity)));
     });
 
     return config;

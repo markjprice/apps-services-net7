@@ -22,6 +22,25 @@ Catalog model = new()
 CatalogDocument document = new(model);
 document.GeneratePdf(filename);
 
-System.Diagnostics.Process.Start("explorer.exe", filename);
-
 WriteLine($"PDF catalog has been created: {filename}");
+
+try
+{
+  if (OperatingSystem.IsWindows())
+  {
+    System.Diagnostics.Process.Start("explorer.exe", filename);
+  }
+  else if (OperatingSystem.IsMacOS())
+  {
+    System.Diagnostics.Process.Start(
+      "/Applications/TextEdit.app/Contents/MacOS/TextEdit", filename);
+  }
+  else
+  {
+    WriteLine("Open the following file manually.");
+  }
+}
+catch (Exception ex)
+{
+  WriteLine($"{ex.GetType()} says {ex.Message}");
+}

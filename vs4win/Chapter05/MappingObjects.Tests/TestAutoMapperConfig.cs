@@ -1,16 +1,15 @@
 using AutoMapper; // MapperConfiguration
 using MappingObjects.Mappers; // CartToSummaryMapper
 
-namespace MappingObjects.Tests
-{
-  public class TestAutoMapperConfig
-  {
-    [Fact]
-    public void TestSummaryMapping()
-    {
-      MapperConfiguration config = CartToSummaryMapper.GetMapperConfiguration();
+namespace MappingObjects.Tests;
 
-      config.AssertConfigurationIsValid();
-    }
+public class TestAutoMapperConfig
+{
+  [Fact]
+  public void TestSummaryMapping()
+  {
+    MapperConfiguration config = CartToSummaryMapper.GetMapperConfiguration();
+
+    config.AssertConfigurationIsValid();
   }
 }

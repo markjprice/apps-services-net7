@@ -3,8 +3,8 @@ using MappingObjects.Mappers; // CartToSummaryMapper
 using Packt.Entities; // Customer, Cart, LineItem
 using Packt.ViewModels; // Summary
 
-// create an object model from "entity" model types that
-// might have come from a data store
+// Create an object model from "entity" model types that
+// might have come from a data store.
 
 Cart cart = new(
   Customer: new(
@@ -24,18 +24,18 @@ foreach (LineItem item in cart.Items)
   WriteLine($"  {item}");
 }
 
-// get a mapper configuration for converting a Cart to a Summary
+// Get the mapper configuration for converting a Cart to a Summary.
 
 MapperConfiguration config = CartToSummaryMapper.GetMapperConfiguration();
 
-// create a mapper using the configuration 
+// Create a mapper using the configuration.
 
 IMapper mapper = config.CreateMapper();
 
-// perform the mapping
+// Perform the mapping.
 
 Summary summary = mapper.Map<Cart, Summary>(cart);
 
-// output the result
+// Output the result.
 
 WriteLine($"Summary: {summary.FullName} spent {summary.Total}.");
