@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient(name: "Northwind.GraphQL",
   configureClient: options =>
   {
-    options.BaseAddress = new Uri("https://localhost:5005/");
+    options.BaseAddress = new Uri("https://localhost:5111/");
     options.DefaultRequestHeaders.Accept.Add(
       new MediaTypeWithQualityHeaderValue(
       "application/json", 1.0));
