@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "Northwind.SignalR.Client.Console"
+		},
+		{
+			"path": "Northwind.SignalR.Client.Console.Streams"
 		}
 	]
 }

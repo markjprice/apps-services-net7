@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32519.111
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Common", "Northwind.Common\Northwind.Common.csproj", "{2F83BC4D-9683-42CF-8013-AFA8AC5032AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Common", "Northwind.Common\Northwind.Common.csproj", "{2F83BC4D-9683-42CF-8013-AFA8AC5032AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.SignalR.Service.Client.Mvc", "Northwind.SignalR.Service.Client.Mvc\Northwind.SignalR.Service.Client.Mvc.csproj", "{E6D008F7-DA51-4B9D-A71D-BB7365CC233C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.SignalR.Service.Client.Mvc", "Northwind.SignalR.Service.Client.Mvc\Northwind.SignalR.Service.Client.Mvc.csproj", "{E6D008F7-DA51-4B9D-A71D-BB7365CC233C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.SignalR.Client.Console", "Northwind.SignalR.Client.Console\Northwind.SignalR.Client.Console.csproj", "{27861A36-1E8A-4D42-BF51-CCC281A5A98A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.SignalR.Client.Console", "Northwind.SignalR.Client.Console\Northwind.SignalR.Client.Console.csproj", "{27861A36-1E8A-4D42-BF51-CCC281A5A98A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.SignalR.Client.Console.Streams", "Northwind.SignalR.Client.Console.Streams\Northwind.SignalR.Client.Console.Streams.csproj", "{F7232450-D6AA-492A-96D0-5731B982B946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{27861A36-1E8A-4D42-BF51-CCC281A5A98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27861A36-1E8A-4D42-BF51-CCC281A5A98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27861A36-1E8A-4D42-BF51-CCC281A5A98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7232450-D6AA-492A-96D0-5731B982B946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7232450-D6AA-492A-96D0-5731B982B946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7232450-D6AA-492A-96D0-5731B982B946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7232450-D6AA-492A-96D0-5731B982B946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

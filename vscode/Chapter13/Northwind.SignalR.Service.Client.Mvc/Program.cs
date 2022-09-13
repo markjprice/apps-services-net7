@@ -1,4 +1,4 @@
-using Northwind.SignalR.Service.Hubs; // ChatHub
+using Northwind.SignalR.Service.Hubs; // ChatHub, StockPriceHub
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapHub<ChatHub>("/chat");
+app.MapHub<StockPriceHub>("/stockprice");
 
 app.MapControllerRoute(
     name: "default",
