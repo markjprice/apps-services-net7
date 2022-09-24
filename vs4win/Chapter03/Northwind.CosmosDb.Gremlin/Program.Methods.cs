@@ -7,6 +7,7 @@ using System.Net; // HttpStatusCode
 using Gremlin.Net.Driver; // GremlinServer, GremlinClient, ResultSet<T>
 using Gremlin.Net.Structure.IO.GraphSON; // GraphSON2Reader, GraphSON2Writer
 using Newtonsoft.Json; // JsonConvert
+using System.Globalization;
 
 partial class Program
 {
@@ -208,7 +209,7 @@ partial class Program
                 .property("productId", {p.ProductId})
                 .property("productName", "{p.ProductName}")
                 .property("quantityPerUnit", "{p.QuantityPerUnit}")
-                .property("unitPrice", {p.UnitPrice ?? 0})
+                .property("unitPrice", {p.UnitPrice?.ToString(CultureInfo.InvariantCulture) ?? 0})
                 .property("unitsInStock", {p.UnitsInStock ?? 0})
                 .property("reorderLevel", {p.ReorderLevel ?? 0})
                 .property("unitsOnOrder", {p.UnitsOnOrder ?? 0})

@@ -100,7 +100,6 @@
 - Remove .NET SDKs and runtimes: https://docs.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions
 - .NET Core runtime, CoreCLR: https://github.com/dotnet/runtime
 - .NET Core Roadmap: https://github.com/dotnet/core/blob/master/roadmap.md
-- .NET Standard versions and which .NET platforms support them: https://github.com/dotnet/standard/blob/master/docs/versions.md
 - .NET Team Members: https://twitter.com/i/lists/120961876//members
 
 ## C# language version and the journey to C# 11
@@ -449,7 +448,7 @@
 - File picker: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker
 - Media picker: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker
 - Clipboard: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/data/clipboard
-- Secure storage: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/storage/secure-storages
+- Secure storage: https://docs.microsoft.com/en-us/dotnet/maui/platform-integration/storage/secure-storage
 
 # Chapter 20 - Introducing the Survey Project Challenge
 

@@ -34,6 +34,11 @@ else if (key is ConsoleKey.D3 or ConsoleKey.NumPad3)
 {
   builder.DataSource = "tcp:127.0.0.1,1433"; // Azure SQL Edge
 }
+else
+{
+  WriteLine("No data source selected.");
+  return;
+}
 
 WriteLine("Authenticate using:");
 WriteLine("  1 - Windows Integrated Security");
@@ -63,6 +68,11 @@ else if (key is ConsoleKey.D2 or ConsoleKey.NumPad2)
 
   builder.Password = password;
   builder.PersistSecurityInfo = false;
+}
+else
+{
+  WriteLine("No authentication selected.");
+  return;
 }
 
 SqlConnection connection = new(builder.ConnectionString);
