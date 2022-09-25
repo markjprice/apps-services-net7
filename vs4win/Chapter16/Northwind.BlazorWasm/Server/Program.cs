@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc; // [FromServices]
 using Packt.Shared; // AddNorthwindContext extension method
 using System.Text.Json.Serialization; // ReferenceHandler
 
+// define an alias for the JsonOptions class
 using HttpJsonOptions = Microsoft.AspNetCore.Http.Json.JsonOptions;
 
 var builder = WebApplication.CreateBuilder(args);
