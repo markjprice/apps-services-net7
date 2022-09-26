@@ -4,29 +4,39 @@ using Microsoft.AspNetCore.Http.HttpResults; // Results
 using Microsoft.AspNetCore.HttpLogging; // HttpLoggingFields
 using Microsoft.AspNetCore.Mvc; // [FromServices]
 using Microsoft.AspNetCore.OpenApi; // WithOpenApi
-using Microsoft.AspNetCore.RateLimiting; // UseRateLimiter, RateLimiterOptions
+using Microsoft.AspNetCore.RateLimiting; // RateLimiterOptions
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using Packt.Shared; // AddNorthwindContext extension method
-using System.Threading.RateLimiting; // PartitionedRateLimiter
+using System.Threading.RateLimiting; // FixedWindowRateLimiterOptions
+using System.Security.Claims; // ClaimsPrincipal
+
+bool useMicrosoftRateLimiting = true;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// AspNetCoreRateLimit rate limiting middleware
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(defaultScheme: "Bearer")
+  .AddJwtBearer();
 
-// needed to store rate limit counters and rules
-builder.Services.AddMemoryCache();
-builder.Services.AddInMemoryRateLimiting();
+// Configure AspNetCoreRateLimit rate limiting middleware.
+if (!useMicrosoftRateLimiting)
+{
+  // Add services to store rate limit counters and rules.
+  builder.Services.AddMemoryCache();
+  builder.Services.AddInMemoryRateLimiting();
 
-// load default rate limit options from appsettings.json
-builder.Services.Configure<ClientRateLimitOptions>(
-  builder.Configuration.GetSection("ClientRateLimiting"));
+  // Load default rate limit options from appsettings.json.
+  builder.Services.Configure<ClientRateLimitOptions>(
+    builder.Configuration.GetSection("ClientRateLimiting"));
 
-// load client-specific policies from appsettings.json
-builder.Services.Configure<ClientRateLimitPolicies>(
-  builder.Configuration.GetSection("ClientRateLimitPolicies"));
+  // Load client-specific policies from appsettings.json.
+  builder.Services.Configure<ClientRateLimitPolicies>(
+    builder.Configuration.GetSection("ClientRateLimitPolicies"));
 
-// register configuration
-builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+  // Register the configuration.
+  builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+}
 
 string northwindMvc = "Northwind.Mvc.Policy";
 
@@ -48,27 +58,30 @@ builder.Services.AddNorthwindContext();
 
 builder.Services.AddHttpLogging(options =>
 {
-  // if we do not explicitly add the Origin header
-  // it will be redacted
+  // Add the Origin header so it will not be redacted.
   options.RequestHeaders.Add("Origin");
 
-  // if we do not explicitly add the rate limiting headers
-  // they will be redacted
+  // Add the rate limiting headers so they will not be redacted.
   options.RequestHeaders.Add("X-Client-Id");
   options.ResponseHeaders.Add("Retry-After");
 
-  // by default the response body is not included
+  // By default, the response body is not included.
   options.LoggingFields = HttpLoggingFields.All;
 });
 
 var app = builder.Build();
 
-using (IServiceScope scope = app.Services.CreateScope())
-{
-  IClientPolicyStore clientPolicyStore = scope.ServiceProvider
-    .GetRequiredService<IClientPolicyStore>();
+app.UseAuthorization();
 
-  await clientPolicyStore.SeedAsync();
+if (!useMicrosoftRateLimiting)
+{
+  using (IServiceScope scope = app.Services.CreateScope())
+  {
+    IClientPolicyStore clientPolicyStore = scope.ServiceProvider
+      .GetRequiredService<IClientPolicyStore>();
+
+    await clientPolicyStore.SeedAsync();
+  }
 }
 
 // Configure the HTTP request pipeline.
@@ -82,7 +95,10 @@ app.UseHttpsRedirection();
 
 app.UseHttpLogging();
 
-app.UseClientRateLimiting();
+if (!useMicrosoftRateLimiting)
+{
+  app.UseClientRateLimiting();
+}
 
 // app.UseCors(policyName: northwindMvc);
 
@@ -91,6 +107,10 @@ app.UseCors();
 
 app.MapGet("/", () => "Hello World!")
   .ExcludeFromDescription();
+
+app.MapGet("/secret", (ClaimsPrincipal user) => 
+  $"Hello {user.Identity?.Name}. The secret ingredient is love.")
+  .RequireAuthorization();
 
 int pageSize = 10;
 
@@ -109,7 +129,8 @@ app.MapGet("api/products", (
     operation.Summary = "Get in-stock products that are not discontinued.";
     return operation;
   })
-  .Produces<Product[]>(StatusCodes.Status200OK);
+  .Produces<Product[]>(StatusCodes.Status200OK)
+  .RequireRateLimiting("fixed5per10Seconds");
 
 app.MapGet("api/products/outofstock", ([FromServices] NorthwindContext db) =>
   db.Products.Where(product =>
@@ -196,18 +217,21 @@ app.MapDelete("api/products/{id:int}", async (
   .Produces(StatusCodes.Status404NotFound)
   .Produces(StatusCodes.Status204NoContent);
 
-// ASP.NET Core rate limiting middleware
-/*
-app.UseRateLimiter(new RateLimiterOptions
+// Configure ASP.NET Core rate limiting middleware.
+if (useMicrosoftRateLimiting)
 {
-  Limiter = PartitionedRateLimiter.Create<HttpContext, string>(resource =>
-  {
-    return RateLimitPartition.CreateConcurrencyLimiter("OneLimiter",
-        _ => new ConcurrencyLimiterOptions(
-          permitLimit: 1, QueueProcessingOrder.NewestFirst,
-          queueLimit: 1));
-  })
-});
-*/
+  RateLimiterOptions rateLimiterOptions = new();
+
+  rateLimiterOptions.AddFixedWindowLimiter(
+    policyName: "fixed5per10Seconds", options =>
+    {
+      options.PermitLimit = 5;
+      options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+      options.QueueLimit = 2;
+      options.Window = TimeSpan.FromSeconds(10);
+    });
+
+  app.UseRateLimiter(rateLimiterOptions);
+}
 
 app.Run();

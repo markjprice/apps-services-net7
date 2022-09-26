@@ -5,12 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UserSecretsId>27850d3e-a377-464c-abc6-e4e7a8400ea5</UserSecretsId>
   </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AspNetCoreRateLimit" Version="4.0.2" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0-*" />
-		<PackageReference Include="Microsoft.AspNetCore.RateLimiting" Version="7.0.0-*" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0-rc.1.22427.2" />
+		<PackageReference Include="Microsoft.AspNetCore.RateLimiting" Version="7.0.0-rc.1.22427.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0-rc.1.22427.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	</ItemGroup>
 
