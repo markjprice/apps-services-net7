@@ -8,6 +8,15 @@
 		},
 		{
 			"path": "GeneratingCodeLib"
+		},
+		{
+			"path": "DynamicLoadAndExecute.Console"
+		},
+		{
+			"path": "DynamicLoadAndExecute.Library"
+		},
+		{
+			"path": "WorkingWithExpressionTrees"
 		}
 	]
 }
