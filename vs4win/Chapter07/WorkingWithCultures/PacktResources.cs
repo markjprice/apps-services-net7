@@ -19,9 +19,14 @@ public class PacktResources
     // 2. check if the resource string was found
     if (localizedString.ResourceNotFound)
     {
-      return $"Error: resource string \"{resourceStringName}\" not found."
-        + $"\nSearch path: {localizedString.SearchedLocation}"
-        + $"\n{localizedString}";
+      ConsoleColor previousColor = ForegroundColor;
+      ForegroundColor = ConsoleColor.Red;
+      WriteLine($"Error: resource string \"{resourceStringName}\" not found."
+        + Environment.NewLine
+        + $"Search path: {localizedString.SearchedLocation}");
+      ForegroundColor = previousColor;
+
+      return $"{localizedString}: ";
     }
 
     // 3. return the found resource string

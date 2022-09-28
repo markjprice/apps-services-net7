@@ -46,6 +46,22 @@ WriteLine($"Kids wake up: {kidsWakeUp}");
 WriteLine("The kids woke me up at {0}",
   arg0: kidsWakeUp.ToShortTimeString());
 
+SectionTitle("Milli-, micro-, and nanoseconds");
+
+DateTime preciseTime = new(
+  year: 2022, month: 11, day: 8,
+  hour: 12, minute: 0, second: 0,
+  millisecond: 6, microsecond: 999);
+
+WriteLine("Millisecond: {0}, Microsecond: {1}, Nanosecond: {2}",
+  preciseTime.Millisecond, preciseTime.Microsecond, preciseTime.Nanosecond);
+
+preciseTime = DateTime.UtcNow;
+
+// Nanosecond value will be 0 to 900 in 100 nanosecond increments.
+WriteLine("Millisecond: {0}, Microsecond: {1}, Nanosecond: {2}",
+  preciseTime.Millisecond, preciseTime.Microsecond, preciseTime.Nanosecond);
+
 SectionTitle("Globalization with dates and times");
 
 // same as Thread.CurrentThread.CurrentCulture
@@ -79,13 +95,35 @@ WriteLine("Is Christmas daylight saving time? {0}",
 WriteLine("Is July 4th daylight saving time? {0}",
   arg0: independenceDay.IsDaylightSavingTime());
 
+SectionTitle("Localizing the DayOfWeek enum");
+
+CultureInfo previousCulture = Thread.CurrentThread.CurrentCulture;
+
+// explicitly set culture to Danish (Denmark)
+Thread.CurrentThread.CurrentCulture = 
+  CultureInfo.GetCultureInfo("da-DK");
+
+WriteLine("Culture: {0}, DayOfWeek: {1}",
+  Thread.CurrentThread.CurrentCulture.NativeName, 
+  DateTime.Now.DayOfWeek);
+
+WriteLine("Culture: {0}, DayOfWeek: {1:dddd}",
+  Thread.CurrentThread.CurrentCulture.NativeName,
+  DateTime.Now);
+
+WriteLine("Culture: {0}, DayOfWeek: {1}",
+  Thread.CurrentThread.CurrentCulture.NativeName,
+  DateTimeFormatInfo.CurrentInfo.GetDayName(DateTime.Now.DayOfWeek));
+
+Thread.CurrentThread.CurrentCulture = previousCulture;
+
 SectionTitle("Working with only a date or a time");
 
-DateOnly jubilee = new(year: 2022, month: 6, day: 4);
-WriteLine($"The Queen's Platinum Jubilee is on {jubilee.ToLongDateString()}.");
+DateOnly coronation = new(year: 2023, month: 6, day: 3);
+WriteLine($"The King's Coronation is on {coronation.ToLongDateString()}.");
 
-TimeOnly partyStarts = new(hour: 16, minute: 30);
-WriteLine($"The Queen's party starts at {partyStarts}.");
+TimeOnly starts = new(hour: 11, minute: 30);
+WriteLine($"The King's Coronation starts at {starts}.");
 
-DateTime calendarEntry = jubilee.ToDateTime(partyStarts);
+DateTime calendarEntry = coronation.ToDateTime(starts);
 WriteLine($"Add to your calendar: {calendarEntry}.");

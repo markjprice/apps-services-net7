@@ -21,14 +21,18 @@ using IHost host = Host.CreateDefaultBuilder(args)
 OutputCultures("Current culture");
 
 WriteLine("Example ISO culture codes:");
-WriteLine("  da-DK: Danish (Denmark)");
-WriteLine("  en-GB: English (United Kingdom)");
-WriteLine("  en-US: English (United States)");
-WriteLine("  fa-IR: Persian (Iran)");
-WriteLine("  fr-CA: French (Canada)");
-WriteLine("  fr-FR: French (France)");
-WriteLine("  he-IL: Hebrew (Israel)");
-WriteLine("  pl-PL: Polish (Poland)");
+
+string[] cultureCodes = new[] { 
+  "da-DK", "en-GB", "en-US", "fa-IR", 
+  "fr-CA", "fr-FR", "he-IL", "pl-PL", "sl-SI" };
+
+foreach (string code in cultureCodes)
+{
+  CultureInfo culture = CultureInfo.GetCultureInfo(code);
+  WriteLine("  {0}: {1} / {2}",
+    culture.Name, culture.EnglishName, culture.NativeName);
+}
+
 WriteLine();
 
 Write("Enter an ISO culture code: ");
