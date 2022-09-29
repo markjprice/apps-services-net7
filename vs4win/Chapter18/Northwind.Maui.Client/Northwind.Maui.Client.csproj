@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>Northwind.Maui.Client</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -16,7 +16,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.northwind.maui.client</ApplicationId>
-		<ApplicationIdGuid>34C56050-078A-46C7-8EC3-4AF65DDB9C14</ApplicationIdGuid>
+		<ApplicationIdGuid>ab99a40d-a0f1-4955-8d19-8a822daab70d</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -40,15 +40,6 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-		<MauiImage Include="Resources\Images\card_index_3d.png" />
-		<MauiImage Include="Resources\Images\cityscape_3d.png" />
-		<MauiImage Include="Resources\Images\delivery_truck_3d.png" />
-		<MauiImage Include="Resources\Images\gear_3d.png" />
-		<MauiImage Include="Resources\Images\euro_banknote_3d.png" />
-		<MauiImage Include="Resources\Images\file_cabinet_3d.png" />
-		<MauiImage Include="Resources\Images\identification_card_3d.png" />
-		<MauiImage Include="Resources\Images\magnifying_glass_tilted_left_3d.png" />
-		<MauiImage Include="Resources\Images\wind_face_3d.png" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -59,33 +50,22 @@
 
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
+	  <None Remove="Resources\Images\card_index_3d.png" />
+	  <None Remove="Resources\Images\cityscape_3d.png" />
+	  <None Remove="Resources\Images\delivery_truck_3d.png" />
+	  <None Remove="Resources\Images\euro_banknote_3d.png" />
+	  <None Remove="Resources\Images\file_cabinet_3d.png" />
+	  <None Remove="Resources\Images\gear_3d.png" />
+	  <None Remove="Resources\Images\identification_card_3d.png" />
+	  <None Remove="Resources\Images\magnifying_glass_tilted_left_3d.png" />
+	  <None Remove="Resources\Images\wind_face_3d.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="CategoriesPage.xaml.cs">
-	    <DependentUpon>CategoriesPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="CustomersPage.xaml.cs">
-	    <DependentUpon>CustomersPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="EmployeesPage.xaml.cs">
-	    <DependentUpon>EmployeesPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="ProductsPage.xaml.cs">
-	    <DependentUpon>ProductsPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="SettingsPage.xaml.cs">
-	    <DependentUpon>SettingsPage.xaml</DependentUpon>
-	  </Compile>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0-rc.1.22426.10" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Resources\Styles\Northwind.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="SettingsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="CategoriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -99,6 +79,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProductsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Northwind.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

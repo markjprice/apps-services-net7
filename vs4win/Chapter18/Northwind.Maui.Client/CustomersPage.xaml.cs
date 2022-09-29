@@ -5,7 +5,7 @@ namespace Northwind.Maui.Client;
 
 public partial class CustomersPage : ContentPage
 {
-  public CustomersPage()
+	public CustomersPage()
 	{
 		InitializeComponent();
 
@@ -98,9 +98,9 @@ public partial class CustomersPage : ContentPage
       }
       catch (Exception ex)
       {
-        await DisplayAlert(title: "Failed", 
+        await DisplayAlert(title: "Failed",
           message: string.Format(
-            "Failed to dial {0} due to: {1}", c.Phone, ex.Message), 
+            "Failed to dial {0} due to: {1}", c.Phone, ex.Message),
           cancel: "OK");
       }
     }

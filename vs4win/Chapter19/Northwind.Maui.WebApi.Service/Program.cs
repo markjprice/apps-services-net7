@@ -1,7 +1,4 @@
-using Microsoft.AspNetCore.Http.HttpResults; // Results
 using Microsoft.AspNetCore.Mvc; // [FromServices] 
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.EntityFrameworkCore;
 using Packt.Shared; // AddNorthwindContext extension method
 
 var builder = WebApplication.CreateBuilder(args);

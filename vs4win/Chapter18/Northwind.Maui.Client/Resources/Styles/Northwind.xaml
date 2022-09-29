@@ -13,14 +13,14 @@
     <GradientStop Color="Violet" Offset="1" />
   </LinearGradientBrush>
 
-  <Color x:Key="TextColor">Black</Color>
-  <Color x:Key="BackgroundColor">Silver</Color>
-
   <Style TargetType="Entry">
     <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
     <Setter Property="FontFamily" Value="OpenSansRegular" />
     <Setter Property="HorizontalOptions" Value="Start" />
     <Setter Property="WidthRequest" Value="300" />
   </Style>
+
+  <Color x:Key="TextColor">Black</Color>
+  <Color x:Key="BackgroundColor">Silver</Color>
 
 </ResourceDictionary>

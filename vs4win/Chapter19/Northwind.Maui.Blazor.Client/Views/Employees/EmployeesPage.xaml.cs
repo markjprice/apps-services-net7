@@ -2,17 +2,18 @@ namespace Northwind.Maui.Blazor.Client.Views;
 
 public partial class EmployeesPage : ContentPage
 {
-  public EmployeesPage()
-  {
-    InitializeComponent();
-  }
+	public EmployeesPage()
+	{
+		InitializeComponent();
+	}
 
   private async void CopyToClipboardButton_Clicked(object sender, EventArgs e)
   {
     await Clipboard.Default.SetTextAsync(NotesTextBox.Text);
   }
 
-  private async void PasteFromClipboardButton_Clicked(object sender, EventArgs e)
+  private async void PasteFromClipboardButton_Clicked(
+    object sender, EventArgs e)
   {
     if (Clipboard.HasText)
     {
@@ -63,9 +64,7 @@ public partial class EmployeesPage : ContentPage
 
     if (photo != null)
     {
-      using Stream sourceStream = await photo.OpenReadAsync();
-
-      FileImage.Source = ImageSource.FromStream(() => sourceStream);
+      FileImage.Source = ImageSource.FromFile(photo.FullPath);
 
       FilePathLabel.Text = photo.FullPath;
     }
@@ -84,19 +83,9 @@ public partial class EmployeesPage : ContentPage
 
       if (photo != null)
       {
-        // save the file into local storage
-        string localFilePath = Path.Combine(
-          FileSystem.CacheDirectory, photo.FileName);
+        FileImage.Source = ImageSource.FromFile(photo.FullPath);
 
-        FilePathLabel.Text = localFilePath;
-
-        using Stream sourceStream = await photo.OpenReadAsync();
-
-        FileImage.Source = ImageSource.FromStream(() => sourceStream);
-
-        using FileStream localFileStream = File.OpenWrite(localFilePath);
-
-        await sourceStream.CopyToAsync(localFileStream);
+        FilePathLabel.Text = photo.FullPath;
       }
       else
       {

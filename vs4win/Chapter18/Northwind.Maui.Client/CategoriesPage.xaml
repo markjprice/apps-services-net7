@@ -4,13 +4,16 @@
              x:Class="Northwind.Maui.Client.CategoriesPage"
              Background="{StaticResource rainbow}"
              Title="Categories">
-  
   <VerticalStackLayout>
-  
-    <Button Text="Click Me" WidthRequest="100" 
-            x:Name="ClickMeButton" 
-            Clicked="ClickMeButton_Clicked" />
-    
+    <Label 
+            Text="Categories"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+    <Button Text="Click Me" WidthRequest="100"
+            x:Name="ClickMeButton"
+            Clicked="ClickMeButton_Clicked"/>
+
     <Label Margin="10">
       Use the slider to rotate the square:
     </Label>
@@ -21,12 +24,11 @@
 
     <Slider Value="0" Minimum="0" Maximum="180" 
             x:Name="sliderRotation" Margin="10,0" />
-    
+
     <Rectangle HeightRequest="200" WidthRequest="200" 
                Fill="{StaticResource rainbow}"
                BindingContext="{x:Reference Name=sliderRotation}"
                Rotation="{Binding Path=Value}" />
 
   </VerticalStackLayout>
-  
 </ContentPage>

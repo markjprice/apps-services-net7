@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Http.HttpResults; // Results
 using Microsoft.AspNetCore.Mvc; // [FromServices] 
-using Microsoft.AspNetCore.OpenApi;
 using Packt.Shared; // AddNorthwindContext extension method
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,8 +15,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.UseSwagger();
-  app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 //app.UseHttpsRedirection();
@@ -27,6 +25,13 @@ app.MapGet("api/customers", (
   [FromServices] NorthwindContext db) => db.Customers)
   .WithName("GetCustomers")
   .Produces<Customer[]>(StatusCodes.Status200OK);
+
+app.MapGet("api/customers/{id}", (
+  [FromRoute] string id,
+  [FromServices] NorthwindContext db) => db.Customers
+    .FirstOrDefault(c => c.CustomerId == id))
+  .WithName("GetCustomer")
+  .Produces<Customer>(StatusCodes.Status200OK);
 
 app.MapPost("api/customers", async (
   [FromBody] Customer customer,

@@ -7,8 +7,8 @@ public partial class EmployeesPage : ContentPage
 		InitializeComponent();
 	}
 
-  private void ContentPage_Loaded(object sender, EventArgs e)
-  {
+	private void ContentPage_Loaded(object sender, EventArgs e)
+	{
     foreach (Button button in gridCalculator.Children.OfType<Button>())
     {
       button.FontSize = 24;

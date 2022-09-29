@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Northwind.Maui.Blazor.Client.Views.EmployeesPage"
              Title="Employees">
-
+  
   <VerticalStackLayout Spacing="10">
-    
+
     <Frame BorderColor="{StaticResource PrimaryTextColor}" 
            Margin="5" Padding="5">
       <VerticalStackLayout Spacing="10">
@@ -26,7 +26,7 @@
         </HorizontalStackLayout>
       </VerticalStackLayout>
     </Frame>
-    
+
     <Frame BorderColor="{StaticResource PrimaryTextColor}" 
            Margin="5" Padding="5">
       <VerticalStackLayout Spacing="10">
@@ -56,7 +56,7 @@
                WidthRequest="250"/>
       </VerticalStackLayout>
     </Frame>
-    
+
   </VerticalStackLayout>
-  
+
 </ContentPage>

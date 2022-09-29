@@ -1,13 +1,13 @@
-using System.Reflection;
+using System.Reflection; // FieldInfo
 
 namespace Northwind.Maui.Client;
 
 public partial class SettingsPage : ContentPage
 {
-  public SettingsPage()
-  {
-    InitializeComponent();
-  }
+	public SettingsPage()
+	{
+		InitializeComponent();
+	}
 
   private const string textColorKey = "TextColor";
   private const string backgroundColorKey = "BackgroundColor";
@@ -16,15 +16,15 @@ public partial class SettingsPage : ContentPage
   {
     try
     {
-      App.Current.Resources[textColorKey] = 
+      App.Current.Resources[textColorKey] =
         Color.Parse(TextColorEntry.Text);
 
-      App.Current.Resources[backgroundColorKey] = 
+      App.Current.Resources[backgroundColorKey] =
         Color.Parse(BackgroundColorEntry.Text);
     }
     catch (Exception ex)
     {
-      await DisplayAlert(title: "Exception", 
+      await DisplayAlert(title: "Exception",
         message: ex.Message, cancel: "OK");
     }
   }
@@ -47,7 +47,7 @@ public partial class SettingsPage : ContentPage
     }
     catch (Exception ex)
     {
-      await DisplayAlert(title: "Exception", 
+      await DisplayAlert(title: "Exception",
         message: ex.Message, cancel: "OK");
     }
   }

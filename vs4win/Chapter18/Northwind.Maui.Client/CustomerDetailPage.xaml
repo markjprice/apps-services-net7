@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Northwind.Maui.Client.CustomerDetailPage"
-             Title="Edit">
-  
-  <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+             Title="Customer Detail">
+
+  <VerticalStackLayout>
+
     <Grid ColumnDefinitions="Auto,Auto" 
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
       <Label Text="Customer Id" VerticalOptions="Center" Margin="6" />
@@ -33,5 +34,7 @@
     </Grid>
     <Button x:Name="InsertButton" Text="Insert Customer" 
             Clicked="InsertButton_Clicked" />
-  </StackLayout>
+
+  </VerticalStackLayout>
+
 </ContentPage>

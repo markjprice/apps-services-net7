@@ -1,114 +1,103 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
-		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
-		<OutputType>Exe</OutputType>
-		<RootNamespace>Northwind.Maui.Blazor.Client</RootNamespace>
-		<UseMaui>true</UseMaui>
-		<SingleProject>true</SingleProject>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<EnableDefaultCssItems>false</EnableDefaultCssItems>
+    <PropertyGroup>
+        <TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+        <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+        <!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Northwind.Maui.Blazor.Client</RootNamespace>
+        <UseMaui>true</UseMaui>
+        <SingleProject>true</SingleProject>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <EnableDefaultCssItems>false</EnableDefaultCssItems>
 
-		<!-- Display name -->
-		<ApplicationTitle>Northwind.Maui.Blazor.Client</ApplicationTitle>
+        <!-- Display name -->
+        <ApplicationTitle>Northwind.Maui.Blazor.Client</ApplicationTitle>
 
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.northwind.maui.blazor.client</ApplicationId>
-		<ApplicationIdGuid>B5719619-6D7C-4210-A0AF-7036A5FB8FD7</ApplicationIdGuid>
+        <!-- App Identifier -->
+        <ApplicationId>com.companyname.northwind.maui.blazor.client</ApplicationId>
+        <ApplicationIdGuid>EFB351D9-AFE7-4080-8BDC-B1868E387B9D</ApplicationIdGuid>
 
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
+        <!-- Versions -->
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-	</PropertyGroup>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+        <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+    <ItemGroup>
+        <!-- App Icon -->
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+        <!-- Splash Screen -->
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+        <!-- Images -->
+        <MauiImage Include="Resources\Images\*" />
+        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
-		<MauiImage Include="Resources\Images\card_index_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\cityscape_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\delivery_truck_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\euro_banknote_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\file_cabinet_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\gear_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\heart_suit_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\identification_card_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\magnifying_glass_tilted_left_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\wastebasket_high_contrast.svg" />
-		<MauiImage Include="Resources\Images\wind_face_high_contrast.svg" />
+        <!-- Custom Fonts -->
+        <MauiFont Include="Resources\Fonts\*" />
 
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
+        <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
 
-		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-	</ItemGroup>
+    <ItemGroup>
+      <None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
+      <None Remove="Resources\Images\card_index_high_contrast.svg" />
+      <None Remove="Resources\Images\categories_small.jpeg" />
+      <None Remove="Resources\Images\category1_small.jpeg" />
+      <None Remove="Resources\Images\category2_small.jpeg" />
+      <None Remove="Resources\Images\category3_small.jpeg" />
+      <None Remove="Resources\Images\category4_small.jpeg" />
+      <None Remove="Resources\Images\category5_small.jpeg" />
+      <None Remove="Resources\Images\category6_small.jpeg" />
+      <None Remove="Resources\Images\category7_small.jpeg" />
+      <None Remove="Resources\Images\category8_small.jpeg" />
+      <None Remove="Resources\Images\cityscape_high_contrast.svg" />
+      <None Remove="Resources\Images\delivery_truck_high_contrast.svg" />
+      <None Remove="Resources\Images\euro_banknote_high_contrast.svg" />
+      <None Remove="Resources\Images\file_cabinet_high_contrast.svg" />
+      <None Remove="Resources\Images\gear_high_contrast.svg" />
+      <None Remove="Resources\Images\heart_suit_high_contrast.svg" />
+      <None Remove="Resources\Images\identification_card_high_contrast.svg" />
+      <None Remove="Resources\Images\magnifying_glass_tilted_left_high_contrast.svg" />
+      <None Remove="Resources\Images\wastebasket_high_contrast.svg" />
+      <None Remove="Resources\Images\wind_face_high_contrast.svg" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<None Remove="Platforms\Android\Resources\xml\network_security_config.xml" />
-		<None Remove="Resources\Images\card_index_high_contrast.svg" />
-		<None Remove="Resources\Images\categories_small.jpeg" />
-		<None Remove="Resources\Images\category1-small.jpeg" />
-		<None Remove="Resources\Images\category1_small.jpeg" />
-		<None Remove="Resources\Images\category2-small.jpeg" />
-		<None Remove="Resources\Images\category2_small.jpeg" />
-		<None Remove="Resources\Images\category3-small.jpeg" />
-		<None Remove="Resources\Images\category3_small.jpeg" />
-		<None Remove="Resources\Images\category4_small.jpeg" />
-		<None Remove="Resources\Images\category5_small.jpeg" />
-		<None Remove="Resources\Images\category6_small.jpeg" />
-		<None Remove="Resources\Images\category7_small.jpeg" />
-		<None Remove="Resources\Images\category8_small.jpeg" />
-		<None Remove="Resources\Images\cityscape_high_contrast.svg" />
-		<None Remove="Resources\Images\delivery_truck_high_contrast.svg" />
-		<None Remove="Resources\Images\euro_banknote_high_contrast.svg" />
-		<None Remove="Resources\Images\file_cabinet_high_contrast.svg" />
-		<None Remove="Resources\Images\gear_high_contrast.svg" />
-		<None Remove="Resources\Images\heart_suit_high_contrast.svg" />
-		<None Remove="Resources\Images\identification_card_high_contrast.svg" />
-		<None Remove="Resources\Images\magnifying_glass_tilted_left_high_contrast.svg" />
-		<None Remove="Resources\Images\wastebasket_high_contrast.svg" />
-		<None Remove="Resources\Images\wind_face_high_contrast.svg" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0-rc.1.22426.10" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<MauiXaml Update="AppShell.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\Categories\CategoriesPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\Categories\CategoryPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\Employees\EmployeesPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\Orders\OrdersPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-	</ItemGroup>
+  <ItemGroup>
+      <MauiXaml Update="AppShell.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="Views\Categories\CategoriesPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="Views\Categories\CategoryPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="Views\Employees\EmployeesPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="Views\Orders\OrdersPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+    </ItemGroup>
 
 </Project>

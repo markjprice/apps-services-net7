@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Northwind.Maui.Blazor.Client.Views.CategoriesPage"
              xmlns:local="clr-namespace:Northwind.Maui.Blazor.Client"
-             xmlns:categories="clr-namespace:Northwind.Maui.Blazor.Client.Views.Categories"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:categories=
+               "clr-namespace:Northwind.Maui.Blazor.Client.Views.Categories"
+             xmlns:toolkit=
+               "http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Categories"
              BackgroundColor="{StaticResource PageBackgroundColor}">
 
@@ -13,19 +15,19 @@
   </ContentPage.BindingContext>
 
   <VerticalStackLayout>
-    
+
     <HorizontalStackLayout Spacing="20" Padding="20">
       <Label Text="{Binding InfoMessage}" />
-      <Label Text="{Binding ErrorMessage}" 
+      <Label Text="{Binding ErrorMessage}" TextColor="Red"
              IsVisible="{Binding ErrorMessageVisible}" />
     </HorizontalStackLayout>
-    
+
     <CarouselView x:Name="carouselView" 
                   ItemsSource="{Binding .}" 
                   IndicatorView="indicatorView"
                   PeekAreaInsets="10"
                   Loop="False">
-      
+
       <CarouselView.EmptyView>
         <ContentView>
           <VerticalStackLayout HorizontalOptions="Center"
@@ -36,7 +38,7 @@
                    FontSize="18"
                    HorizontalOptions="Fill"
                    HorizontalTextAlignment="Center" />
-            <Label Text="{Binding EmptyMessage}"
+            <Label Text="{Binding ErrorMessage}"
                    FontAttributes="Italic"
                    FontSize="12"
                    HorizontalOptions="Fill"
@@ -44,7 +46,7 @@
           </VerticalStackLayout>
         </ContentView>
       </CarouselView.EmptyView>
-      
+
       <CarouselView.ItemTemplate>
         <DataTemplate>
           <VerticalStackLayout>
@@ -55,7 +57,7 @@
                    HeightRequest="450"
                    HorizontalOptions="Center"
                    VerticalOptions="Center">
-              
+
               <VerticalStackLayout>
                 <Label Text="{Binding CategoryName}"
                        FontAttributes="Bold"
@@ -73,13 +75,13 @@
                        MaxLines="5"
                        LineBreakMode="TailTruncation" />
               </VerticalStackLayout>
-              
+
             </Frame>
           </VerticalStackLayout>
         </DataTemplate>
       </CarouselView.ItemTemplate>
     </CarouselView>
-    
+
     <Frame BackgroundColor="{StaticResource PrimaryTextColor}" 
            CornerRadius="5" HorizontalOptions="Center">
       <IndicatorView x:Name="indicatorView"
@@ -87,7 +89,6 @@
                      SelectedIndicatorColor="DeepSkyBlue"
                      HorizontalOptions="Center" />
     </Frame>
-    
-  </VerticalStackLayout>
 
+  </VerticalStackLayout>
 </ContentPage>

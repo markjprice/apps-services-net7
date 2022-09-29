@@ -7,7 +7,8 @@ namespace Northwind.Maui.Blazor.Client.Views.Categories;
 
 internal partial class CategoriesViewModel : ObservableCollection<Category>
 {
-  public string EmptyMessage { get; set; } = string.Empty;
+  // These property do not need to support two-way binding
+  // because they are set programmatically to display to user.
 
   public string InfoMessage { get; set; } = string.Empty;
 
@@ -42,9 +43,7 @@ internal partial class CategoriesViewModel : ObservableCollection<Category>
       foreach (Category category in categories)
       {
         int offset = 78; // to remove the OLE header
-                         //string oleHeader = "FRwvAAIAAAANAA4AFAAhAP////9CaXRtYXAgSW1hZ2UAUGFpbnQuUGljdHVyZQABBQAAAgAAAAcAAABQQnJ1c2gAAAAAAAAAAACgKQAA";
-                         //System.Convert.ToBase64String(category.Picture.AsSpan(
-                         //0, offset).ToArray());
+
         category.Picture = category.Picture.AsSpan(
           offset, category.Picture.Length - offset).ToArray();
 

@@ -5,6 +5,7 @@
              Title="Customers">
 
   <VerticalStackLayout Spacing="15" Padding="20">
+
     <HorizontalStackLayout Spacing="10">
       <Label Text="Customers" FontSize="Title" />
       <Button Text="Add" Clicked="Add_Clicked" HorizontalOptions="End" />
@@ -32,6 +33,6 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </VerticalStackLayout>
 
+  </VerticalStackLayout>
 </ContentPage>

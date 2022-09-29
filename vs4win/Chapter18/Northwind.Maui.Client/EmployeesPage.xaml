@@ -4,8 +4,8 @@
              x:Class="Northwind.Maui.Client.EmployeesPage"
              Title="Employees"
              Loaded="ContentPage_Loaded">
-  
-  <VerticalStackLayout>
+    <VerticalStackLayout>
+
     <Grid Background="DarkGray" Margin="10" 
           Padding="5" x:Name="gridCalculator"
           ColumnDefinitions="Auto,Auto,Auto,Auto"
@@ -30,5 +30,6 @@
     <Label x:Name="Output" FontSize="24" 
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
+
   </VerticalStackLayout>
 </ContentPage>

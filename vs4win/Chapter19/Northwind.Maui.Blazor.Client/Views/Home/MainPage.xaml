@@ -6,10 +6,10 @@
              Title="Home"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <BlazorWebView HostPage="wwwroot/index.html">
-        <BlazorWebView.RootComponents>
-            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
-        </BlazorWebView.RootComponents>
-    </BlazorWebView>
+  <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+    <BlazorWebView.RootComponents>
+      <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
+    </BlazorWebView.RootComponents>
+  </BlazorWebView>
 
 </ContentPage>

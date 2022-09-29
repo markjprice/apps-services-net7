@@ -1,11 +1,11 @@
 ﻿// ObservableObject, [ObservableProperty]
-using CommunityToolkit.Mvvm.ComponentModel; 
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Northwind.Maui.Blazor.Client.Views.Categories;
 
 internal partial class Category : ObservableObject
 {
-  // The field names must be camelCase because the source generated
+  // The field names must be camelCase because the source-generated
   // public property names will be TitleCase.
 
   [ObservableProperty]
