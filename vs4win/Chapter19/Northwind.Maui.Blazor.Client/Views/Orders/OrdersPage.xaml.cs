@@ -1,5 +1,5 @@
-using CommunityToolkit.Maui.Alerts;
-using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Alerts; // Toast
+using CommunityToolkit.Maui.Core; // IToast, ToastDuration
 
 namespace Northwind.Maui.Blazor.Client.Views;
 

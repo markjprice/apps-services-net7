@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel; // ObservableObject
 using CommunityToolkit.Mvvm.Input; // [RelayCommand]
-using CommunityToolkit.Maui.Alerts; // Toast, ToastDuration
-using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Alerts; // Toast
+using CommunityToolkit.Maui.Core; // IToast, ToastDuration
 
 namespace Northwind.Maui.Blazor.Client.Views.Orders;
 
