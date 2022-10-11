@@ -130,7 +130,7 @@ app.MapGet("api/products", (
     return operation;
   })
   .Produces<Product[]>(StatusCodes.Status200OK)
-  .RequireRateLimiting("fixed5per10Seconds");
+  .RequireRateLimiting("fixed5per10seconds");
 
 app.MapGet("api/products/outofstock", ([FromServices] NorthwindContext db) =>
   db.Products.Where(product =>
@@ -223,7 +223,7 @@ if (useMicrosoftRateLimiting)
   RateLimiterOptions rateLimiterOptions = new();
 
   rateLimiterOptions.AddFixedWindowLimiter(
-    policyName: "fixed5per10Seconds", options =>
+    policyName: "fixed5per10seconds", options =>
     {
       options.PermitLimit = 5;
       options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
