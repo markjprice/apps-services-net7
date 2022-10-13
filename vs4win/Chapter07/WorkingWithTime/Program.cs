@@ -119,7 +119,7 @@ Thread.CurrentThread.CurrentCulture = previousCulture;
 
 SectionTitle("Working with only a date or a time");
 
-DateOnly coronation = new(year: 2023, month: 6, day: 3);
+DateOnly coronation = new(year: 2023, month: 5, day: 6);
 WriteLine($"The King's Coronation is on {coronation.ToLongDateString()}.");
 
 TimeOnly starts = new(hour: 11, minute: 30);
