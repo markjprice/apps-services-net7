@@ -19,7 +19,7 @@
 - [Chapter 3 - Managing NoSQL Data Using Azure Cosmos DB](#chapter-3---managing-nosql-data-using-azure-cosmos-db)
   - [NoSQL data stores](#nosql-data-stores)
   - [Azure Cosmos DB](#azure-cosmos-db)
-- [Chapter 4 - Improving Performance and Scalability Using Multitasking](#chapter-4---improving-performance-and-scalability-using-multitasking)
+- [Chapter 4 - Benchmarking Performance, Multitasking, and Concurrency](#chapter-4---benchmarking-performance-multitasking-and-concurrency)
 - [Chapter 5 - Using Popular Third-Party Libraries](#chapter-5---using-popular-third-party-libraries)
   - [Working with images](#working-with-images)
   - [Others](#others)
@@ -114,23 +114,24 @@
 - Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
 - Draft proposals for C# Language Specifications for 6.0 and later: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
 - C# language versioning: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
-- [EPIC] .NET 6 C# project templates use latest language idioms #3359: https://github.com/dotnet/templating/issues/3359
-- SDK support for implicit namespaces in C# projects #25066: https://github.com/dotnet/docs/issues/25066
+- [EPIC - .NET 6 C# project templates use latest language idioms #3359](https://github.com/dotnet/templating/issues/3359)
+- [SDK support for implicit namespaces in C# projects #25066](https://github.com/dotnet/docs/issues/25066)
 
 ## C# implemented proposals
-- C# 10: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-10.0
-- C# 9: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-9.0
-- C# 8: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-8.0
-- C# 7.3: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.3
-- C# 7.2: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.2
-- C# 7.1: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.1
-- C# 7.0: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.0
-- C# 6.0: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-6.0
+- [C# 11](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-11.0)
+- [C# 10](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-10.0)
+- [C# 9](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-9.0)
+- [C# 8](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-8.0)
+- [C# 7.3](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.3)
+- [C# 7.2](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.2)
+- [C# 7.1](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.1)
+- [C# 7.0](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.0)
+- [C# 6.0](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-6.0)
 
 ## C# proposals being worked on
-- [Proposal] Required Properties #3630: https://github.com/dotnet/csharplang/issues/3630
-- Proposal: Semi-Auto-Properties; field keyword #140: https://github.com/dotnet/csharplang/issues/140
-- Working Set (of proposals): https://github.com/dotnet/csharplang/milestone/19
+- [Proposal: Required Properties #3630](https://github.com/dotnet/csharplang/issues/3630)
+- [Proposal: Semi-Auto-Properties; field keyword #140](https://github.com/dotnet/csharplang/issues/140)
+- [Working Set (of proposals)](https://github.com/dotnet/csharplang/milestone/19)
 
 ## C# language
 - C# Reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
@@ -217,17 +218,18 @@
 - Migrate one-to-few relational data into Azure Cosmos DB SQL API account: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/migrate-relational-to-cosmos-db-sql-api
 - Frequently asked questions about different APIs in Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/faq
 
-# Chapter 4 - Improving Performance and Scalability Using Multitasking
+# Chapter 4 - Benchmarking Performance, Multitasking, and Concurrency
 
-- Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
-- Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
-- Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
-- Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
-- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
-- Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
-- await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
-- Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
-- Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
+- [Thread pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
+- [Pros and cons of different ways to start tasks](https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/)
+- [Events and thread-safety](https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful)
+- [Stephen Cleary's thoughts on events and thread-safety](https://blog.stephencleary.com/2009/06/threadsafe-events.html)
+- [Threads and threading](https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading)
+- [Async in depth](https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth)
+- [await (C# reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await)
+- [Parallel Programming in .NET](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/)
+- [Overview of synchronization primitives](https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives)
+- [Async streams tutorial](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/generate-consume-asynchronous-stream)
 
 # Chapter 5 - Using Popular Third-Party Libraries
 
@@ -240,12 +242,12 @@
 # Chapter 6 - Controlling the Roslyn Compiler, Reflection and Expression Trees
 
 ## Assemblies and reflection
-- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
-- Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
-- Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
-- Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
-- Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
-- Extending Metadata Using Attributes: https://docs.microsoft.com/en-us/dotnet/standard/attributes/
+- [.NET API Reference](https://docs.microsoft.com/en-us/dotnet/api/)
+- [Compiler-generated display class](http://stackoverflow.com/a/2509524/55847)
+- [Dynamically load assemblies that are not currently referenced](https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto)
+- [Dynamically execute code](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke)
+- [Dynamically generate new code and assemblies](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder)
+- [Extending Metadata Using Attributes](https://docs.microsoft.com/en-us/dotnet/standard/attributes/)
 
 # Chapter 7 - Handling Dates, Times, and Internationalization
 
@@ -360,6 +362,7 @@
 
 # Chapter 14 - Building Serverless Nanoservices Using Azure Functions
 
+- .NET 7 comes to Azure Functions & Visual Studio 2022: https://devblogs.microsoft.com/dotnet/dotnet-7-comes-to-azure-functions/
 - Azure Functions: https://azure.microsoft.com/en-us/services/functions/
 - Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
 - Azure serverless community library: https://www.serverlesslibrary.net/
@@ -403,6 +406,7 @@
 - Implementing offline support for Blazor WebAssembly projects: https://docs.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app#offline-support
 - Lazy loading assemblies: https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0
 - Routing in Blazor Apps: Comparing the routing of popular web frameworks like React and Angular with Blazor: https://devblogs.microsoft.com/premier-developer/routing-in-blazor-apps/
+- Use .NET from any JavaScript app in .NET 7: https://devblogs.microsoft.com/dotnet/use-net-7-from-any-javascript-app-in-net-7/
 
 # Chapter 17 - Using Open-Source Blazor Component Libraries
 
@@ -418,8 +422,11 @@
 - .NET Multi-platform App UI: https://dotnet.microsoft.com/en-us/apps/maui
 - .NET Multi-platform App UI documentation: https://docs.microsoft.com/en-us/dotnet/maui/
 - .NET Multi-platform App UI (.NET MAUI) Support Policy: https://dotnet.microsoft.com/en-us/platform/support/policy/maui
+- .NET Conf Focus on MAUI – That’s a wrap!: https://devblogs.microsoft.com/dotnet/dotnet-conf-focus-on-maui-recap/
 - .NET Podcasts - Sample Application: https://github.com/microsoft/dotnet-podcasts
+- .NET MAUI eBook Now Available – Enterprise Application Pattern: https://devblogs.microsoft.com/dotnet/dotnet-maui-ebook-released/
 - Visual Studio 2022 for Mac is now available: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/
+- Announcing .NET MAUI support for Xcode 14 and iOS 16: https://devblogs.microsoft.com/dotnet/dotnet-maui-xcode-14/
 - Introducing .NET MAUI – One Codebase, Many Platforms: https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/
 - Introducing .NET Multi-platform App UI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
 - Layouts: https://docs.microsoft.com/en-us/dotnet/maui/user-interface/layouts/
