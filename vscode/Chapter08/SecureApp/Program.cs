@@ -14,7 +14,7 @@ Protector.Register("Eve", "Pa$$w0rd");
 // prompt user to enter username and password to login
 // as one of these three users
 
-Write($"Enter your user name: ");
+Write($"Enter your username: ");
 string? username = ReadLine()!;
 
 Write($"Enter your password: ");
