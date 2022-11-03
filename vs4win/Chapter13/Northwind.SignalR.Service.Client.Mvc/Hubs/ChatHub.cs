@@ -39,7 +39,7 @@ public class ChatHub : Hub
     {
       if (string.IsNullOrEmpty(newUser.Name))
       {
-        // assign a GUID for name is they are anonymous
+        // assign a GUID for name if they are anonymous
         newUser.Name = Guid.NewGuid().ToString();
       }
       newUser.ConnectionId = Context.ConnectionId;
