@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
 
-namespace Northwind.OData.Services.Controllers;
+namespace Northwind.OData.Service.Controllers;
 
 public class CustomersController : ODataController
 {
