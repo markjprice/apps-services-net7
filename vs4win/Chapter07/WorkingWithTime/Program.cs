@@ -34,7 +34,7 @@ WriteLine($"Now: {DateTime.Now}");
 WriteLine("There are {0} days and {1} hours until Christmas 2024.",
   arg0: untilXmas.Days, arg1: untilXmas.Hours);
 
-WriteLine("There are {0:N0} hours until Christmas.",
+WriteLine("There are {0:N0} hours until Christmas 2024.",
   arg0: untilXmas.TotalHours);
 
 DateTime kidsWakeUp = new(
