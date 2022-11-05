@@ -7,7 +7,8 @@ public partial class EmployeesPage : ContentPage
 		InitializeComponent();
 	}
 
-  private async void CopyToClipboardButton_Clicked(object sender, EventArgs e)
+  private async void CopyToClipboardButton_Clicked(
+    object sender, EventArgs e)
   {
     await Clipboard.Default.SetTextAsync(NotesTextBox.Text);
   }
