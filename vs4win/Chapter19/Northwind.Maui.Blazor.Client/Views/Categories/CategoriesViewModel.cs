@@ -22,7 +22,8 @@ internal partial class CategoriesViewModel : ObservableCollection<Category>
     {
       HttpClient client = new()
       {
-        BaseAddress = new Uri(DeviceInfo.Platform == DevicePlatform.Android ?
+        BaseAddress = new Uri(
+          DeviceInfo.Platform == DevicePlatform.Android ?
           "http://10.0.2.2:5192" : "http://localhost:5192")
       };
 
