@@ -8,6 +8,7 @@
   - [C# implemented proposals](#c-implemented-proposals)
   - [C# proposals being worked on](#c-proposals-being-worked-on)
   - [C# language](#c-language)
+  - [Azure and .NET](#azure-and-net)
   - [Help and learning](#help-and-learning)
 - [Chapter 2 - Managing Relational Data Using SQL Server](#chapter-2---managing-relational-data-using-sql-server)
   - [Microsoft SQL Server](#microsoft-sql-server)
@@ -99,6 +100,7 @@
 
 ## .NET
 - [Download .NET SDK](https://www.microsoft.com/net/download)
+- [.NET Conf 2022 Keynote: Welcome to .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=8V_BUGFKdaI)
 - [Stack Overflow survey 2021 - Most loved frameworks and libraries](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries)
 - [Themes of .NET](https://themesof.net/)
 - [Official list of .NET 7 supported operating systems](https://github.com/dotnet/core/blob/main/release-notes/7.0/supported-os.md)
@@ -111,6 +113,7 @@
 - [.NET Team Members](https://twitter.com/i/lists/120961876//members)
 
 ## C# language version and the journey to C# 11
+- [What's New in C# 11 | .NET Conf 2022](https://www.youtube.com/watch?v=H18CfoinPZg)
 - [Early peek at C# 11 features](https://devblogs.microsoft.com/dotnet/early-peek-at-csharp-11-features/)
 - [What's new in C# 11](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11)
 - [Welcome to C# 10](https://devblogs.microsoft.com/dotnet/welcome-to-csharp-10/)
@@ -148,6 +151,10 @@
 - [Naming guidelines](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
 - [Types (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/)
 - [Statements (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/statements)
+
+## Azure and .NET
+- [State of Azure + .NET | .NET Conf 2022](https://www.youtube.com/watch?v=NBbI52liUR4)
+- [The Whirlwind Tour of Building .NET Apps in Azure | .NET Conf 2022](https://www.youtube.com/watch?v=45gTMoqSYHg)
 
 ## Help and learning
 - [Raise an issue with the book](https://github.com/markjprice/apps-services-net7/issues)
@@ -190,6 +197,8 @@
 - [Scaffolding](https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli)
 - [Deep Dive into Many-to-Many: A Tour of EF Core 5.0](https://channel9.msdn.com/Shows/On-NET/Deep-Dive-into-Many-to-Many-A-Tour-of-EF-Core-50-pt-2)
 - [Naming Conventions for Entity Framework Core Tables and Columns](https://github.com/efcore/EFCore.NamingConventions)
+- [Table-per-concrete-type (TPC) inheritance mapping](https://learn.microsoft.com/en-gb/ef/core/what-is-new/ef-core-7.0/whatsnew#table-per-concrete-type-tpc-inheritance-mapping)
+- [T4 goodness with Entity Framework Core 7 | .NET Conf 2022](https://www.youtube.com/watch?v=PUexkGWErNk)
 
 ## EF Core querying and manipulating
 - [Filtered include](https://learn.microsoft.com/en-us/ef/core/querying/related-data/eager#filtered-include)
@@ -226,6 +235,7 @@
 
 # Chapter 4 - Benchmarking Performance, Multitasking, and Concurrency
 
+- [Performance Improvements in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=yNPEdaxkTZw)
 - [Thread pool](https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
 - [Pros and cons of different ways to start tasks](https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/)
 - [Events and thread-safety](https://learn.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful)
@@ -317,6 +327,8 @@
 
 ## Web Service design
 - [RESTful web API design](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+- [Making the Most of Minimal APIs in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=HXHwtEjQoyM)
+- [Building modern high performance services with ASP.NET Core and .NET 7](https://www.youtube.com/watch?v=P7lmBFuw92s)
 
 ## Web service routing
 - [Design decisions around endpoint routing](https://devblogs.microsoft.com/aspnet/asp-net-core-2-2-0-preview1-endpoint-routing/)
@@ -389,6 +401,9 @@
 - [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/overview)
 - [ASP.NET Core gRPC for WCF Developers](https://learn.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/)
 - [Introduction to HTTP/2](https://web.dev/performance-http2/)
+- [High-performance services with gRPC: What's new in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=et_2NBk4N4Y)
+- [From RESTful HTTP API to gRPC | .NET Conf 2022](https://www.youtube.com/watch?v=o7MHxvcjFm4)
+- [Using CoreWCF to unblock modernization of WCF apps | .NET Conf 2022](https://www.youtube.com/watch?v=jbcNF-QsxNs)
 
 # Chapter 13 - Broadcasting Real-Time Communication Using SignalR
 
@@ -402,10 +417,12 @@
 - [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
 - [Azure Functions documentation](https://learn.microsoft.com/en-us/azure/azure-functions/)
 - [Azure serverless community library](https://www.serverlesslibrary.net/)
+- [Building Serverless Applications with .NET 7 and Azure functions | .NET Conf 2022](https://www.youtube.com/watch?v=ITpcihRwbTc)
 
 # Chapter 15 - Building Web User Interfaces Using ASP.NET Core
 
 ## ASP.NET Core
+- [State of ASP.NET Core | .NET Conf 2022](https://www.youtube.com/watch?v=gNyEpkJMmcM)
 - [ASP.NET Core fundamentals](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/)
 - [Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview)
 - [Free TLS/SSL certificates](https://letsencrypt.org)
@@ -416,6 +433,7 @@
 - [Views in ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/overview)
 - [Layout in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/layout)
 - [Tag Helpers in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro)
+- [Human-readable Razor views with ASP.NET 7 Tag Helpers | .NET Conf 2022](https://www.youtube.com/watch?v=8B9bqdMIXZk)
 - [ASP.NET Core Razor Pages with EF Core](https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro)
 - [Registering a database context for use as a dependency service](https://learn.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext#using-dbcontext-with-dependency-injection)
 - [The `<partial>` tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/partial-tag-helper)
@@ -428,6 +446,8 @@
 - [Official list of supported Blazor platforms](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms)
 - [Blazor hosting models](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models)
 - [Blazor Hybrid apps](https://devblogs.microsoft.com/aspnet/hybrid-blazor-apps-in-mobile-blazor-bindings-july-update/)
+- [What's new for Blazor in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=evW4Gj4sHsk)
+- [.NET ❤️’s WebAssembly in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=Ru-kO77d3F8)
 
 ## Blazor components
 - [The reason for needing CSS isolation for Blazor components](https://github.com/dotnet/aspnetcore/issues/10170)
@@ -440,6 +460,8 @@
 - [Lazy loading assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies)
 - [Routing in Blazor Apps: Comparing the routing of popular web frameworks like React and Angular with Blazor](https://devblogs.microsoft.com/premier-developer/routing-in-blazor-apps/)
 - [Use .NET from any JavaScript app in .NET 7](https://devblogs.microsoft.com/dotnet/use-net-7-from-any-javascript-app-in-net-7/)
+- [Testing Blazor Applications with Playwright | .NET Conf 2022](https://www.youtube.com/watch?v=gBky9_AskNQ)
+- [CSS Techniques for Blazor Developers | .NET Conf 2022](https://www.youtube.com/watch?v=w_x1keHyXAY)
 
 # Chapter 17 - Using Open-Source Blazor Component Libraries
 
@@ -452,9 +474,11 @@
 
 # Chapter 18 - Building Mobile and Desktop Apps Using .NET MAUI
 
+- [State of .NET MAUI | .NET Conf 2022](https://www.youtube.com/watch?v=Z6UPJmerTo8)
 - [.NET Multi-platform App UI](https://dotnet.microsoft.com/en-us/apps/maui)
 - [.NET Multi-platform App UI documentation](https://learn.microsoft.com/en-us/dotnet/maui/)
 - [.NET Multi-platform App UI (.NET MAUI) Support Policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui)
+- [What's new in .NET MAUI and Desktop Apps | .NET Conf 2022](https://www.youtube.com/watch?v=nu6sv94QvAg)
 - [.NET Conf Focus on MAUI – That’s a wrap!](https://devblogs.microsoft.com/dotnet/dotnet-conf-focus-on-maui-recap/)
 - [.NET Podcasts - Sample Application](https://github.com/microsoft/dotnet-podcasts)
 - [.NET MAUI eBook Now Available – Enterprise Application Pattern](https://devblogs.microsoft.com/dotnet/dotnet-maui-ebook-released/)
@@ -470,9 +494,14 @@
 - [.NET MAUI - Workshop](https://github.com/dotnet-presentations/dotnet-maui-workshop)
 - [Build mobile and desktop apps with .NET MAUI learning path](https://learn.microsoft.com/en-gb/learn/paths/build-apps-with-dotnet-maui/)
 - [Forums](https://learn.microsoft.com/en-us/answers/topics/dotnet-maui.html)
+- [MVVM is easier than ever before with Source Generators, .NET 7, and the MVVM Toolkit| .NET Conf 2022](https://www.youtube.com/watch?v=oQluWTag-e4)
+- [Building Windows apps with WinUI 3 with .NET | .NET Conf 2022](https://www.youtube.com/watch?v=sYBCFTRmHOA)
+- [Accelerate your WinUI 3 app with the Windows Community Toolkit | .NET Conf 2022](https://www.youtube.com/watch?v=WH-vRxvY95M)
+- [OSS Spotlight - Build amazing cross-platform UI for .NET with Avalonia UI!](https://www.youtube.com/watch?v=qcZSr2ejH5I)
 
 # Chapter 19 - Integrating .NET MAUI Apps with Blazor and Native Platforms
 
+- [Create native desktop & mobile apps using web skills in Blazor Hybrid | .NET Conf 2022](https://www.youtube.com/watch?v=ojcvL8KCOwo)
 - [Host a Blazor web app in a .NET MAUI app using BlazorWebView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview)
 - [Enterprise Application Patterns Using .NET MAUI](https://learn.microsoft.com/en-us/dotnet/architecture/maui/)
 - [CarouselView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/carouselview/)
@@ -488,6 +517,7 @@
 - [Media picker](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker)
 - [Clipboard](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/data/clipboard)
 - [Secure storage](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/secure-storage)
+- [Modernize your WPF and Windows Forms application with Blazor | .NET Conf 2022](https://www.youtube.com/watch?v=niX1DbFwgq4)
 
 # Chapter 20 - Introducing the Survey Project Challenge
 
