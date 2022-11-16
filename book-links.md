@@ -151,6 +151,8 @@
 - [Naming guidelines](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
 - [Types (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/)
 - [Statements (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/statements)
+- [Pattern matching overview](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching)
+- [Patterns (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns)
 
 ## Azure and .NET
 - [State of Azure + .NET | .NET Conf 2022](https://www.youtube.com/watch?v=NBbI52liUR4)

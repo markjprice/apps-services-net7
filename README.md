@@ -2,11 +2,11 @@
 
 # Apps and Services with .NET 7, First Edition
 
-Available on Amazon in Paperback or Kindle editions from November 8, 2022 with pre-orders open now: 
+Available on Amazon in Paperback or Kindle editions from November 15, 2022. 
 
 My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
-Available on Packt's website in eBook or Print + eBook editions, or included with a Packt Subscription, from November 8, 2022 with pre-orders open now: 
+Available on Packt's website in eBook or Print + eBook editions, or included with a Packt Subscription from November 15, 2022. 
 
 All of my books on Packt's website: https://subscription.packtpub.com/search?query=mark+j.+price
 
