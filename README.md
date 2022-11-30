@@ -55,6 +55,9 @@ The appendix and color figures are available to download as PDFs:
 - [Appendix A, Answers to the Test Your Knowledge Questions](docs/B18857_Appendix.pdf)
 - [Color images of the screenshots/diagrams used in this book](docs/9781801813433_ColorImages.pdf)
 
+With every Packt book you get a DRM-free PDF version of that book at no cost. Submit your proof of purchase at the following link:
+https://packt.link/free-ebook/9781801813433
+
 ## Important
 Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
 - [Book Links](book-links.md)
