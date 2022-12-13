@@ -2,13 +2,12 @@
 
 # Apps and Services with .NET 7, First Edition
 
-Available on Amazon in Paperback or Kindle editions from November 15, 2022. 
+With every Packt book you get a DRM-free PDF version of that book at no cost. Submit your proof of purchase at the following link:
+https://packt.link/free-ebook/9781801813433
 
-My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
+Available on Amazon in Paperback or Kindle editions from November 15, 2022. My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
-Available on Packt's website in eBook or Print + eBook editions, or included with a Packt Subscription from November 15, 2022. 
-
-All of my books on Packt's website: https://subscription.packtpub.com/search?query=mark+j.+price
+Available on Packt's website in eBook or Print + eBook editions, or included with a Packt Subscription from November 15, 2022. All of my books on Packt's website: https://subscription.packtpub.com/search?query=mark+j.+price
 
 ## Code solutions for Visual Studio 2022 and Visual Studio Code
 
@@ -55,9 +54,6 @@ The appendix and color figures are available to download as PDFs:
 - [Appendix A, Answers to the Test Your Knowledge Questions](docs/B18857_Appendix.pdf)
 - [Color images of the screenshots/diagrams used in this book](docs/9781801813433_ColorImages.pdf)
 
-With every Packt book you get a DRM-free PDF version of that book at no cost. Submit your proof of purchase at the following link:
-https://packt.link/free-ebook/9781801813433
-
 ## Important
 Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
 - [Book Links](book-links.md)
@@ -73,6 +69,7 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 
 ## Interviews with me
 Podcast interviews with me:
+- [Yet Another Podcast with Jesse Liberty - December 2022](https://jesseliberty.com/2022/12/10/mark-price-on-c-11-fixed/)
 - [The .NET Core Podcast - February 4, 2022](https://dotnetcore.show/episode-91-c-sharp-10-and-dotnet-6-with-mark-j-price/)
 - [Yet Another Podcast with Jesse Liberty - May 2021](http://jesseliberty.com/2021/05/16/mark-price-on-c9-and-net-6/)
 - [The .NET Core Podcast - February 7, 2020](https://dotnetcore.show/episode-44-learning-net-core-with-mark-j-price/)
