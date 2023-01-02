@@ -100,3 +100,13 @@ We asked the compiler to treat warnings as errors so we cannot build until the c
 ```cs
 #nullable disable
 ```
+
+Microsoft recommends either setting `DbSet<T>` properties to the null-forgiving operator, or calling the `Set<T>` method defined in the `DbContext` base class to implement them as a read-only property, as shown in the following code:
+```cs
+public virtual DbSet<Category> Categories => Set<Category>();
+```
+
+**Working with Nullable Reference Types - DbContext and DbSet**
+https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types#dbcontext-and-dbset
+
+> Thanks to [charlygg](https://github.com/charlygg) for suggesting using the `Set<T>` method in a comment on [issue on 1 January 2023](https://github.com/markjprice/apps-services-net7/issues/5#issuecomment-1368614033).
