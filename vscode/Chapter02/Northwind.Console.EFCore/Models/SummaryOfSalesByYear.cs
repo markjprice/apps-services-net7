@@ -4,15 +4,16 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Northwind.Console.EFCore.Models
+namespace Northwind.Console.EFCore.Models;
+
+[Keyless]
+public partial class SummaryOfSalesByYear
 {
-    [Keyless]
-    public partial class SummaryOfSalesByYear
-    {
-        [Column(TypeName = "datetime")]
-        public DateTime? ShippedDate { get; set; }
-        public int OrderId { get; set; }
-        [Column(TypeName = "money")]
-        public decimal? Subtotal { get; set; }
-    }
+    [Column(TypeName = "datetime")]
+    public DateTime? ShippedDate { get; set; }
+
+    public int OrderId { get; set; }
+
+    [Column(TypeName = "money")]
+    public decimal? Subtotal { get; set; }
 }
