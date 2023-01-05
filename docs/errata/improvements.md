@@ -35,4 +35,6 @@ Copying and pasting directly from the ebook is likely to include newline charact
 
 > Thanks to Bob Molloy for emailing me about this issue on 5 January 2023.
 
-In Step 3, you add a reference to a project that is outside the solution. In Step 4, you need to build the project. I added a note to explain that you must build the project at the command-line or you will see an error because Visual Studio cannot find projects that are outside a solution. In early drafts of the book, this was the first time this situation occurred. In later drafts, the SQL Server chapter was moved earlier. So now the first time the situation occurs is on page 130 but it does not have a note explaining why it is import to build at the command-line using the `dotnet build` command. In the next edition I will move the note to the SQL Server chapter.
+In Step 3, you add a reference to a project that is outside the solution. In Step 4, you build the project at the command-line or terminal by using the following command: `dotnet build`. 
+
+There is a note to explain that if you try to use the **Build** menu in Visual Studio then you will see an error. This is because Visual Studio cannot find projects that are outside a solution. In early drafts of the book, this was the first time this situation occurred which is why I put the note here. In later drafts, the SQL Server and Cosmos DB chapters were moved earlier. So then the first time the situation occurs is in Chapter 3 on page 130. In the next edition I will move the note to the first time the situation occurs.
