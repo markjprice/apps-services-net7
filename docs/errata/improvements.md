@@ -27,14 +27,12 @@ Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace
 Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
 ```
 
-Here is the same command as a single line to make it easier to copy and paste:
+I recommend that you type from the print book or copy and paste long commands like this from the eBook into a plain text editor like Notepad. Then make sure that the whole command is properly formatted as a single line with correct spacing, before you then copy and paste it to the command-line. Copying and pasting directly from the eBook is likely to include newline characters and missing spaces and so on that break the command.
+
+For convenience, here is the same command as a single line to make it easier to copy and paste:
 ```
 dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
 ```
-
-I recommend that you copy and paste long commands like this from the ebook into a plain text editor like Notepad, and then make sure that the whole command is properly formatted as a single line, before you then copy and paste it to the command-line. 
-
-Copying and pasting directly from the ebook is likely to include newline characters and missing spaces and so on that break the command.
 
 # Page 362 - Building a web service that supports OData
 
