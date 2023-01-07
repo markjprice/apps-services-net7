@@ -19,12 +19,17 @@ It would be better to add an extra step, "In your preferred database tool, add a
 
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 31 December 2022](https://github.com/markjprice/apps-services-net7/issues/4).
 
-In Step 4, I show text that must be entered as a single line at the command-line, as shown in the following command:
+In Step 4, I show text that must be entered as a single line at the command-line, as shown in the following command formatted as in the print book:
 ```
 dotnet ef dbcontext scaffold "Data Source=.;Initial 
 Catalog=Northwind;Integrated Security=true;TrustServerCertificate=true;" 
 Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace 
 Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
+```
+
+Here is the same command as a single line to make it easier to copy and paste:
+```
+dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
 ```
 
 I recommend that you copy and paste long commands like this from the ebook into a plain text editor like Notepad, and then make sure that the whole command is properly formatted as a single line, before you then copy and paste it to the command-line. 
