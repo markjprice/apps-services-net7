@@ -1,4 +1,4 @@
-**Errata** (1 items)
+**Errata** (2 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
