@@ -8,6 +8,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 82 - Defining the Northwind database model](#page-82---defining-the-northwind-database-model)
   - [Category class changes](#category-class-changes)
   - [NorthwindDb class changes](#northwinddb-class-changes)
+- [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -110,3 +111,33 @@ public virtual DbSet<Category> Categories => Set<Category>();
 https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types#dbcontext-and-dbset
 
 > Thanks to [charlygg](https://github.com/charlygg) for suggesting using the `Set<T>` method in a comment on [issue on 1 January 2023](https://github.com/markjprice/apps-services-net7/issues/5#issuecomment-1368614033).
+
+# Page 417 - Understanding Strawberry Shake - Creating a console app client
+
+In Step 4, you add references to two StrawberryShake packages. I had hoped that version 13 would be released by now, but it is still in preview for one of those packages and is not available at all for the other. I therefore recommend that you use version 12.16.0, as shown in the following markup:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+  <PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="12.16.0" />
+  <PackageReference Include="StrawberryShake.Transport.Http" Version="12.16.0" />
+</ItemGroup>
+```
+
+> ChilliCream recommends that you always use the same versions when referencing multiple of their packages to ensure they work together properly.
+
+In Step 9, you add a file named `seafoodProducts.graphql`. After creating this file, review the project file to check for an entry to explicitly remove this file from the build process, as shown in the following markup: 
+```xml
+<ItemGroup>
+  <GraphQL Remove="seafoodProducts.graphql" />
+</ItemGroup>
+```
+
+There must be at least one .graphql file for the Strawberry Shake tool to be able to generate its code automatically. So this entry will prevent the Strawberry Shake tool from generating its code and you will later get compile errors. You should delete or comment out that entry, as shown in the following markup:
+```xml
+<!--<ItemGroup>
+  <GraphQL Remove="seafoodProducts.graphql" />
+</ItemGroup>-->
+```
+
