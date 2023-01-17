@@ -1,9 +1,10 @@
-**Improvements** (3 items)
+**Improvements** (4 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
 - [Page 72 - Executing stored procedures using ADO.NET](#page-72---executing-stored-procedures-using-adonet)
 - [Page 81 - Defining the Northwind database model](#page-81---defining-the-northwind-database-model)
+- [Pager 232 - Making a type or member obsolete](#pager-232---making-a-type-or-member-obsolete)
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
 
 # Page 72 - Executing stored procedures using ADO.NET
@@ -33,6 +34,12 @@ For convenience, here is the same command as a single line to make it easier to 
 ```
 dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
 ```
+
+# Pager 232 - Making a type or member obsolete
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 14 January 2023](https://github.com/markjprice/apps-services-net7/issues/8).
+
+Make sure you do not miss the addition of the `{3}` placeholder in the call to `WriteLine`! I will add a note to highlight this in the 8th edition.
 
 # Page 362 - Building a web service that supports OData
 
