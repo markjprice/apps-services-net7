@@ -1,4 +1,4 @@
-**Errata** (3 items)
+**Errata** (4 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -9,6 +9,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
   - [Category class changes](#category-class-changes)
   - [NorthwindDb class changes](#northwinddb-class-changes)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
+- [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -141,3 +142,8 @@ There must be at least one .graphql file for the Strawberry Shake tool to be abl
 </ItemGroup>-->
 ```
 
+# Page 587 - Building and testing a Blazor alert component
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 8 February 2023](https://github.com/markjprice/apps-services-net7/issues/9).
+
+In Step 3, the filename `_Imports.cshtml` should be `_Imports.razor`.
