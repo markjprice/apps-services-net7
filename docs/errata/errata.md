@@ -1,4 +1,4 @@
-**Errata** (4 items)
+**Errata** (6 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -8,6 +8,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 82 - Defining the Northwind database model](#page-82---defining-the-northwind-database-model)
   - [Category class changes](#category-class-changes)
   - [NorthwindDb class changes](#northwinddb-class-changes)
+- [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 
@@ -112,6 +113,32 @@ public virtual DbSet<Category> Categories => Set<Category>();
 https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types#dbcontext-and-dbset
 
 > Thanks to [charlygg](https://github.com/charlygg) for suggesting using the `Set<T>` method in a comment on [issue on 1 January 2023](https://github.com/markjprice/apps-services-net7/issues/5#issuecomment-1368614033).
+
+# Page 200 - Testing an AutoMapper configuration
+
+> Thanks to Doug Murphy for raising this issue via email.
+
+In the note at the top of page 200, I wrote, "For the entity models, we used records because they will be immutable. But an 
+instance of `Summary` will be created and then its members populated automatically by AutoMapper, so it must be a normal mutable class with public properties that can be set."
+
+But records are not always immutable. They are immutable in this scenario due to the way I defined them. It is possible to define mutable records. For example:
+```cs
+// As defined in the book. This will not work because it // only has a 
+// constructor with two parameters. AutoMapper needs to call a default 
+// constructor (no parameters) and then set the properties.
+public record Summary(string? FullName, decimal Total);
+
+// This works because it has a default constructor and due to the init 
+// keywords. After constructing an instance, the properties can be set,
+// but after that, the properties cannot be changed.
+public record Summary 
+{
+  public string? FullName { get; init; }
+  public decimal Total { get; init; }
+}
+```
+
+In the next edition, I will use the `init` style to define the `Summary` record.
 
 # Page 417 - Understanding Strawberry Shake - Creating a console app client
 
