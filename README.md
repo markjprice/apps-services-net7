@@ -49,8 +49,9 @@ If you have Visual Studio 2022 for Windows and Visual Studio Code and its C# ext
 
 ## Bonus content
 
-The appendix and color figures are available to download as PDFs:
+Chapters 7 and 12, and the appendix and color figures are available to download as PDFs:
 
+- [Sample Chapters 7 and 12 - Apps and Services with .NET 7](https://github.com/markjprice/apps-services-net7/blob/main/docs/Sample%20Chapters%207%20and%2012%20-%20Apps%20and%20Services%20with%20.NET%207.pdf)
 - [Appendix A, Answers to the Test Your Knowledge Questions](docs/B18857_Appendix.pdf)
 - [Color images of the screenshots/diagrams used in this book](docs/9781801813433_ColorImages.pdf)
 
