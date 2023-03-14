@@ -1,4 +1,4 @@
-**Errata** (6 items)
+**Errata** (8 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -11,6 +11,8 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
+- [Page 600 - Building a local storage service](#page-600---building-a-local-storage-service)
+- [Page 613 - Exploring Radzen Blazor components](#page-613---exploring-radzen-blazor-components)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -174,3 +176,14 @@ There must be at least one .graphql file for the Strawberry Shake tool to be abl
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 8 February 2023](https://github.com/markjprice/apps-services-net7/issues/9).
 
 In Step 3, the filename `_Imports.cshtml` should be `_Imports.razor`.
+
+# Page 600 - Building a local storage service
+
+In Step 9, the filename `_Imports.cshtml` should be `_Imports.razor`.
+
+# Page 613 - Exploring Radzen Blazor components
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 14 March 2023](https://github.com/markjprice/apps-services-net7/issues/11).
+
+In Step 10, the filename `_Imports.cshtml` should be `_Imports.razor`.
+
