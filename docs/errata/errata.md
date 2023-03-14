@@ -13,6 +13,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 - [Page 600 - Building a local storage service](#page-600---building-a-local-storage-service)
 - [Page 613 - Exploring Radzen Blazor components](#page-613---exploring-radzen-blazor-components)
+- [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -187,3 +188,16 @@ In Step 9, the filename `_Imports.cshtml` should be `_Imports.razor`.
 
 In Step 10, the filename `_Imports.cshtml` should be `_Imports.razor`.
 
+# Page 621 - Building a web service for Northwind entities
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 14 March 2023](https://github.com/markjprice/apps-services-net7/issues/12).
+
+In Step 6, the statement to include the products is missing a close bracket. It should be as shown:
+```cs
+app.MapGet("api/categories", (
+  [FromServices] NorthwindContext db) => 
+    Results.Json(
+      db.Categories.Include(c => c.Products)))
+  .WithName("GetCategories")
+  .Produces<Category[]>(StatusCodes.Status200OK);
+```
