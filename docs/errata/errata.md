@@ -211,6 +211,9 @@ app.MapGet("api/categories", (
   .Produces<Category[]>(StatusCodes.Status200OK);
 ```
 
+The GitHub repository code solution used a slightly older version of this code. It has now been updated to match the book, as shown at the following link:
+https://github.com/markjprice/apps-services-net7/blob/main/vs4win/Chapter17/Northwind.BlazorLibraries/Server/Program.cs#L44
+
 # Page 623 - Using the Radzen tabs, image, and icon components
 
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 15 March 2023](https://github.com/markjprice/apps-services-net7/issues/13).
