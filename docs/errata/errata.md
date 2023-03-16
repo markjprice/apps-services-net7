@@ -1,4 +1,4 @@
-**Errata** (8 items)
+**Errata** (13 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -10,10 +10,15 @@ If you find any mistakes, then please [raise an issue in this repository](https:
   - [NorthwindDb class changes](#northwinddb-class-changes)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
+- [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 - [Page 600 - Building a local storage service](#page-600---building-a-local-storage-service)
 - [Page 613 - Exploring Radzen Blazor components](#page-613---exploring-radzen-blazor-components)
 - [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
+- [Page 623 - Using the Radzen tabs, image, and icon components](#page-623---using-the-radzen-tabs-image-and-icon-components)
+- [Page 627 - Using the Radzen HTML editor component](#page-627---using-the-radzen-html-editor-component)
+- [Page 631 - Using the Radzen chart component](#page-631---using-the-radzen-chart-component)
+- [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -172,6 +177,10 @@ There must be at least one .graphql file for the Strawberry Shake tool to be abl
 </ItemGroup>-->
 ```
 
+# Page 571 - Blazor routing to page components
+
+`MainLayout.cshtml` should be `MainLayout.razor`.
+
 # Page 587 - Building and testing a Blazor alert component
 
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 8 February 2023](https://github.com/markjprice/apps-services-net7/issues/9).
@@ -201,3 +210,22 @@ app.MapGet("api/categories", (
   .WithName("GetCategories")
   .Produces<Category[]>(StatusCodes.Status200OK);
 ```
+
+# Page 623 - Using the Radzen tabs, image, and icon components
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 15 March 2023](https://github.com/markjprice/apps-services-net7/issues/13).
+
+In Step 5, `MainLayout.cshtml` should be `MainLayout.razor`.
+
+# Page 627 - Using the Radzen HTML editor component
+
+In Step 3, `MainLayout.cshtml` should be `MainLayout.razor`.
+
+# Page 631 - Using the Radzen chart component
+
+In Step 5, `MainLayout.cshtml` should be `MainLayout.razor`.
+
+# Page 634 - Using the Radzen form components
+
+In Step 2, `MainLayout.cshtml` should be `MainLayout.razor`.
+
