@@ -9,6 +9,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
 - [Page 582 - Building and testing a Blazor progress bar component](#page-582---building-and-testing-a-blazor-progress-bar-component)
 - [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
+- [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
 
 # Page 72 - Executing stored procedures using ADO.NET
 
@@ -90,7 +91,7 @@ In the next edition, I will remove Step 6. The same applies to the section *Enab
 
 # Page 621 - Building a web service for Northwind entities
 
-In Step 6, I give instructions to write statements to configure two endpoints for an HTTP API web service that return categories and their related products, and to return orders. In the next edition, I will add steps to test that it works:
+In Step 6, I give instructions to write statements to configure two endpoints for an HTTP API web service that return categories and their related products, and to return orders. In the next edition, I will add steps to test that they work:
 
 7. Start the `Northwind.BlazorLibraries.Server` project without debugging.
 8. In the browser address box, enter the path to request categories, as shown in the following link: https://localhost:5171/api/categories, and note the response as shown in the following screenshot:
@@ -100,3 +101,23 @@ In Step 6, I give instructions to write statements to configure two endpoints fo
 9. In the browser address box, enter the path to request orders, as shown in the following link: https://localhost:5171/api/orders, and note the response as shown in the following screenshot:
 
 ![Orders returned from the HTTP endpoint web service](images/B18857_17_page_621b.png)
+
+# Page 634 - Using the Radzen form components
+
+In Step 1, I give instructions to write statements to configure four endpoints for an HTTP API web service that return employees, cities, and countries, and to update an employee. 
+
+In the next edition, I will add steps to test that they work:
+
+a) Start the `Northwind.BlazorLibraries.Server` project without debugging.
+b) In the browser address box, enter the path to request employees, as shown in the following link: https://localhost:5171/api/employees, and note the response as shown in the following screenshot:
+
+![Employees returned from the HTTP endpoint web service](images/B18857_17_page_634.png)
+
+c) In the browser address box, enter the path to request countries, as shown in the following link: https://localhost:5171/api/countries, and note the response as shown in the following output:
+```
+["UK","USA"]
+```
+d) In the browser address box, enter the path to request cities, as shown in the following link: https://localhost:5171/api/cities, and note the response as shown in the following output:
+```
+[null,"Kirkland","London","Redmond","Seattle","Tacoma"]
+```

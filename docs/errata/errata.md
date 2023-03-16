@@ -1,4 +1,4 @@
-**Errata** (13 items)
+**Errata** (14 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -18,6 +18,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 623 - Using the Radzen tabs, image, and icon components](#page-623---using-the-radzen-tabs-image-and-icon-components)
 - [Page 627 - Using the Radzen HTML editor component](#page-627---using-the-radzen-html-editor-component)
 - [Page 631 - Using the Radzen chart component](#page-631---using-the-radzen-chart-component)
+- [Page 633 - Using the Radzen form components](#page-633---using-the-radzen-form-components)
 - [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
 
 # Page 56 - Managing data with Transact-SQL
@@ -227,6 +228,26 @@ In Step 3, `MainLayout.cshtml` should be `MainLayout.razor`.
 # Page 631 - Using the Radzen chart component
 
 In Step 5, `MainLayout.cshtml` should be `MainLayout.razor`.
+
+# Page 633 - Using the Radzen form components
+
+In Step 1, the statement to define and endpoint for employees manually sets JSON options, as shown in the following code:
+```cs
+app.MapGet("api/employees/", (
+  [FromServices] NorthwindContext db) =>
+    Results.Json(db.Employees, jsonOptions))
+  .WithName("GetEmployees")
+  .Produces<Employee[]>(StatusCodes.Status200OK);
+```
+
+It should use the globally configure JSON options, as shown in the following code:
+```cs
+app.MapGet("api/employees/", (
+  [FromServices] NorthwindContext db) =>
+    Results.Json(db.Employees))
+  .WithName("GetEmployees")
+  .Produces<Employee[]>(StatusCodes.Status200OK);
+```
 
 # Page 634 - Using the Radzen form components
 
