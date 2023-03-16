@@ -195,7 +195,7 @@ In Step 9, the filename `_Imports.cshtml` should be `_Imports.razor`.
 
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 14 March 2023](https://github.com/markjprice/apps-services-net7/issues/11).
 
-In Step 10, the filename `_Imports.cshtml` should be `_Imports.razor`.
+In Step 10, the filename `_Imports.cshtml` should be `_Imports.razor`. Also, the text should say, "add statements to import the Radzen and Radzen Blazor namespaces", not just one statement.
 
 # Page 621 - Building a web service for Northwind entities
 

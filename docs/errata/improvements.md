@@ -7,6 +7,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 232 - Making a type or member obsolete](#page-232---making-a-type-or-member-obsolete)
 - [Page 326 - Setting up an ASP.NET Core Web API project](#page-326---setting-up-an-aspnet-core-web-api-project)
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
+- [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
 
 # Page 72 - Executing stored procedures using ADO.NET
 
@@ -72,3 +73,16 @@ But if you start the website project at the command-line then you must manually 
 In Step 3, you add a reference to a project that is outside the solution. In Step 4, you build the project at the command-line or terminal by using the following command: `dotnet build`. 
 
 There is a note to explain that if you try to use the **Build** menu in Visual Studio then you will see an error. This is because Visual Studio cannot find projects that are outside a solution. In early drafts of the book, this was the first time this situation occurred which is why I put the note here. In later drafts, the SQL Server and Cosmos DB chapters were moved earlier. So then the first time the situation occurs is in Chapter 3 on page 130. In the next edition I will move the note to the first time the situation occurs.
+
+# Page 621 - Building a web service for Northwind entities
+
+In Step 6, I give instructions to write statements to configure two endpoints for an HTTP API web service that return categories and their related products, and to return orders. In the next edition, I will add steps to test that it works:
+
+7. Start the `Northwind.BlazorLibraries.Server` project without debugging.
+8. In the browser address box, enter the path to request categories, as shown in the following link: https://localhost:5171/api/categories, and note the response as shown in the following screenshot:
+
+![Orders returned from the HTTP endpoint web service](images/B18857_17_page_621a.png)
+
+9. In the browser address box, enter the path to request orders, as shown in the following link: https://localhost:5171/api/orders, and note the response as shown in the following screenshot:
+
+![Orders returned from the HTTP endpoint web service](images/B18857_17_page_621b.png)
