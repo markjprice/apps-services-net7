@@ -1,10 +1,10 @@
 ﻿@page "/employees"
 @using System.Net
+
 @inject IHttpClientFactory httpClientFactory
 @inject NotificationService notificationService
 
 <h3>Employees</h3>
-
 <RadzenCard>
   <RadzenListBox AllowFiltering="true" TValue="int"
                  FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
@@ -45,8 +45,8 @@
               <RadzenLabel Text="Title of Courtesy" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="TitleOfCourtesy" 
-                @bind-Value="employee.TitleOfCourtesy" />
+              <RadzenTextBox style="width: 100%;" Name="TitleOfCourtesy"
+                           @bind-Value="employee.TitleOfCourtesy" />
             </div>
           </div>
           <div class="row">
@@ -54,8 +54,8 @@
               <RadzenLabel Text="First Name" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="FirstName" 
-                @bind-Value="employee.FirstName" />
+              <RadzenTextBox style="width: 100%;" Name="FirstName"
+                           @bind-Value="employee.FirstName" />
             </div>
           </div>
           <div class="row">
@@ -63,8 +63,8 @@
               <RadzenLabel Text="Last Name" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="LastName" 
-                @bind-Value="employee.LastName" />
+              <RadzenTextBox style="width: 100%;" Name="LastName"
+                           @bind-Value="employee.LastName" />
             </div>
           </div>
           <div class="row">
@@ -72,8 +72,8 @@
               <RadzenLabel Text="Birth Date" />
             </div>
             <div class="col-md-8">
-              <RadzenDatePicker style="width: 100%;" Name="BirthDate" 
-                @bind-Value="employee.BirthDate" />
+              <RadzenDatePicker style="width: 100%;" Name="BirthDate"
+                              @bind-Value="employee.BirthDate" />
             </div>
           </div>
           <div class="row">
@@ -81,14 +81,14 @@
               <RadzenLabel Text="Hire Date" />
             </div>
             <div class="col-md-8">
-              <RadzenDatePicker style="width: 100%;" Name="HireDate" 
-                @bind-Value="employee.HireDate" />
+              <RadzenDatePicker style="width: 100%;" Name="HireDate"
+                              @bind-Value="employee.HireDate" />
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <RadzenTextArea style="width: 100%;" Name="Notes" 
-                @bind-Value="employee.Notes" Rows="6" />
+              <RadzenTextArea style="width: 100%;" Name="Notes"
+                            @bind-Value="employee.Notes" Rows="6" />
             </div>
           </div>
         </RadzenFieldset>
@@ -100,8 +100,9 @@
               <RadzenLabel Text="Country" />
             </div>
             <div class="col-md-8">
-              <RadzenDropDown TValue="string" @bind-Value="employee.Country" 
-                Placeholder="USA" Data="@countries" style="width: 100%;" Name="Country">
+              <RadzenDropDown TValue="string" @bind-Value="employee.Country"
+                            Placeholder="USA" Data="@countries" style="width: 100%;"
+                            Name="Country">
               </RadzenDropDown>
             </div>
           </div>
@@ -110,8 +111,8 @@
               <RadzenLabel Text="City" />
             </div>
             <div class="col-md-8">
-              <RadzenDropDown TValue="string" @bind-Value="employee.City" 
-                Data="@cities" style="width: 100%;" Name="City">
+              <RadzenDropDown TValue="string" @bind-Value="employee.City"
+                            Data="@cities" style="width: 100%;" Name="City">
               </RadzenDropDown>
             </div>
           </div>
@@ -120,8 +121,8 @@
               <RadzenLabel Text="Region" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="Region" 
-                @bind-Value="employee.Region" />
+              <RadzenTextBox style="width: 100%;" Name="Region"
+                           @bind-Value="employee.Region" />
             </div>
           </div>
           <div class="row">
@@ -129,8 +130,8 @@
               <RadzenLabel Text="Postal Code" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="PostalCode" 
-                @bind-Value="employee.PostalCode" />
+              <RadzenTextBox style="width: 100%;" Name="PostalCode"
+                           @bind-Value="employee.PostalCode" />
             </div>
           </div>
           <div class="row">
@@ -138,8 +139,8 @@
               <RadzenLabel Text="Building/Street" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="Address" 
-                @bind-Value="employee.Address" />
+              <RadzenTextBox style="width: 100%;" Name="Address"
+                           @bind-Value="employee.Address" />
             </div>
           </div>
           <div class="row">
@@ -147,8 +148,8 @@
               <RadzenLabel Text="Home Phone" />
             </div>
             <div class="col-md-8">
-              <RadzenTextBox style="width: 100%;" Name="HomePhone" 
-                @bind-Value="employee.HomePhone" />
+              <RadzenTextBox style="width: 100%;" Name="HomePhone"
+                           @bind-Value="employee.HomePhone" />
             </div>
           </div>
           <div class="row">
@@ -160,37 +161,35 @@
               {
                 <div>
                   <img class="rounded float-start"
-                   src="@employee.Photo.ConvertToBase64Jpeg()" />
+                       src="@employee.Photo.ConvertToBase64Jpeg()" />
                 </div>
               }
-
             </div>
           </div>
         </RadzenFieldset>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-12 d-flex align-items-end justify-content-center" 
+      <div class="col-md-12 d-flex align-items-end justify-content-center"
            style="margin-top: 16px;">
-        <RadzenButton ButtonType="ButtonType.Submit" Icon="save" 
-          Text="Save Changes" />
+        <RadzenButton ButtonType="ButtonType.Submit" Icon="save"
+                    Text="Save Changes" />
       </div>
     </div>
   </RadzenTemplateForm>
 }
-
 @code {
   private IQueryable<Employee>? employees;
   private string[]? countries;
   private string[]? cities;
-
   private Employee? employee = null;
 
   // Web API service uses "Preserve" so
   // we must control how references are handled.
   private JsonSerializerOptions jsonOptions = new()
     {
-      ReferenceHandler = ReferenceHandler.Preserve
+      ReferenceHandler = ReferenceHandler.Preserve,
+      PropertyNameCaseInsensitive = true
     };
 
   protected override async Task OnParametersSetAsync()
@@ -224,7 +223,8 @@
   void OnChange(object value, string name)
   {
     string? str = value is IEnumerable<object> ?
-      string.Join(", ", (IEnumerable<object>)value) :
+
+    string.Join(", ", (IEnumerable<object>)value) :
       value.ToString();
 
     Console.WriteLine($"{name} value changed to {str}");
@@ -232,7 +232,7 @@
     if (str != null)
     {
       employee = employees?.FirstOrDefault(employee =>
-        employee.EmployeeId == int.Parse(str));
+      employee.EmployeeId == int.Parse(str));
     }
   }
 
@@ -250,7 +250,7 @@
 
       NotificationMessage message = new()
         {
-          Severity = response.StatusCode == HttpStatusCode.OK ? 
+          Severity = response.StatusCode == HttpStatusCode.OK ?
             NotificationSeverity.Success : NotificationSeverity.Error,
           Summary = $"{response.StatusCode}",
           Detail = $"Employees affected: {await response.Content.ReadAsStringAsync()}",

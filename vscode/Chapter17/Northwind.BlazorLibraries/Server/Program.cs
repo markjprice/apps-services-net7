@@ -1,16 +1,17 @@
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Mvc; // [FromServices]
 using Packt.Shared; // AddNorthwindContext extension method
 using System.Text.Json.Serialization; // ReferenceHandler
-using System.Text.Json; // JsonSerializerOptions
-using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.EntityFrameworkCore;
-using Northwind.BlazorLibraries.Client.Pages;
+using Microsoft.EntityFrameworkCore; // Include extension method
+
+using HttpJsonOptions = Microsoft.AspNetCore.Http.Json.JsonOptions;
+using Microsoft.AspNetCore.Http.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<JsonOptions>(options =>
+builder.Services.Configure<HttpJsonOptions>(options =>
 {
-  options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+  options.SerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 
 builder.Services.AddControllersWithViews();
@@ -37,33 +38,23 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Create an options object to pass with Results.Json
-JsonSerializerOptions jsonOptions = new()
-{
-  // Employee entity has circular reference to itself so
-  // we must control how references are handled.
-  ReferenceHandler = ReferenceHandler.Preserve
-};
-
 app.MapGet("api/categories", (
   [FromServices] NorthwindContext db) =>
     Results.Json(
-      db.Categories.Include(c => c.Products), 
-      jsonOptions))
+      db.Categories.Include(c => c.Products)))
   .WithName("GetCategories")
   .Produces<Category[]>(StatusCodes.Status200OK);
 
 app.MapGet("api/orders/", (
   [FromServices] NorthwindContext db) =>
     Results.Json(
-      db.Orders.Include(o => o.OrderDetails),
-      jsonOptions))
+      db.Orders.Include(o => o.OrderDetails)))
   .WithName("GetOrders")
   .Produces<Order[]>(StatusCodes.Status200OK);
 
 app.MapGet("api/employees/", (
   [FromServices] NorthwindContext db) =>
-    Results.Json(db.Employees, jsonOptions))
+    Results.Json(db.Employees))
   .WithName("GetEmployees")
   .Produces<Employee[]>(StatusCodes.Status200OK);
 
@@ -80,9 +71,9 @@ app.MapGet("api/cities/", (
   .Produces<string[]>(StatusCodes.Status200OK);
 
 app.MapPut("api/employees/{id:int}", async (
-    [FromRoute] int id,
-    [FromBody] Employee employee,
-    [FromServices] NorthwindContext db) =>
+  [FromRoute] int id,
+  [FromBody] Employee employee,
+  [FromServices] NorthwindContext db) =>
   {
     Employee? foundEmployee = await db.Employees.FindAsync(id);
 

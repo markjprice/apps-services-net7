@@ -1,4 +1,4 @@
-**Improvements** (5 items)
+**Improvements** (7 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -7,6 +7,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 232 - Making a type or member obsolete](#page-232---making-a-type-or-member-obsolete)
 - [Page 326 - Setting up an ASP.NET Core Web API project](#page-326---setting-up-an-aspnet-core-web-api-project)
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
+- [Page 582 - Building and testing a Blazor progress bar component](#page-582---building-and-testing-a-blazor-progress-bar-component)
 - [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
 
 # Page 72 - Executing stored procedures using ADO.NET
@@ -73,6 +74,19 @@ But if you start the website project at the command-line then you must manually 
 In Step 3, you add a reference to a project that is outside the solution. In Step 4, you build the project at the command-line or terminal by using the following command: `dotnet build`. 
 
 There is a note to explain that if you try to use the **Build** menu in Visual Studio then you will see an error. This is because Visual Studio cannot find projects that are outside a solution. In early drafts of the book, this was the first time this situation occurred which is why I put the note here. In later drafts, the SQL Server and Cosmos DB chapters were moved earlier. So then the first time the situation occurs is in Chapter 3 on page 130. In the next edition I will move the note to the first time the situation occurs.
+
+# Page 582 - Building and testing a Blazor progress bar component
+
+In Step 6, I wrote, "In `App.razor`, comment out the `<FocusOnNavigate>` element so that the `<h1>` is not selected". 
+
+In the GA release, Microsoft improved this feature so that the `<h1>` element does not have an ugly outline when it has the focus, as shown in the following CSS file:
+```css
+h1:focus {
+    outline: none;
+}
+```
+
+In the next edition, I will remove Step 6. The same applies to the section *Enabling the Radzen dialog, notification, context menu, and tooltip components* on page 615 in Step 4. 
 
 # Page 621 - Building a web service for Northwind entities
 
