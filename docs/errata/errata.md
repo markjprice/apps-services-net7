@@ -1,4 +1,4 @@
-**Errata** (14 items)
+**Errata** (15 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -10,6 +10,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
   - [NorthwindDb class changes](#northwinddb-class-changes)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
+- [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 - [Page 600 - Building a local storage service](#page-600---building-a-local-storage-service)
@@ -177,6 +178,30 @@ There must be at least one .graphql file for the Strawberry Shake tool to be abl
   <GraphQL Remove="seafoodProducts.graphql" />
 </ItemGroup>-->
 ```
+
+# Page 467 - Adding a chat page to the MVC website
+
+In Step 2, in a JavaScript file named `chat.js`, I tell the reader to add statements to add events handlers for the **Register** and **Send** buttons, and so on. One of those statements uses a backtick \` to enable JavaScript interpolated strings that use curly brackets `{}` for dynamic placeholders. 
+
+But after submitting final drafts in a Word document, a Packt process replaced the backtick characters with single straight quote `'` characters. This disabled the interpolated strings. I had even added a comment to explain to the reader that they should use a backtick character but the Packt process replaced that too! 
+
+Incorrect code in the print book in the comment and string value:
+```cs
+// note the use of backtick ' to enable a formatted string
+li.textContent =
+  'To ${received.to}, From ${received.from}: ${received.body}';
+```
+
+The statement should be as follows:
+
+```cs
+// note the use of backtick ` to enable a formatted string
+li.textContent =
+  `To ${received.to}, From ${received.from}: ${received.body}`;
+```
+
+Luckily, the code was correct in the GitHub repository:
+https://github.com/markjprice/apps-services-net7/blob/main/vs4win/Chapter13/Northwind.SignalR.Service.Client.Mvc/wwwroot/js/chat.js#L28
 
 # Page 571 - Blazor routing to page components
 
