@@ -1,4 +1,4 @@
-**Errata** (15 items)
+**Errata** (16 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -21,6 +21,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 631 - Using the Radzen chart component](#page-631---using-the-radzen-chart-component)
 - [Page 633 - Using the Radzen form components](#page-633---using-the-radzen-form-components)
 - [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
+- [Page 657 - Creating a virtual Android device for local app testing](#page-657---creating-a-virtual-android-device-for-local-app-testing)
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -278,3 +279,8 @@ app.MapGet("api/employees/", (
 
 In Step 2, `MainLayout.cshtml` should be `MainLayout.razor`.
 
+# Page 657 - Creating a virtual Android device for local app testing
+
+> Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 29 March 2023](https://github.com/markjprice/apps-services-net7/issues/15).
+
+In Step 5, **Save** should be **Create**. Also in *Figure 18.2*, the caption of the button should be **Create** instead of **Save**. (I must have edited an existing device instead of creating a new one when taking the screenshot which caused this mistake.)
