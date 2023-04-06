@@ -2,6 +2,8 @@
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
+> Note that some of the simpler typos listed below have been fixed for copies purchased after about mid-April 2023. For example, the [single-quotes instead of backticks issue](#page-467---adding-a-chat-page-to-the-mvc-website), and the [wrong file extensions (some `.cshtml` files should be `.razor` files)](#page-571---blazor-routing-to-page-components).
+
 > Microsoft has changed their domain for documentation from `https://docs.microsoft.com` to `https://learn.microsoft.com` with an automatic redirect so all links in my books that use the `docs` domain should still work.
 
 - [Page 56 - Managing data with Transact-SQL](#page-56---managing-data-with-transact-sql)
