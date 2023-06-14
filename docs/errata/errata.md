@@ -1,4 +1,4 @@
-**Errata** (16 items)
+**Errata** (18 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,10 +6,12 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 > Microsoft has changed their domain for documentation from `https://docs.microsoft.com` to `https://learn.microsoft.com` with an automatic redirect so all links in my books that use the `docs` domain should still work.
 
+- [Page 16 - Installing other extensions](#page-16---installing-other-extensions)
 - [Page 56 - Managing data with Transact-SQL](#page-56---managing-data-with-transact-sql)
 - [Page 82 - Defining the Northwind database model](#page-82---defining-the-northwind-database-model)
   - [Category class changes](#category-class-changes)
   - [NorthwindDb class changes](#northwinddb-class-changes)
+- [Page 102 - Creating a class library for the data context using SQL Server](#page-102---creating-a-class-library-for-the-data-context-using-sql-server)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
@@ -24,6 +26,12 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 633 - Using the Radzen form components](#page-633---using-the-radzen-form-components)
 - [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
 - [Page 657 - Creating a virtual Android device for local app testing](#page-657---creating-a-virtual-android-device-for-local-app-testing)
+
+# Page 16 - Installing other extensions
+
+In the table, the **C# for Visual Studio Code** extension says it is "powered by OmniSharp". This is true up to the most recent release version `1.25.9`. But if you install the pre-release version `2.0.x` then it does not include OmniSharp any more.
+
+To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
 
 # Page 56 - Managing data with Transact-SQL
 
@@ -126,6 +134,14 @@ public virtual DbSet<Category> Categories => Set<Category>();
 https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types#dbcontext-and-dbset
 
 > Thanks to [charlygg](https://github.com/charlygg) for suggesting using the `Set<T>` method in a comment on [issue on 1 January 2023](https://github.com/markjprice/apps-services-net7/issues/5#issuecomment-1368614033).
+
+# Page 102 - Creating a class library for the data context using SQL Server
+
+In Step 1, I wrote, "In Visual Studio Code, select `Northwind.Common.DataContext.SqlServer` as the active OmniSharp project." 
+
+This works if you installed the most recent release version `1.25.9`. But if you installed the pre-release version `2.0.x` then it does not include OmniSharp any more.
+
+To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
 
 # Page 200 - Testing an AutoMapper configuration
 
