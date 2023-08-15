@@ -13,6 +13,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
   - [NorthwindDb class changes](#northwinddb-class-changes)
 - [Page 102 - Creating a class library for the data context using SQL Server](#page-102---creating-a-class-library-for-the-data-context-using-sql-server)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
+- [Page 411 - Using an ASP.NET Core MVC project as a GraphQL client](#page-411---using-an-aspnet-core-mvc-project-as-a-graphql-client)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
@@ -168,6 +169,19 @@ public record Summary
 ```
 
 In the next edition, I will use the `init` style to define the `Summary` record.
+
+# Page 411 - Using an ASP.NET Core MVC project as a GraphQL client
+
+> Thanks to [mdevol58](https://github.com/mdevol58) for raising this [issue on 14 August 2023](https://github.com/markjprice/apps-services-net7/issues/18).
+
+In Step 12, I wrote, "In the `Controllers` folder, in `HomeController.cs`, import the namespace for working with text encodings and for our Northwind entity models".
+
+I should have written, "In the `Controllers` folder, in `HomeController.cs`, import the namespace for working with text 
+encodings and for the local project models", and add the missing import statement for the models, as shown in the following code:
+```cs
+using Northwind.Mvc.GraphQLClient.Models; // IndexViewModel, ResponseProducts and so on
+using System.Text; // Encoding
+```
 
 # Page 417 - Understanding Strawberry Shake - Creating a console app client
 
