@@ -1,4 +1,4 @@
-**Errata** (19 items)
+**Errata** (20 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -17,6 +17,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
+- [Page 578 - Building Blazor components](#page-578---building-blazor-components)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
 - [Page 600 - Building a local storage service](#page-600---building-a-local-storage-service)
 - [Page 613 - Exploring Radzen Blazor components](#page-613---exploring-radzen-blazor-components)
@@ -239,6 +240,16 @@ https://github.com/markjprice/apps-services-net7/blob/main/vs4win/Chapter13/Nort
 # Page 571 - Blazor routing to page components
 
 `MainLayout.cshtml` should be `MainLayout.razor`.
+
+# Page 578 - Building Blazor components
+
+> Thanks to [mdevol58](https://github.com/mdevol58) for raising this [issue on 16 August 2023](https://github.com/markjprice/apps-services-net7/issues/19).
+
+In Step 17, the two elements added should be self-closing i.e. they should end with `/>` instead of just `>`, as shown in the following markup:
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+```
 
 # Page 587 - Building and testing a Blazor alert component
 
