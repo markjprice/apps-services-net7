@@ -243,13 +243,15 @@ https://github.com/markjprice/apps-services-net7/blob/main/vs4win/Chapter13/Nort
 
 # Page 578 - Building Blazor components
 
-> Thanks to [mdevol58](https://github.com/mdevol58) for raising this [issue on 16 August 2023](https://github.com/markjprice/apps-services-net7/issues/19).
+> Thanks to [mdevol58](https://github.com/mdevol58) for raising two potential issues on [16 August 2023](https://github.com/markjprice/apps-services-net7/issues/19) and [17 August 2023](https://github.com/markjprice/apps-services-net7/issues/20).
 
-In Step 17, the two elements added should be self-closing i.e. they should end with `/>` instead of just `>`, as shown in the following markup:
+In Step 17, the two elements added are already HTML5-compliant and were copied from [Bootstrap's official template](https://getbootstrap.com/docs/5.2/getting-started/introduction/). But if you need them to be XHTML-compliant then they should be self-closing i.e. they should end with `/>` instead of just `>`, as shown in the following markup:
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 ```
+
+The second issue that mdevol58 found caused the **Delete Database** dialog not to display. I was not able to reproduce the same error so I cannot confirm the fix. If you have the same issue, try changing the attribute name from `crossorigin` to `crossOrigin`. The official documentation does not say camelCase is required.
 
 # Page 587 - Building and testing a Blazor alert component
 
