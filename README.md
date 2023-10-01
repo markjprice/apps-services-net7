@@ -2,6 +2,8 @@
 
 # Apps and Services with .NET 7, First Edition
 
+> **Announcement** about the next edition: https://www.linkedin.com/feed/update/urn:li:activity:7112386364465102848/
+
 With every Packt book you get a DRM-free PDF version of that book at no cost. Submit your proof of purchase at the following link:
 https://packt.link/free-ebook/9781801813433
 
