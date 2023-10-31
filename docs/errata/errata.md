@@ -1,4 +1,4 @@
-**Errata** (20 items)
+**Errata** (21 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -12,6 +12,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
   - [Category class changes](#category-class-changes)
   - [NorthwindDb class changes](#northwinddb-class-changes)
 - [Page 102 - Creating a class library for the data context using SQL Server](#page-102---creating-a-class-library-for-the-data-context-using-sql-server)
+- [Page 138 - Performing CRUD operations with Cosmos SQL API](#page-138---performing-crud-operations-with-cosmos-sql-api)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
 - [Page 411 - Using an ASP.NET Core MVC project as a GraphQL client](#page-411---using-an-aspnet-core-mvc-project-as-a-graphql-client)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
@@ -144,6 +145,34 @@ In Step 1, I wrote, "In Visual Studio Code, select `Northwind.Common.DataContext
 This works if you installed the most recent release version `1.25.9`. But if you installed the pre-release version `2.0.x` then it does not include OmniSharp any more.
 
 To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
+
+# Page 138 - Performing CRUD operations with Cosmos SQL API
+
+In Step 8, a long block of code tries to copy `Product` instances and their related `Category` and `Supplier` entities into Cosmos DB. Although the code uses `Where` to filter only products that have a non-null category and supplier, the compiler is not smart enough to detect this, and gives warnings about potential `null` value assignment. 
+
+The following statement:
+```cs
+category = new CategoryCosmos
+```
+Can be changed to the following:
+```cs
+// If the related category is null, store null,
+// else store the category mapped to Cosmos model.
+category = p.Category == null ? null :
+  new CategoryCosmos
+```
+
+And the following statement:
+```cs
+supplier = new SupplierCosmos
+```
+Can be changed to the following:
+```cs
+supplier = p.Supplier == null ? null :
+  new SupplierCosmos
+```
+
+This change has been made in the 2nd edition, found at the following link: https://github.com/markjprice/apps-services-net8/blob/main/code/Chapter04/Northwind.CosmosDb.SqlApi/Program.Methods.cs#L149
 
 # Page 200 - Testing an AutoMapper configuration
 
