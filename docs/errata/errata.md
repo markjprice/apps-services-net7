@@ -1,4 +1,4 @@
-**Errata** (21 items)
+**Errata** (22 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -14,6 +14,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 102 - Creating a class library for the data context using SQL Server](#page-102---creating-a-class-library-for-the-data-context-using-sql-server)
 - [Page 138 - Performing CRUD operations with Cosmos SQL API](#page-138---performing-crud-operations-with-cosmos-sql-api)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
+- [Page 350 - Rate limiting using ASP.NET Core middleware](#page-350---rate-limiting-using-aspnet-core-middleware)
 - [Page 411 - Using an ASP.NET Core MVC project as a GraphQL client](#page-411---using-an-aspnet-core-mvc-project-as-a-graphql-client)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
@@ -199,6 +200,12 @@ public record Summary
 ```
 
 In the next edition, I will use the `init` style to define the `Summary` record.
+
+# Page 350 - Rate limiting using ASP.NET Core middleware
+
+> Thanks to `JimCampbell63` in the Discord channel for highlighting this issue.
+
+In Step 1, I instruct the reader to add a package reference for `Microsoft.AspNetCore.RateLimiting`. This was necessary up to the release candidate, but for the GA release of .NET 7, the team added the functionality to the main libraries so it is not necessary to reference a package or rebuild the project in Step 2.
 
 # Page 411 - Using an ASP.NET Core MVC project as a GraphQL client
 
