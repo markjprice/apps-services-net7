@@ -1,9 +1,10 @@
-**Improvements** (7 items)
+**Improvements** (9 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
 - [Page 72 - Executing stored procedures using ADO.NET](#page-72---executing-stored-procedures-using-adonet)
 - [Page 81 - Defining the Northwind database model](#page-81---defining-the-northwind-database-model)
+- [Page 169 - Nested and child tasks](#page-169---nested-and-child-tasks)
 - [Page 232 - Making a type or member obsolete](#page-232---making-a-type-or-member-obsolete)
 - [Page 326 - Setting up an ASP.NET Core Web API project](#page-326---setting-up-an-aspnet-core-web-api-project)
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
@@ -37,6 +38,46 @@ I recommend that you type from the print book or copy and paste long commands li
 For convenience, here is the same command as a single line to make it easier to copy and paste:
 ```
 dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --namespace Northwind.Console.EFCore.Models --data-annotations --context NorthwindDb
+```
+
+# Page 169 - Nested and child tasks
+
+> Thanks to Amer Cejudo for emailing about this item.
+
+In this section about making one task the child of a parent task, I only showed output for one of two possible results, and had two notes to explain the other possible outputs. In the next edition, I will show both possible outputs before and after applying the `AttachedToParent` option.
+
+In Step 3, you run the code and review the result, as shown in the following output:
+```
+Outer method starting...
+Inner method starting...
+Outer method finished.
+Console app is stopping.
+```
+
+As the note at the top of page 170 says, you might not see any output from the `InnerMethod` at all, but I do not show that output. In the next edition, I will include it, as shown in the following output:
+```
+Outer method starting...
+Outer method finished.
+Console app is stopping.
+```
+
+In Step 4, you add the `AttachedToParent` option. 
+
+In Step 5, you review the result, and the `OuterMethod` could start *and finish* before the `InnerMethod` starts but I do not show this possible output. I only show the scenario where both methods start before the methods finish, as shown in the following output:
+```
+Outer method starting...
+Inner method starting...
+Outer method finished.
+Inner method finished.
+Console app is stopping.
+```
+The addition of the `AttachedToParent` option means that the `InnerMethod` is guaranteed to both start and end before the console app ends. But it does not guarantee the order in which the methods finish. The `OuterMethod` could finish before the `InnerMethod` starts. Although I had a note about this after my output I did not show the actual output. In the next edition I will include it, as shown in the following output:
+```
+Outer method starting...
+Outer method finished.
+Inner method starting...
+Inner method finished.
+Console app is stopping.
 ```
 
 # Page 232 - Making a type or member obsolete
