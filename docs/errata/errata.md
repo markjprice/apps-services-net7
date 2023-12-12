@@ -146,7 +146,6 @@ https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types
 
 I show the SQL to define the two tables used in the TPC mapping strategy but it includes a foreign key constraint to a `People` table that does not exist, as shown in the following code:
 
-The SQL in the book:
 ```sql
 CREATE TABLE [Students] (
   [Id] int NOT NULL DEFAULT (NEXT VALUE FOR [PersonIds]),
