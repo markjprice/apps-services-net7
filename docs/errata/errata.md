@@ -1,4 +1,4 @@
-**Errata** (23 items)
+**Errata** (24 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -15,6 +15,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 102 - Creating a class library for the data context using SQL Server](#page-102---creating-a-class-library-for-the-data-context-using-sql-server)
 - [Page 138 - Performing CRUD operations with Cosmos SQL API](#page-138---performing-crud-operations-with-cosmos-sql-api)
 - [Page 200 - Testing an AutoMapper configuration](#page-200---testing-an-automapper-configuration)
+- [Page 254 - Localizing the DayOfWeek enum](#page-254---localizing-the-dayofweek-enum)
 - [Page 350 - Rate limiting using ASP.NET Core middleware](#page-350---rate-limiting-using-aspnet-core-middleware)
 - [Page 411 - Using an ASP.NET Core MVC project as a GraphQL client](#page-411---using-an-aspnet-core-mvc-project-as-a-graphql-client)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
@@ -249,6 +250,21 @@ public record Summary
 ```
 
 In the next edition, I will use the `init` style to define the `Summary` record.
+
+# Page 254 - Localizing the DayOfWeek enum
+
+> Thanks to [Stephen Harper](https://github.com/sjharper79) for raising this [issue on 15 December 2023](https://github.com/markjprice/apps-services-net7/issues/23).
+
+At the top of the page I show a statement to output the current day of the week, as shown in the following code:
+```cs
+WriteLine($"The day of the week is {0:dddd}.", DateTime.Now);
+```
+But that code mixes string interpolation e.g. `$` and string positional format e.g. `{0}`. 
+
+In the 2nd edition, I changed the statement to use string interpolation, as shown in the following code:
+```cs
+WriteLine($"The day of the week is {DateTime.Now:dddd}.");
+```
 
 # Page 350 - Rate limiting using ASP.NET Core middleware
 
