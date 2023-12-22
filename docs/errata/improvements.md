@@ -1,4 +1,4 @@
-**Improvements** (9 items)
+**Improvements** (10 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -8,6 +8,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 232 - Making a type or member obsolete](#page-232---making-a-type-or-member-obsolete)
 - [Page 326 - Setting up an ASP.NET Core Web API project](#page-326---setting-up-an-aspnet-core-web-api-project)
 - [Page 362 - Building a web service that supports OData](#page-362---building-a-web-service-that-supports-odata)
+- [Page 365 - Creating and testing OData controllers](#page-365---creating-and-testing-odata-controllers)
 - [Page 582 - Building and testing a Blazor progress bar component](#page-582---building-and-testing-a-blazor-progress-bar-component)
 - [Page 621 - Building a web service for Northwind entities](#page-621---building-a-web-service-for-northwind-entities)
 - [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
@@ -116,6 +117,26 @@ But if you start the website project at the command-line then you must manually 
 In Step 3, you add a reference to a project that is outside the solution. In Step 4, you build the project at the command-line or terminal by using the following command: `dotnet build`. 
 
 There is a note to explain that if you try to use the **Build** menu in Visual Studio then you will see an error. This is because Visual Studio cannot find projects that are outside a solution. In early drafts of the book, this was the first time this situation occurred which is why I put the note here. In later drafts, the SQL Server and Cosmos DB chapters were moved earlier. So then the first time the situation occurs is in Chapter 3 on page 130. In the next edition I will move the note to the first time the situation occurs.
+
+# Page 365 - Creating and testing OData controllers
+
+> Thanks to Steve Harper for posting about this issue on the book's Discord channel on December 22, 2023.
+
+In Step 2, I tell the reader to add code to the ` CategoriesController.cs` file, including an action method, as shown in the following code:
+```cs
+[EnableQuery]
+public IActionResult Get(int key)
+{
+  return Ok(db.Categories.Where(
+    category => category.CategoryId == key));
+}
+```
+
+For readers familiar with ASP.NET Core MVC, they might mistakenly name the parameter `id`. This is because with an MVC project, a default route is configured: `{controller}/{method}/{id}` that will (1) instantiate the class named `{controller}Controller`, call the method named `{method}`, and (3) pass a parameter value named `{id}`. 
+
+But an OData project is not a traditional MVC project. Controller classes that derive from `ODataController` are registered using different routes. Instead, the route is configured with a parameter named `key` so that is what the method parameter must be named to allow automatic route mapping to pass parameters. 
+
+In the second and later editions, the OData chapter is now online-only, so I have added a warning about this.
 
 # Page 582 - Building and testing a Blazor progress bar component
 
