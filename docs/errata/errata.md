@@ -1,4 +1,4 @@
-**Errata** (25 items)
+**Errata** (26 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -21,6 +21,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 419 - Understanding Strawberry Shake - Creating a console app client](#page-419---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
+- [Page 508 - Implementing a function that works with queues and BLOBs](#page-508---implementing-a-function-that-works-with-queues-and-blobs)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
 - [Page 578 - Building Blazor components](#page-578---building-blazor-components)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
@@ -355,6 +356,68 @@ li.textContent =
 
 Luckily, the code was correct in the GitHub repository:
 https://github.com/markjprice/apps-services-net7/blob/main/vs4win/Chapter13/Northwind.SignalR.Service.Client.Mvc/wwwroot/js/chat.js#L28
+
+# Page 508 - Implementing a function that works with queues and BLOBs
+
+> Thanks to [Jim Campbell](https://github.com/jimcbell) who raised this issue and provided solutions on [December 24, 2023](https://github.com/markjprice/apps-services-net7/issues/24).
+
+In Step 4, I tell the reader to "add package references for working with ... drawing with ImageSharp" and the markup shows the version current at the time of publishing in November 2022, version `2.1.3` and `1.0.0-*`. If you use those versions then everything works as in the book. But if you use the latest versions, there are some changes to the ImageSharp API, for example, the `IPen` and `IBrush` interfaces have been removed.
+
+In Step 11, this can be fixed by making the types for the objects used for drawing `Pen` and `Brush`, as shown in the following code:
+```cs
+// define some pens and brushes
+Pen blackPen = Pens.Solid(Color.Black, 2); 
+Pen blackThickPen = Pens.Solid(Color.Black, 8); 
+Pen greenPen = Pens.Solid(Color.Green, 3); 
+Brush redBrush = Brushes.Solid(Color.Red); 
+Brush blueBrush = Brushes.Solid(Color.Blue);
+```
+
+Also, the signature of the `DrawText` method no longer takes a `TextOptions` object. Instead it should be a `RichTextOptions`, as shown in the following code:
+
+```cs
+RichTextOptions textOptions = new(font)
+{
+  Origin = new PointF(100, 200),
+  WrappingLength = 1000,
+  HorizontalAlignment = HorizontalAlignment.Left
+};
+
+image.Mutate(x => x.DrawText(
+  textOptions, amount, blueBrush, blackPen));
+```
+
+There is also an issue if running on Mac or Linux because I hardcoded the path to the fonts with the Windows path separator, as shown in the following code:
+```cs
+FontFamily family = collection.Add(
+  @"fonts\Caveat\static\Caveat-Regular.ttf");
+```
+
+I should have used cross-platform technique to build the path, as shown in the following code:
+```cs
+string pathToFont = System.IO.Path.Combine("fonts", "Caveat", "static", "Caveat-Regular.ttf");
+
+FontFamily family = collection.Add(pathToFont);
+```
+
+And to build the paths to the local folder to write the blob to, as shown in the following code:
+```cs
+if (System.Environment.GetEnvironmentVariable("IS_LOCAL") == "true")
+{
+  // create blob in the local filesystem
+  string folder = System.IO.Path.Combine(System.Environment.CurrentDirectory, "blobs");
+  if (!Directory.Exists(folder))
+  {
+    Directory.CreateDirectory(folder);
+  }
+
+  log.LogInformation($"Blobs folder: {folder}");
+
+  string blobPath = System.IO.Path.Combine(folder,blobName);
+
+  await image.SaveAsPngAsync(blobPath);
+}
+```
 
 # Page 571 - Blazor routing to page components
 
