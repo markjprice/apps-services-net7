@@ -1,4 +1,4 @@
-**Errata** (24 items)
+**Errata** (25 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -19,6 +19,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 350 - Rate limiting using ASP.NET Core middleware](#page-350---rate-limiting-using-aspnet-core-middleware)
 - [Page 411 - Using an ASP.NET Core MVC project as a GraphQL client](#page-411---using-an-aspnet-core-mvc-project-as-a-graphql-client)
 - [Page 417 - Understanding Strawberry Shake - Creating a console app client](#page-417---understanding-strawberry-shake---creating-a-console-app-client)
+- [Page 419 - Understanding Strawberry Shake - Creating a console app client](#page-419---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
 - [Page 578 - Building Blazor components](#page-578---building-blazor-components)
@@ -313,6 +314,23 @@ There must be at least one .graphql file for the Strawberry Shake tool to be abl
   <GraphQL Remove="seafoodProducts.graphql" />
 </ItemGroup>-->
 ```
+
+# Page 419 - Understanding Strawberry Shake - Creating a console app client
+
+> thanks to [Stephen Harper](https://github.com/sjharper79) for raising this issue and finding a solution on [December 25, 2023](https://github.com/markjprice/apps-services-net7/issues/25).
+
+In Step 10, when you build the console app, you might see the following error:
+```
+SS0006: Access to the path 'obj\berry' is denied.
+SS0006: Method not found: 'Void StrawberryShake.CodeGeneration.CSharp.CSharpGeneratorSettings.set_RequestStrategy(StrawberryShake.Tools.Configuration.RequestStrategy)'
+```
+
+To fix the error, in the project file, in a `<PropertyGroup>`, add the following markup:
+```xml
+<StrawberryShake_State>$(MSBuildProjectExtensionsPath)berry</StrawberryShake_State>
+```
+
+You can read more about this at the following link: https://stackoverflow.com/questions/75693518/c-sharp-net-build-error-due-to-strawberry-shake-graphql-client-error-access.
 
 # Page 467 - Adding a chat page to the MVC website
 
