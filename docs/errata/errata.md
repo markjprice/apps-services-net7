@@ -1,4 +1,4 @@
-**Errata** (26 items)
+**Errata** (28 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -22,6 +22,8 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 419 - Understanding Strawberry Shake - Creating a console app client](#page-419---understanding-strawberry-shake---creating-a-console-app-client)
 - [Page 467 - Adding a chat page to the MVC website](#page-467---adding-a-chat-page-to-the-mvc-website)
 - [Page 508 - Implementing a function that works with queues and BLOBs](#page-508---implementing-a-function-that-works-with-queues-and-blobs)
+- [Page 550 - Understanding the Accept-Language header](#page-550---understanding-the-accept-language-header)
+- [Page 550 - Comparing HTML Helpers and Tag Helpers](#page-550---comparing-html-helpers-and-tag-helpers)
 - [Page 571 - Blazor routing to page components](#page-571---blazor-routing-to-page-components)
 - [Page 578 - Building Blazor components](#page-578---building-blazor-components)
 - [Page 587 - Building and testing a Blazor alert component](#page-587---building-and-testing-a-blazor-alert-component)
@@ -418,6 +420,35 @@ if (System.Environment.GetEnvironmentVariable("IS_LOCAL") == "true")
   await image.SaveAsPngAsync(blobPath);
 }
 ```
+
+# Page 550 - Understanding the Accept-Language header
+
+> Thanks to [Stephen Harper](https://github.com/sjharper79) for raising this issue on [January 3, 2024](https://github.com/markjprice/apps-services-net7/issues/26).
+
+The third bullet says, "fr-FR;q=0.8: English language in France ranked at 0.8." 
+
+It should say, "fr-FR;q=0.8: French language in France ranked at 0.8."
+
+This has been fixed in the second edition.
+
+# Page 550 - Comparing HTML Helpers and Tag Helpers
+
+> Thanks to [Stephen Harper](https://github.com/sjharper79) for raising this issue on [January 3, 2024](https://github.com/markjprice/apps-services-net7/issues/27).
+
+I show three statements that should produce the following markup:
+```html
+<a href="/home/privacy">View our privacy policy.</a>
+```
+
+But the first two statements use `Index` instead of `Home`. They should be as follows:
+```
+@Html.ActionLink("View our privacy policy.", "Privacy", "Home")
+
+@Html.ActionLink(linkText: "View our privacy policy.",
+  action: "Privacy", controller: "Home")
+```
+
+This will be fixed in the third edition.
 
 # Page 571 - Blazor routing to page components
 
