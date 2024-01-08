@@ -1,4 +1,4 @@
-**Errata** (28 items)
+**Errata** (29 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net7/issues) or email me at markjprice (at) gmail.com.
 
@@ -36,6 +36,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 633 - Using the Radzen form components](#page-633---using-the-radzen-form-components)
 - [Page 634 - Using the Radzen form components](#page-634---using-the-radzen-form-components)
 - [Page 657 - Creating a virtual Android device for local app testing](#page-657---creating-a-virtual-android-device-for-local-app-testing)
+- [Page 667 - Adding shell navigation and more content pages](#page-667---adding-shell-navigation-and-more-content-pages)
 
 # Page 16 - Installing other extensions
 
@@ -542,3 +543,9 @@ In Step 2, `MainLayout.cshtml` should be `MainLayout.razor`.
 > Thanks to [Bob Molloy](https://github.com/BobMolloy) for raising this [issue on 29 March 2023](https://github.com/markjprice/apps-services-net7/issues/15).
 
 In Step 5, **Save** should be **Create**. Also in *Figure 18.2*, the caption of the button should be **Create** instead of **Save**. (I must have edited an existing device instead of creating a new one when taking the screenshot which caused this mistake.)
+
+# Page 667 - Adding shell navigation and more content pages
+
+> Thanks to [Stephen Harper](https://github.com/sjharper79) for raising this [issue on 8 January 2024](https://github.com/markjprice/apps-services-net7/issues/29).
+
+In Step 20, the method name should be `ClickMeButton_Clicked`.
