@@ -2,7 +2,7 @@
 
 # Apps and Services with .NET 7, First Edition
 
-> .NET 7 will reach its end-of-life on [Tuesday, May 14, 2024](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle). I recommend upgrading to [.NET 8](https://github.com/markjprice/apps-services-net8/blob/main/README.md) as soon as possible. March 2024 announcement: https://devblogs.microsoft.com/dotnet/dotnet-7-end-of-support/.
+> .NET 7 reached its end-of-life on [Tuesday, May 14, 2024](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle). I recommend upgrading to [.NET 8](https://github.com/markjprice/apps-services-net8/blob/main/README.md) as soon as possible.
 
 With every Packt book you get a DRM-free PDF version of that book at no cost. Submit your proof of purchase at the following link:
 https://packt.link/free-ebook/9781801813433
